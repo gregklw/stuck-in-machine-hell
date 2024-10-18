@@ -1,0 +1,3 @@
+public struct ObjectiveCompleteEventWrapper : IEventWrapper
+{
+}

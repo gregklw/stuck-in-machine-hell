@@ -1,0 +1,1244 @@
+fileFormatVersion: 2
+guid: 3a07bf0c4610d4f4a90451a3832821b8
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Earwig lady animation_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3024
+        width: 237
+        height: 378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdde04fcd17c46f47807771435630a61
+      internalID: 605631470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig lady animation_1
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 3024
+        width: 237
+        height: 378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1dc5ba3427e3ce45a4ac1a2547ff45c
+      internalID: -1201115241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig lady animation_2
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 3024
+        width: 237
+        height: 378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12b2a2d89af91ab4fa3018ff2f650be0
+      internalID: -1016348371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig lady animation_3
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 3024
+        width: 237
+        height: 378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cca31aba12f57a44b22b22865c41c8e
+      internalID: 1914623289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig lady animation_4
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 3024
+        width: 237
+        height: 378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32151e99461d2664881149313520f44c
+      internalID: -426374064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig lady animation_5
+      rect:
+        serializedVersion: 2
+        x: 1185
+        y: 3024
+        width: 237
+        height: 378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e0c29504a8b9614290091a7e74dc280
+      internalID: -433928112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig lady animation_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2646
+        width: 237
+        height: 378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b14fe1fb1a17f64438f84f7dc9d2f544
+      internalID: 1083723453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig lady animation_7
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 2646
+        width: 237
+        height: 378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26533e31c3be4ba46839494f9e770c89
+      internalID: 2003718145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig lady animation_8
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 2646
+        width: 237
+        height: 378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e439b753ecd8aea4691e0c754d7f7764
+      internalID: 1584693794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig lady animation_9
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 2646
+        width: 237
+        height: 378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14bbf13dfa06faa469da3ed35c46ba7b
+      internalID: -719062343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig lady animation_10
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 2646
+        width: 237
+        height: 378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1de060b4c14f3574a824a1806badf5e3
+      internalID: -1594744467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig lady animation_11
+      rect:
+        serializedVersion: 2
+        x: 1185
+        y: 2646
+        width: 237
+        height: 378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 884bf26c62ce6b14e8a4aa13b91e366a
+      internalID: 1474035203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig lady animation_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2268
+        width: 237
+        height: 378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 215d7622c1c0b4e44912df10797f9d8e
+      internalID: 1445413237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig lady animation_13
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 2268
+        width: 237
+        height: 378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ac26606c86a71d459c714cb367a2768
+      internalID: 850727055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig lady animation_14
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 2268
+        width: 237
+        height: 378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcc46dd4c2f8e8d46b437dbcc383265e
+      internalID: -502147263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig lady animation_15
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 2268
+        width: 237
+        height: 378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d78e39854d1b3443b6e0c93a33e594a
+      internalID: 241167772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig lady animation_16
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 2268
+        width: 237
+        height: 378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19f49cb584e639048b58cfebcda39dc3
+      internalID: -883872311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig lady animation_17
+      rect:
+        serializedVersion: 2
+        x: 1185
+        y: 2268
+        width: 237
+        height: 378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf67e7945c7fb7e46a907cf65acfbc41
+      internalID: -1471395423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig lady animation_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1890
+        width: 237
+        height: 378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e7290637ceb7b04b9ceed269d268dd8
+      internalID: 2115731685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig lady animation_19
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 1890
+        width: 237
+        height: 378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d58469b7a2f5aa48be6d0ae607c712b
+      internalID: 589971817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig lady animation_20
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 1890
+        width: 237
+        height: 378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a16bb86d910a38478ed4bbd9f39775d
+      internalID: 60528090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig lady animation_21
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 1890
+        width: 237
+        height: 378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 244373031c09b6c43aa2373a5cfe04bf
+      internalID: 1000251657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig lady animation_22
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 1890
+        width: 237
+        height: 378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af0f022224c892144a1d5aa715f21095
+      internalID: -1732162347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig lady animation_23
+      rect:
+        serializedVersion: 2
+        x: 1185
+        y: 1890
+        width: 237
+        height: 378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a67636d87295b764e8103317fe21e11b
+      internalID: 1207052076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig lady animation_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1512
+        width: 237
+        height: 378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a2b8e9deb1a3624ab1558fed10aaaf4
+      internalID: -1418898881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig lady animation_25
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 1512
+        width: 237
+        height: 378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1921e3d3212f13499d1997456136248
+      internalID: 671546673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig lady animation_26
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 1512
+        width: 237
+        height: 378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02306d040a495e9429e1b5bee2d2951f
+      internalID: 962957636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig lady animation_27
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 1512
+        width: 237
+        height: 378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d6b35759a9ecbb408736a97a09c8ddb
+      internalID: -194741205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig lady animation_28
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 1512
+        width: 237
+        height: 378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b53b8f8606e25ab47b11031d090c427b
+      internalID: -867265308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig lady animation_29
+      rect:
+        serializedVersion: 2
+        x: 1185
+        y: 1512
+        width: 237
+        height: 378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ebb2f403800348479b1a425dc8a42f3
+      internalID: 1132331840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig lady animation_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1134
+        width: 237
+        height: 378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f44280ecb2441b94399b0be3f32e29c7
+      internalID: -1098367264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig lady animation_31
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 1134
+        width: 237
+        height: 378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9d7c5123dab98d4487c1a7d4121270e
+      internalID: 58035525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig lady animation_32
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 1134
+        width: 237
+        height: 378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 843ab2d2c16e2a64caac46295cc17810
+      internalID: -1213872339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig lady animation_33
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 1134
+        width: 237
+        height: 378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c051b0e8d901ee4eb2d2342e9108f06
+      internalID: -1943513084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig lady animation_34
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 1134
+        width: 237
+        height: 378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 371d098e6ad28444a914728c9178fa1f
+      internalID: 744854882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig lady animation_35
+      rect:
+        serializedVersion: 2
+        x: 1185
+        y: 1134
+        width: 237
+        height: 378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c1fdf4690f67084289def96320cace5
+      internalID: 2029031868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig lady animation_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 756
+        width: 237
+        height: 378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0933140c3f6d5e1419b51a128a093a95
+      internalID: 269529334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig lady animation_37
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 756
+        width: 237
+        height: 378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62a260da7064c2948baba6dbb5da8c2b
+      internalID: -1373875758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig lady animation_38
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 756
+        width: 237
+        height: 378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41e52d98202b802458c3c1e78f614491
+      internalID: 1375761463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig lady animation_39
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 756
+        width: 237
+        height: 378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2a7509a5376d8441b2d634252bb88d2
+      internalID: 498377335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig lady animation_40
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 756
+        width: 237
+        height: 378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d380c9832f7d0341a8ad75bc7887079
+      internalID: -85981569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig lady animation_41
+      rect:
+        serializedVersion: 2
+        x: 1185
+        y: 756
+        width: 237
+        height: 378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9302261b50d02394796100d75ad62b16
+      internalID: 453231150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig lady animation_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 378
+        width: 237
+        height: 378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9949b1b5c5214b94ab7862c7a40f5d21
+      internalID: -1180428615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig lady animation_43
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 378
+        width: 237
+        height: 378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fadb992a425eb942866bbf30705dde4
+      internalID: 1597079119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig lady animation_44
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 378
+        width: 237
+        height: 378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f0f071c105fefb4593edb98fda391e4
+      internalID: -932033551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig lady animation_45
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 378
+        width: 237
+        height: 378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 562de220194829346a8ded2279c42703
+      internalID: -44868791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig lady animation_46
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 378
+        width: 237
+        height: 378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35d964b9985f0b1439303e1f2264d190
+      internalID: -1433023085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig lady animation_47
+      rect:
+        serializedVersion: 2
+        x: 1185
+        y: 378
+        width: 237
+        height: 378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1864f14b666133947b7b2a85b1eedb44
+      internalID: -1572184989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig lady animation_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 237
+        height: 378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b90168e6fa4ba974ea53089939cf776c
+      internalID: -249036139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig lady animation_49
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 0
+        width: 237
+        height: 378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ace863a2054d2a4b99e9b1248c3ecb1
+      internalID: -455548829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Earwig lady animation_0: 605631470
+      Earwig lady animation_1: -1201115241
+      Earwig lady animation_10: -1594744467
+      Earwig lady animation_11: 1474035203
+      Earwig lady animation_12: 1445413237
+      Earwig lady animation_13: 850727055
+      Earwig lady animation_14: -502147263
+      Earwig lady animation_15: 241167772
+      Earwig lady animation_16: -883872311
+      Earwig lady animation_17: -1471395423
+      Earwig lady animation_18: 2115731685
+      Earwig lady animation_19: 589971817
+      Earwig lady animation_2: -1016348371
+      Earwig lady animation_20: 60528090
+      Earwig lady animation_21: 1000251657
+      Earwig lady animation_22: -1732162347
+      Earwig lady animation_23: 1207052076
+      Earwig lady animation_24: -1418898881
+      Earwig lady animation_25: 671546673
+      Earwig lady animation_26: 962957636
+      Earwig lady animation_27: -194741205
+      Earwig lady animation_28: -867265308
+      Earwig lady animation_29: 1132331840
+      Earwig lady animation_3: 1914623289
+      Earwig lady animation_30: -1098367264
+      Earwig lady animation_31: 58035525
+      Earwig lady animation_32: -1213872339
+      Earwig lady animation_33: -1943513084
+      Earwig lady animation_34: 744854882
+      Earwig lady animation_35: 2029031868
+      Earwig lady animation_36: 269529334
+      Earwig lady animation_37: -1373875758
+      Earwig lady animation_38: 1375761463
+      Earwig lady animation_39: 498377335
+      Earwig lady animation_4: -426374064
+      Earwig lady animation_40: -85981569
+      Earwig lady animation_41: 453231150
+      Earwig lady animation_42: -1180428615
+      Earwig lady animation_43: 1597079119
+      Earwig lady animation_44: -932033551
+      Earwig lady animation_45: -44868791
+      Earwig lady animation_46: -1433023085
+      Earwig lady animation_47: -1572184989
+      Earwig lady animation_48: -249036139
+      Earwig lady animation_49: -455548829
+      Earwig lady animation_5: -433928112
+      Earwig lady animation_50: -1184808925
+      Earwig lady animation_51: 441303501
+      Earwig lady animation_52: 1517674396
+      Earwig lady animation_53: 1210782059
+      Earwig lady animation_6: 1083723453
+      Earwig lady animation_7: 2003718145
+      Earwig lady animation_8: 1584693794
+      Earwig lady animation_9: -719062343
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

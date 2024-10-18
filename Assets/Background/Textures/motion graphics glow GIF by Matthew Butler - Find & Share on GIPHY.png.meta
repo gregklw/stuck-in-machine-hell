@@ -1,0 +1,1397 @@
+fileFormatVersion: 2
+guid: b8607ed156b76c34faac040984660dc5
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2529
+        width: 500
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28996ff48591c5840bdaa201f74525ee
+      internalID: -1540259299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_1
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 2529
+        width: 500
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 322fed066870b1640a5b57e4b922ad66
+      internalID: 928752658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_2
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 2529
+        width: 500
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3b072be1a841c64f9730a53688e4b89
+      internalID: -1418764712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_3
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 2529
+        width: 500
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2c7e69a82f735241baee9d7a0ebd8e5
+      internalID: 201694907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_4
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 2529
+        width: 500
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f4c8702254a97f429d5404a7bca0d20
+      internalID: -2118421134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_5
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 2529
+        width: 500
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e7ec675d71d06b45b35cde032845c34
+      internalID: -1263888804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2248
+        width: 500
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4887349982d3a374192e6fb9785ddb59
+      internalID: -2134273954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_7
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 2248
+        width: 500
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f828a5297ad84a40801a46b98f3025a
+      internalID: 679796780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_8
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 2248
+        width: 500
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c8264340a413b74f859577835d37d0e
+      internalID: 1343713354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_9
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 2248
+        width: 500
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ed86d8d58b11894db872ba3cd2f3e99
+      internalID: 1273183277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_10
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 2248
+        width: 500
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d669d4e83ccf2a9409e3bb57121715d0
+      internalID: -444341621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_11
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 2248
+        width: 500
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f0d6b942edcc4f4d81f1f9c3eec9375
+      internalID: 163252228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1967
+        width: 500
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df2d1e34e2410ca498ad2e77340efd49
+      internalID: -1874415783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_13
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1967
+        width: 500
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00bd67b863a8dbe41846c749489386ca
+      internalID: 214882359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_14
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1967
+        width: 500
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9b6119a167b5684ca1e43de2555f12d
+      internalID: 1065010646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_15
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 1967
+        width: 500
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 624b588b8bc6e9f48bf427a01331a711
+      internalID: -1782532193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_16
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 1967
+        width: 500
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10cda0d408bd01b4ca26ba08aebfb344
+      internalID: 321914283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_17
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 1967
+        width: 500
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 787275a09f816ba4790ee38b3579bd8f
+      internalID: -906082278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1686
+        width: 500
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29e8d6f25a94f564b880b687bb183f09
+      internalID: 1111961939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_19
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1686
+        width: 500
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ef9110671e1cb44ba1593b2da37afff
+      internalID: 834504599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_20
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1686
+        width: 500
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1aea9b1f5367d594aaf8424c24ced392
+      internalID: -896695640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_21
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 1686
+        width: 500
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42b38a717e149ed4782329b2251e35cc
+      internalID: -926235134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_22
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 1686
+        width: 500
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 602c134db25e71143a80180a7e59df0d
+      internalID: 1338632445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_23
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 1686
+        width: 500
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e709de63bb287743a732b30555b7680
+      internalID: 510046588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1405
+        width: 500
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1cf4e4b9177acf4eb9c07bf927669c6
+      internalID: -4589420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_25
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1405
+        width: 500
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7c2dcf218c5b10498bbeedc93420957
+      internalID: 1875092570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_26
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1405
+        width: 500
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f9ffbb590e8c7b439ed067c01bb7b97
+      internalID: -1522882459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_27
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 1405
+        width: 500
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 011c60eb577c1074591726c01175f914
+      internalID: -1192162059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_28
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 1405
+        width: 500
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd4b99ed779f4394ab0887556eed9079
+      internalID: 1910715578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_29
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 1405
+        width: 500
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 473fff41ae1c58b4aab988420e4f1122
+      internalID: 2026465932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1124
+        width: 500
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61683cd4db5183c418af68ec710b1330
+      internalID: -2023549031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_31
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1124
+        width: 500
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54c6cea4e1e502a44b94ad57332c6d29
+      internalID: 330132680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_32
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1124
+        width: 500
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07f692c479371b44fbd7a59969c3acd3
+      internalID: -1601853086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_33
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 1124
+        width: 500
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 699258cdd4126c247af318cde28fc134
+      internalID: -688864386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_34
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 1124
+        width: 500
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de3d468814306444fb41fd02805f4355
+      internalID: -619355101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_35
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 1124
+        width: 500
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7028d9ff2293f740a51946e6c1c01e8
+      internalID: -1192941862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 843
+        width: 500
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e00167d525376a34999ccd2b212bf6af
+      internalID: -1602527173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_37
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 843
+        width: 500
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b602f35372597544687e28603ca655d4
+      internalID: 2137149461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_38
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 843
+        width: 500
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1823da5b76c09ce4c8ba8191eb87c876
+      internalID: 1944110760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_39
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 843
+        width: 500
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd3086ecdf459874e8d4fb95f22365c8
+      internalID: -1107246376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_40
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 843
+        width: 500
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55c22cc74b19e5242a557c59d7157ad4
+      internalID: -1562005798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_41
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 843
+        width: 500
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecbb8a32d33e8694b85cd1f1b7eae526
+      internalID: -1015981681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 562
+        width: 500
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 675f042315e13e94b96483c7169f29ec
+      internalID: -2075823111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_43
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 562
+        width: 500
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 265b07525c55b9945ae983780b4b6b8c
+      internalID: 1743102638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_44
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 562
+        width: 500
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d765f723a62bca4eb791732b790e2ea
+      internalID: 1075975360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_45
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 562
+        width: 500
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a359ba563e349b438e62d31f29430c4
+      internalID: -369661107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_46
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 562
+        width: 500
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ad21bd2dbddc7941936a3b63f918be8
+      internalID: 1546951904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_47
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 562
+        width: 500
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbd3944dee0d32c4d8b07d921d1c0988
+      internalID: 1323905370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 281
+        width: 500
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b20653a978af23e4bbf89fa8a7ae02f9
+      internalID: -1044311827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_49
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 281
+        width: 500
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32ce4018fdb6f6444becf1429cde80d0
+      internalID: 81057109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_50
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 281
+        width: 500
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22518d3f138f41f4a9f0a6f103f2cf9d
+      internalID: -1604436831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_51
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 281
+        width: 500
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b48348360258e9146936141fe10c0650
+      internalID: -250809681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_52
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 281
+        width: 500
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26a117e401ade774d8f63703ebe5596a
+      internalID: -1299669859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_53
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 281
+        width: 500
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60ccca0fe70d76a4bbc04f8510895212
+      internalID: 838262222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 500
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6a6584635543ac4a9ff64bc08a6fd16
+      internalID: 1041242344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_55
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 0
+        width: 500
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5a3308d59409d74c9cbfbc5b4e11f83
+      internalID: 181885931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_56
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 0
+        width: 500
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c28be0cc3768f28439972ab2c936ab6b
+      internalID: -1949521332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_0: -1540259299
+      motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_1: 928752658
+      motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_10: -444341621
+      motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_11: 163252228
+      motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_12: -1874415783
+      motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_13: 214882359
+      motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_14: 1065010646
+      motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_15: -1782532193
+      motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_16: 321914283
+      motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_17: -906082278
+      motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_18: 1111961939
+      motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_19: 834504599
+      motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_2: -1418764712
+      motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_20: -896695640
+      motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_21: -926235134
+      motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_22: 1338632445
+      motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_23: 510046588
+      motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_24: -4589420
+      motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_25: 1875092570
+      motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_26: -1522882459
+      motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_27: -1192162059
+      motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_28: 1910715578
+      motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_29: 2026465932
+      motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_3: 201694907
+      motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_30: -2023549031
+      motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_31: 330132680
+      motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_32: -1601853086
+      motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_33: -688864386
+      motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_34: -619355101
+      motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_35: -1192941862
+      motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_36: -1602527173
+      motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_37: 2137149461
+      motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_38: 1944110760
+      motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_39: -1107246376
+      motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_4: -2118421134
+      motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_40: -1562005798
+      motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_41: -1015981681
+      motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_42: -2075823111
+      motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_43: 1743102638
+      motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_44: 1075975360
+      motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_45: -369661107
+      motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_46: 1546951904
+      motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_47: 1323905370
+      motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_48: -1044311827
+      motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_49: 81057109
+      motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_5: -1263888804
+      motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_50: -1604436831
+      motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_51: -250809681
+      motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_52: -1299669859
+      motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_53: 838262222
+      motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_54: 1041242344
+      motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_55: 181885931
+      motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_56: -1949521332
+      motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_57: -1540254169
+      motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_58: -733259216
+      motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_59: 681684536
+      motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_6: -2134273954
+      motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_7: 679796780
+      motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_8: 1343713354
+      motion graphics glow GIF by Matthew Butler - Find & Share on GIPHY_9: 1273183277
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,1329 @@
+fileFormatVersion: 2
+guid: f520541fb28aa434e9760abeec81e006
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1636
+        width: 163
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bff1f8fb4a219e043a9e54526280d551
+      internalID: 460353002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_1
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 1636
+        width: 163
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 815a2be3474d3f2468457406cf60077f
+      internalID: 465624174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_2
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 1636
+        width: 163
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ba7a4999711f65459c875e4d3741ddd
+      internalID: -2074216063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_3
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 1636
+        width: 163
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7937ac0c67568c84fa90084f8bef1585
+      internalID: 957812518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_4
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 1636
+        width: 163
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bc46b38b252f3c4bacf30486ba14343
+      internalID: -1824171398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1473
+        width: 163
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b422abbfae1e3c4fb95fdc8ee8bc87b
+      internalID: 986931474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_6
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 1473
+        width: 163
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4335606fb63a84546a1e33d37802ae55
+      internalID: -714882202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_7
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 1473
+        width: 163
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93bd825a26446f646a0411414334a944
+      internalID: 444263917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_8
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 1473
+        width: 163
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a9b0ac8fbe752044af889c292498c09
+      internalID: 1285824906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_9
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 1473
+        width: 163
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c38d5ef04590cd4c8cff5e2ffb85109
+      internalID: 2104900894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1310
+        width: 163
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 912e065d57df7324787f73328d1bcb83
+      internalID: 1461251923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_11
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 1310
+        width: 163
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2fa3da33b56fe64783017fb0ae983a1
+      internalID: 766721230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_12
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 1310
+        width: 163
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 638202787518be345874753a010e43b5
+      internalID: 1671540352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_13
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 1310
+        width: 163
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a90c6f0a9a834540868df3498cda37e
+      internalID: -494534330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_14
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 1310
+        width: 163
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 907cbf7db211cd24ab03c7cb58388d2c
+      internalID: -1471140791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1147
+        width: 163
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23e69ea5ea4d84546999fa59ba2d1ada
+      internalID: 1699518449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_16
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 1147
+        width: 163
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa3b009e7b9ca7b409adcdba35fc7a3d
+      internalID: 748957719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_17
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 1147
+        width: 163
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a83c2cefb38ebf14baf44ae220bf1b41
+      internalID: 308549236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_18
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 1147
+        width: 163
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0502b3c781ed4d7449c78ab21b9b9e85
+      internalID: 595124605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_19
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 1147
+        width: 163
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76b9f4c59fd1a914d89faccaa3172fc5
+      internalID: 892051537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 984
+        width: 163
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a7b61f6198961a44968ac16f78efc31
+      internalID: 135282914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_21
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 984
+        width: 163
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e12fcbb792110c148afa71af58ab9566
+      internalID: 1765225290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_22
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 984
+        width: 163
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a85336a92cf579a468161ef8446116d3
+      internalID: -255837494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_23
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 984
+        width: 163
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10ba973948a0a6645804ec057945aeb1
+      internalID: 312849447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_24
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 984
+        width: 163
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d33166caea780864683b9a82c050e7a4
+      internalID: 1611046117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 821
+        width: 163
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b21e024547a5c8749baf6529564c56e8
+      internalID: -1473993589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_26
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 821
+        width: 163
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e5374c22a8a2ac42a49a2ef917c3898
+      internalID: -1533347583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_27
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 821
+        width: 163
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f924e0e20ea94b4ba20989a9ff4d0f8
+      internalID: -238874276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_28
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 821
+        width: 163
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9b9a636cd5a2774bb49829b12cb199b
+      internalID: 1524165325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_29
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 821
+        width: 163
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c17075ad16675864cb471dd97a60d00e
+      internalID: -1083190858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 658
+        width: 163
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8765f866fa177284683e3ef05a0eabf7
+      internalID: 1570049740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_31
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 658
+        width: 163
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f3ca44754029944dab740a3bd5d32e1
+      internalID: 169989298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_32
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 658
+        width: 163
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4182e3809bb310547a72632b55f8fd2d
+      internalID: 1132850163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_33
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 658
+        width: 163
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfac413ebc176a547b40e456d25e9c33
+      internalID: 676607514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_34
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 658
+        width: 163
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a166764f830780c4d885785a619a91fb
+      internalID: -1416356427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 495
+        width: 163
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f77ef3c1ea8c5f4aa564685e216c76c
+      internalID: -1550529819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_36
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 495
+        width: 163
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef83a522316051c44a0fab2a508057b8
+      internalID: -579036716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_37
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 495
+        width: 163
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 413cb6b69c20b0b47b287c555eb04726
+      internalID: 412803875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_38
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 495
+        width: 163
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9993ef33c0eeb9418900d7664dd1370
+      internalID: -1790830693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_39
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 495
+        width: 163
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbb2b1fb3d9a63a41849949f3cc918b1
+      internalID: -172503191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 332
+        width: 163
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b43b6077d9a045c45aa6e8554fe5adb8
+      internalID: -768396873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_41
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 332
+        width: 163
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c1bf009093e01d4f8e4c796da25234a
+      internalID: 332823559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_42
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 332
+        width: 163
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 408a03695aea7074497c4935f3407dbc
+      internalID: 129009674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_43
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 332
+        width: 163
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8656f0460a813074fb62c80327ccefa6
+      internalID: 1200834553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_44
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 332
+        width: 163
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c90e1df96924da4ea27b467077d8945
+      internalID: -782748645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 169
+        width: 163
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02da784a84cdf4440a36dd03857c47ac
+      internalID: -1980688368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_46
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 169
+        width: 163
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce23c4bb38bf1714d82da810a68cdcd9
+      internalID: 329319692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_47
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 169
+        width: 163
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88d1ca53e9da48a468661f53c396d642
+      internalID: -1723515612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_48
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 169
+        width: 163
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ff594d4fc184c649ab24a082737df87
+      internalID: -185633103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_49
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 169
+        width: 163
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a81d1271eb8ea8140acb2de9c0f4a3c9
+      internalID: 860136752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6
+        width: 163
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26f686ebf6f0ac24ba0e31818ac261b1
+      internalID: 769725658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_51
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 6
+        width: 163
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2436ebfecf4934a448db98d31662bc89
+      internalID: -1930203261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_52
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 6
+        width: 163
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41981ddd3a3dd1242aea54e633962c37
+      internalID: 950945846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_53
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 6
+        width: 163
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09bdd49a4abcc354bb2c06fc1bc08e05
+      internalID: -982670750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_0: 460353002
+      explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_1: 465624174
+      explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_10: 1461251923
+      explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_11: 766721230
+      explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_12: 1671540352
+      explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_13: -494534330
+      explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_14: -1471140791
+      explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_15: 1699518449
+      explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_16: 748957719
+      explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_17: 308549236
+      explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_18: 595124605
+      explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_19: 892051537
+      explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_2: -2074216063
+      explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_20: 135282914
+      explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_21: 1765225290
+      explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_22: -255837494
+      explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_23: 312849447
+      explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_24: 1611046117
+      explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_25: -1473993589
+      explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_26: -1533347583
+      explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_27: -238874276
+      explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_28: 1524165325
+      explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_29: -1083190858
+      explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_3: 957812518
+      explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_30: 1570049740
+      explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_31: 169989298
+      explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_32: 1132850163
+      explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_33: 676607514
+      explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_34: -1416356427
+      explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_35: -1550529819
+      explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_36: -579036716
+      explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_37: 412803875
+      explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_38: -1790830693
+      explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_39: -172503191
+      explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_4: -1824171398
+      explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_40: -768396873
+      explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_41: 332823559
+      explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_42: 129009674
+      explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_43: 1200834553
+      explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_44: -782748645
+      explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_45: -1980688368
+      explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_46: 329319692
+      explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_47: -1723515612
+      explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_48: -185633103
+      explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_49: 860136752
+      explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_5: 986931474
+      explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_50: 769725658
+      explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_51: -1930203261
+      explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_52: 950945846
+      explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_53: -982670750
+      explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_54: -1774736432
+      explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_6: -714882202
+      explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_7: 444263917
+      explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_8: 1285824906
+      explosion_w_debris_special_effect_transparent_png_by_joesalotofthings_ded8t2g-414w-2x_9: 2104900894
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
