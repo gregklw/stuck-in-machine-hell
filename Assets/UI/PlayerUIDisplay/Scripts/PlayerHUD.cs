@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class PlayerHUD : MonoBehaviour
 {
-    [SerializeField] private AttributeBar _healthBar;
+    [SerializeField] private CanvasAttributeBar _healthBar;
     [SerializeField] private TMP_Text _scoreText;
 
     private BusEventBinding<PlayerHealthEventWrapper> _healthEventBinding;

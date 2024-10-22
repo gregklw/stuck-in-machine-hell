@@ -4,21 +4,10 @@ using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class AttributeBar : MonoBehaviour
+public class CanvasAttributeBar : MonoBehaviour, IAttributeBar
 {
     [SerializeField] private RectTransform _attributeBarRect, _attributeBarRectInner;
     private Vector2 _maxSizeDelta;
-    private Camera _mainCamera;
-    private Camera MainCamera
-    {
-        get
-        {
-            _mainCamera ??= GetComponent<Camera>();
-            return _mainCamera;
-        }
-    }
-
-    public Vector2 BarSize => _attributeBarRect.sizeDelta;
 
     public Vector2 BarPosition
     {
@@ -32,10 +21,12 @@ public class AttributeBar : MonoBehaviour
         _attributeBarRectInner.sizeDelta = _maxSizeDelta;
     }
 
-    public void RealignBar()
+    public void CenterBarPosX()
     {
         Vector3[] arrayCorners = new Vector3[4];
         _attributeBarRect.GetWorldCorners(arrayCorners);
+        //if this gets the world corners of rect then how does this scale depending on the image?
+
         Vector3 dir = arrayCorners[2] - arrayCorners[1];
         _attributeBarRect.position -= dir / 2;
         _maxSizeDelta = _attributeBarRect.sizeDelta;

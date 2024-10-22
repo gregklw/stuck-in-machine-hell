@@ -2,17 +2,19 @@ using UnityEngine;
 
 public class EnemyHUD : MonoBehaviour
 {
-    [SerializeField] private AttributeBar _healthBar;
     [SerializeField] private Enemy _enemy;
-    private const float BarWidthMultiplier = 1.5f;
+    //private const float BarWidthMultiplier = 1.5f;
+    private IAttributeBar _healthBar;
 
     private void Start()
     {
+        _healthBar = GetComponentInChildren<IAttributeBar>();
         BoxCollider2D boxCollider = GetComponent<BoxCollider2D>();
-        _healthBar.SetBarDisplayWidth((boxCollider.bounds.size.x * BarWidthMultiplier));
+        Debug.Log(boxCollider.bounds.size.x);
+        _healthBar.SetBarDisplayWidth((boxCollider.bounds.size.x));
         _healthBar.BarPosition = transform.position;
         _healthBar.BarPosition -= (Vector2)(transform.up * boxCollider.bounds.size.y);
-        _healthBar.RealignBar();
+        _healthBar.CenterBarPosX();
     }
 
     private void OnEnable()
