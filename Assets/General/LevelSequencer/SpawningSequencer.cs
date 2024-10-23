@@ -14,7 +14,7 @@ public class SpawningSequencer : MonoBehaviour
 
         foreach (var spawner in _spawners)
         {
-            Debug.Log("RUN");
+            //Debug.Log("RUN");
             yield return spawner.SpawnGameObjectsPerRoutine();
         }
     }

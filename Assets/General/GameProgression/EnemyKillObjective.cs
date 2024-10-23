@@ -40,6 +40,6 @@ public class EnemyKillObjective : MonoBehaviour, IObjective
             EventBus<ObjectiveCompleteEventWrapper>.Raise(new ObjectiveCompleteEventWrapper());
             //EventBus<EnemyDeathEventWrapper>.Deregister(_killEvent);
         }
-        Debug.Log($"Enemies remaining: {_totalEnemiesRemaining} | Kill objective complete: {_isComplete}");
+        //Debug.Log($"Enemies remaining: {_totalEnemiesRemaining} | Kill objective complete: {_isComplete}");
     }
 }

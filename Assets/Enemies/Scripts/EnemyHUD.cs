@@ -10,7 +10,6 @@ public class EnemyHUD : MonoBehaviour
     {
         _healthBar = GetComponentInChildren<IAttributeBar>();
         BoxCollider2D boxCollider = GetComponent<BoxCollider2D>();
-        Debug.Log(boxCollider.bounds.size.x);
         _healthBar.SetBarDisplayWidth((boxCollider.bounds.size.x));
         _healthBar.BarPosition = transform.position;
         _healthBar.BarPosition -= (Vector2)(transform.up * boxCollider.bounds.size.y);

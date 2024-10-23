@@ -43,7 +43,7 @@ public class WeaponManager : MonoBehaviour
         Weapon weaponPrefab = playerWeaponChangeEvent.WeaponPrefab;
         foreach (var collectedWeapon in _weaponCollection)
         {
-            Debug.Log(collectedWeapon.GetType());
+            //Debug.Log(collectedWeapon.GetType());
             if (collectedWeapon.GetType() == weaponPrefab.GetType())
             {
                 //consider destroying weapon argument or prevent instantiation

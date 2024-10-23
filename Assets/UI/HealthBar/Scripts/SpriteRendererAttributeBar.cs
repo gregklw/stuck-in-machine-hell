@@ -48,7 +48,7 @@ public class SpriteRendererAttributeBar : MonoBehaviour, IAttributeBar
     private void CreatePivotForHealthBar()
     {
         Vector2 boundsDiff = _attributeBarInnerRenderer.bounds.max - _attributeBarInnerRenderer.bounds.min;
-        Debug.Log($"{boundsDiff.x}/{_attributeBarInnerRenderer.bounds.min}/{_attributeBarInnerRenderer.bounds.max}");
+        //Debug.Log($"{boundsDiff.x}/{_attributeBarInnerRenderer.bounds.min}/{_attributeBarInnerRenderer.bounds.max}");
 
         _pivot = _pivot ? _pivot : new GameObject().transform;
         _attributeBarInnerRenderer.transform.SetParent(_pivot.transform, false);

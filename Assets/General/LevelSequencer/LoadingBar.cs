@@ -80,7 +80,7 @@ public class LoadingBar : MonoBehaviour
 
     public bool CheckIfScenesFullyProcessed()
     {
-        Debug.Log(_scenesToProcess.Count);
+        //Debug.Log(_scenesToProcess.Count);
 
         bool assertTrue = true;
         for (int i = 0; i < _scenesToProcess.Count; i++)
