@@ -14,7 +14,7 @@ public abstract class Projectile : MonoBehaviour, IDamagingEntity
     public float Damage { get; set; }
     [SerializeField] private string[] _collisionTagsForHit;
     [SerializeField] private ProjectileType _projectileType;
-    [SerializeField] private ExplosionOnDestroy _explosionOnDestroyPrefab;
+    [SerializeField] private ExplosionVisuals _explosionVisuals;
 
     public void Init(Vector3 startDir, float damage)
     {
@@ -57,9 +57,15 @@ public abstract class Projectile : MonoBehaviour, IDamagingEntity
 
     private void DestroyProjectile()
     {
-        ExplosionOnDestroy explosionOnDestroy = Instantiate(_explosionOnDestroyPrefab, transform.position, Quaternion.identity);
+        ExplosionOnDestroy explosionOnDestroy = ExplosionObjectPool.Instance.GetNewExplosion(_explosionVisuals);
+        explosionOnDestroy.transform.position = transform.position;
         explosionOnDestroy.InitSize(GetComponent<SpriteRenderer>());
         Destroy(gameObject);
+    }
+
+    private void ExplosionOnDestroy()
+    { 
+    
     }
 
     private bool CompareTags(Collider2D collision)

@@ -1,8 +1,23 @@
-using Unity.VisualScripting;
+using System;
 using UnityEngine;
 
 public class ExplosionOnDestroy : MonoBehaviour
 {
+    private SpriteRenderer _explosionRenderer;
+    private Animator _explosionAnimator;
+    private ExplosionObjectPool _explosionObjectPool;
+
+    private void Awake()
+    {
+        _explosionRenderer = GetComponent<SpriteRenderer>();
+        _explosionAnimator = GetComponent<Animator>();
+    }
+
+    public void SetExplosionVisuals(ExplosionVisuals explosionVisuals)
+    {
+        _explosionRenderer.sprite = explosionVisuals.ExplosionSprite;
+        _explosionAnimator.runtimeAnimatorController = explosionVisuals.ExplosionAnimationController;
+    }
 
     public void InitSize(SpriteRenderer destroyedObjectRenderer)
     {
@@ -18,7 +33,8 @@ public class ExplosionOnDestroy : MonoBehaviour
 
     public void DestroyObject()
     {
-        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
-        Destroy(gameObject);
+        _explosionRenderer.sprite = null;
+        _explosionAnimator.runtimeAnimatorController = null;
+        ExplosionObjectPool.Instance.AddUnusedExplosion(this);
     }
 }

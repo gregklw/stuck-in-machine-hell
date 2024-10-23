@@ -100,9 +100,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e19d32e9ab5a4a840b6780061574c1e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentHealth: 400
-  _maxHealth: 400
-  _destroyedAnimationPrefab: {fileID: 0}
+  _currentHealth: 200
+  _maxHealth: 200
+  _destroyedAnimationPrefab: {fileID: 219534951325564701, guid: c542d20c4b9ca274990250a870f17102, type: 3}
   _armorType: 0
   _currentWeapon: {fileID: 0}
   _baseAttackSpeed: 480

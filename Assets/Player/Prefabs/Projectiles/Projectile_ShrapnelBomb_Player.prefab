@@ -151,7 +151,7 @@ MonoBehaviour:
   _collisionTagsForHit:
   - Enemy
   _projectileType: 2
-  _explosionOnDestroyPrefab: {fileID: 219534951325564701, guid: c542d20c4b9ca274990250a870f17102, type: 3}
+  _explosionVisuals: {fileID: 11400000, guid: 0f43db4ac49fad34e899bc6f8d51aac7, type: 2}
   _shrapnelDamage: 6
   _numberOfShrapnel: 16
   _shrapnelPrefab: {fileID: 725052309357314102, guid: 1f48a845e66a5394394f6a8427f9e606, type: 3}

@@ -142,4 +142,4 @@ MonoBehaviour:
   _collisionTagsForHit:
   - Player
   _projectileType: 0
-  _explosionOnDestroyPrefab: {fileID: 219534951325564701, guid: 8fbeb94de7a380d4a81e275ea5ddf178, type: 3}
+  _explosionVisuals: {fileID: 11400000, guid: 0f6ffc9d38dabc244b9cc7070bbccfb0, type: 2}

@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32dbb1894c444d64db91a0e410e318dc, type: 3}
+  m_Name: ExplosionVisuals_L01W2
+  m_EditorClassIdentifier: 
+  ExplosionSprite: {fileID: -1460533542, guid: e6b00a343f7292f4ca23fbb63891e66a, type: 3}
+  ExplosionAnimationController: {fileID: 22100000, guid: 989b0c2fb981ac3449d9509165f4e82a, type: 2}

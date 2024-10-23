@@ -36,7 +36,7 @@ public class SpriteRendererAttributeBar : MonoBehaviour, IAttributeBar
     public void SetBarAmount(float percentage)
     {
         percentage = Mathf.Clamp01(percentage);
-        _pivot.localScale = new Vector2(percentage * _maxSize.x, _pivot.localScale.y);
+        _pivot.localScale = new Vector2(percentage, _pivot.localScale.y);
     }
 
     public void SetBarDisplayWidth(float width)
@@ -51,9 +51,7 @@ public class SpriteRendererAttributeBar : MonoBehaviour, IAttributeBar
         Debug.Log($"{boundsDiff.x}/{_attributeBarInnerRenderer.bounds.min}/{_attributeBarInnerRenderer.bounds.max}");
 
         _pivot = _pivot ? _pivot : new GameObject().transform;
-        //pivot.transform.localPosition = new Vector3(boundsDiff.x,0);
         _attributeBarInnerRenderer.transform.SetParent(_pivot.transform, false);
-
 
         _pivot.transform.SetParent(_attributeBarRenderer.transform, false);
         _pivot.transform.localPosition = Vector2.zero;
