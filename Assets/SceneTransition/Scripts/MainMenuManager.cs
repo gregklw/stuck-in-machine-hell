@@ -33,7 +33,7 @@ public class MainMenuManager : MonoBehaviour
         SceneManager.SetActiveScene(SceneManager.GetSceneByName(_persistentGameplay));
         AsyncOperation menuUnloadAsync = SceneManager.UnloadSceneAsync(menuScene);
         loadingbar.RegisterSceneOperation(menuUnloadAsync);
-        Debug.Log(SceneManager.GetActiveScene().name);
+        //Debug.Log(SceneManager.GetActiveScene().name);
         StartCoroutine(levelManager.StartPlaythroughAtSelectedLevel());
     }
 }
