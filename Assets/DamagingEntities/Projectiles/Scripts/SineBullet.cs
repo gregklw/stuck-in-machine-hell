@@ -33,6 +33,7 @@ public class SineBullet : Projectile
 
     public override void OnHitCollision(Collider2D collision)
     {
-        Destroy(gameObject);
+        //Destroy(gameObject);
+        RemoveAndCacheProjectile();
     }
 }

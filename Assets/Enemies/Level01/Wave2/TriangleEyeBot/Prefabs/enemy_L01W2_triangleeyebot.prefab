@@ -59,11 +59,11 @@ PrefabInstance:
     - target: {fileID: 3888091203753222411, guid: 2f8de9c3323d97c42b4ea1bc310369d0, type: 3}
       propertyPath: _attributeBarRect
       value: 
-      objectReference: {fileID: 7616467505352543748}
+      objectReference: {fileID: 0}
     - target: {fileID: 3888091203753222411, guid: 2f8de9c3323d97c42b4ea1bc310369d0, type: 3}
       propertyPath: _attributeBarRectInner
       value: 
-      objectReference: {fileID: 8311298437709868377}
+      objectReference: {fileID: 0}
     - target: {fileID: 3900277760571333906, guid: 2f8de9c3323d97c42b4ea1bc310369d0, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.2
@@ -203,14 +203,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _damage: 4
   _attackSpeedFactor: 1
+  _projectileData: {fileID: 11400000, guid: b09fa6cf3b0d5f84dba3e661028d46df, type: 2}
   _projectile: {fileID: 2826380532765346948, guid: 0384e61602f8494459c85a07bcedde36, type: 3}
---- !u!224 &7616467505352543748 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 876017256810518141, guid: 2f8de9c3323d97c42b4ea1bc310369d0, type: 3}
-  m_PrefabInstance: {fileID: 7321478443014920313}
-  m_PrefabAsset: {fileID: 0}
---- !u!224 &8311298437709868377 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 1642886145608070432, guid: 2f8de9c3323d97c42b4ea1bc310369d0, type: 3}
-  m_PrefabInstance: {fileID: 7321478443014920313}
-  m_PrefabAsset: {fileID: 0}

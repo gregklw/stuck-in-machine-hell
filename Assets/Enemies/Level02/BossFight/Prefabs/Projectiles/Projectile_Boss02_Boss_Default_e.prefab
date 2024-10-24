@@ -130,4 +130,4 @@ MonoBehaviour:
   _collisionTagsForHit:
   - Player
   _projectileType: 0
-  _explosionVisuals: {fileID: 11400000, guid: d13915ea32f7a1c49839d78ccbcc5d65, type: 2}
+  _projectileData: {fileID: 11400000, guid: b7316a0e8b6b6f044963ebe09daebdec, type: 2}

@@ -21,10 +21,15 @@ public class ShrapnelBomb : Projectile
         for (int i = 0; i < _numberOfShrapnel; i++)
         {
             angle += (360 / (float) _numberOfShrapnel) * i;
-            Projectile shrapnel = Instantiate(_shrapnelPrefab, transform.position, Quaternion.identity);
-            shrapnel.Damage = _shrapnelDamage;
-            shrapnel.transform.up = CommonCalculations.RotateTowardsUp(Vector3.up, angle);
+
+            GameObject projBase = ProjectilePool.Instance.GetNewProjectile();
+            projBase.transform.position = transform.position;
+            Projectile proj = projBase.AddComponent<DefaultBullet>();
+            proj.Init(CommonCalculations.RotateTowardsUp(Vector3.up, angle), Damage, ProjectileData);
+            proj.Damage = _shrapnelDamage;
         }
-        Destroy(gameObject);
+        //ProjectilePool.Instance.AddUnusedProjectile(gameObject);
+        //Destroy(this);
+        RemoveAndCacheProjectile();
     }
 }

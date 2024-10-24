@@ -13,7 +13,7 @@ public class ExplosionOnDestroy : MonoBehaviour
         _explosionAnimator = GetComponent<Animator>();
     }
 
-    public void SetExplosionVisuals(ExplosionVisuals explosionVisuals)
+    public void SetExplosionVisuals(ProjectileData explosionVisuals)
     {
         _explosionRenderer.sprite = explosionVisuals.ExplosionSprite;
         _explosionAnimator.runtimeAnimatorController = explosionVisuals.ExplosionAnimationController;

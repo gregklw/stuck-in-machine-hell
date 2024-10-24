@@ -183,5 +183,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _damage: 5
   _attackSpeedFactor: 0
-  projectilePrefab: {fileID: 2826380532765346948, guid: 3a267518f2ac03643be308484dfb5303, type: 3}
+  _projectileData: {fileID: 11400000, guid: 13b6e057813c3fd45a4540243ca2b1be, type: 2}
   _numberOfShrapnel: 16

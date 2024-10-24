@@ -11,10 +11,12 @@ public abstract class Weapon : MonoBehaviour
     public float AttackSpeedFactor => _attackSpeedFactor;
 
     public abstract void Fire(Vector3 spawnPos, Vector3 facingDirection);
-    protected Projectile InstantiateProjectile(Projectile projectilePrefab, Vector3 spawnPos, Vector3 facingDirection)
+    protected Projectile CreateProjectile(Vector3 spawnPos, Vector3 facingDirection, ProjectileData projectileData)
     {
-        Projectile proj = MonoBehaviour.Instantiate(projectilePrefab, spawnPos, Quaternion.identity);
-        proj.Init(facingDirection, Damage);
+        GameObject projBase = ProjectilePool.Instance.GetNewProjectile();
+        projBase.transform.position = spawnPos;
+        Projectile proj = projBase.AddComponent<DefaultBullet>();
+        proj.Init(facingDirection, Damage, projectileData);
         return proj;
     }
 }

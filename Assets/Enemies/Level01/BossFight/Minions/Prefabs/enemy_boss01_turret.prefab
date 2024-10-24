@@ -204,4 +204,5 @@ MonoBehaviour:
   _damage: 1
   _attackSpeedFactor: 1
   _offset: {x: 0.12, y: 0.03}
-  _projectile: {fileID: 5764622753861403568, guid: ae0875664fe161449ac9f9df6920d977, type: 3}
+  projectileData1: {fileID: 11400000, guid: b83e8e916bf00054ab4a561d7d6c3201, type: 2}
+  projectileData2: {fileID: 11400000, guid: b83e8e916bf00054ab4a561d7d6c3201, type: 2}

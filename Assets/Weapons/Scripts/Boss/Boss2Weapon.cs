@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Boss2Weapon : Weapon
 {
-    [SerializeField] private Projectile[] projectilePrefabs;
+    [SerializeField] private ProjectileData[] bossProjectileData;
     private int _projectilePrefabSelectionCount;
     private int _angleOffset;
     private const int RotateOffsetAmount = 20;
@@ -13,23 +13,22 @@ public class Boss2Weapon : Weapon
     public override void Fire(Vector3 spawnPos, Vector3 facingDirection)
     {
         if (_angleOffset % FullRotationValue == 0) _angleOffset = 0;
-        if (_projectilePrefabSelectionCount % projectilePrefabs.Length == 0) _projectilePrefabSelectionCount = 0;
+        if (_projectilePrefabSelectionCount % bossProjectileData.Length == 0) _projectilePrefabSelectionCount = 0;
 
         float angle = _angleOffset;
 
-        if (_projectilePrefabSelectionCount % projectilePrefabs.Length == 0) _projectilePrefabSelectionCount = 0;
-        InstantiateProjectile(projectilePrefabs[_projectilePrefabSelectionCount++], transform.position, CommonCalculations.RotateTowardsUp(Vector3.up, angle));
+        if (_projectilePrefabSelectionCount % bossProjectileData.Length == 0) _projectilePrefabSelectionCount = 0;
+        CreateProjectile(transform.position, CommonCalculations.RotateTowardsUp(Vector3.up, angle), bossProjectileData[_projectilePrefabSelectionCount++]);
 
-        if (_projectilePrefabSelectionCount % projectilePrefabs.Length == 0) _projectilePrefabSelectionCount = 0;
-        InstantiateProjectile(projectilePrefabs[_projectilePrefabSelectionCount++], transform.position, CommonCalculations.RotateTowardsUp(Vector3.up, angle += 90));
+        if (_projectilePrefabSelectionCount % bossProjectileData.Length == 0) _projectilePrefabSelectionCount = 0;
+        CreateProjectile(transform.position, CommonCalculations.RotateTowardsUp(Vector3.up, angle += 90), bossProjectileData[_projectilePrefabSelectionCount++]);
 
-        if (_projectilePrefabSelectionCount % projectilePrefabs.Length == 0) _projectilePrefabSelectionCount = 0;
-        InstantiateProjectile(projectilePrefabs[_projectilePrefabSelectionCount++], transform.position, CommonCalculations.RotateTowardsUp(Vector3.up, angle += 90));
+        if (_projectilePrefabSelectionCount % bossProjectileData.Length == 0) _projectilePrefabSelectionCount = 0;
+        CreateProjectile(transform.position, CommonCalculations.RotateTowardsUp(Vector3.up, angle += 90), bossProjectileData[_projectilePrefabSelectionCount++]);
 
-        if (_projectilePrefabSelectionCount % projectilePrefabs.Length == 0) _projectilePrefabSelectionCount = 0;
-        InstantiateProjectile(projectilePrefabs[_projectilePrefabSelectionCount++], transform.position, CommonCalculations.RotateTowardsUp(Vector3.up, angle += 90));
+        if (_projectilePrefabSelectionCount % bossProjectileData.Length == 0) _projectilePrefabSelectionCount = 0;
+        CreateProjectile(transform.position, CommonCalculations.RotateTowardsUp(Vector3.up, angle += 90), bossProjectileData[_projectilePrefabSelectionCount++]);
 
         _angleOffset += RotateOffsetAmount;
     }
-
 }

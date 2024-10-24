@@ -11,6 +11,6 @@ public class PiercingBullet : Projectile
 
     public override void OnHitCollision(Collider2D collision)
     {
-        
+        RemoveAndCacheProjectile();
     }
 }

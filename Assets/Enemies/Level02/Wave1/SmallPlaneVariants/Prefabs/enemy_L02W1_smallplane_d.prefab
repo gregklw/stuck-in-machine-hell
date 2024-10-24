@@ -179,4 +179,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _damage: 1
   _attackSpeedFactor: 1
-  _projectile: {fileID: -4203186003403191468, guid: b94c19039c0e98d459966c89031bd2de, type: 3}
+  _projectileData: {fileID: 11400000, guid: 1cc8d5dc8817770489197dcf7c7f309c, type: 2}

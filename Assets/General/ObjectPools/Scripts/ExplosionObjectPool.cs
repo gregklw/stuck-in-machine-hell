@@ -11,7 +11,7 @@ public class ExplosionObjectPool : SimpleObjectPool<ExplosionOnDestroy>
     }
 
     [SerializeField] private ExplosionOnDestroy _explosionPrefab;
-    public ExplosionOnDestroy GetNewExplosion(ExplosionVisuals explosionVisuals)
+    public ExplosionOnDestroy GetNewExplosion(ProjectileData explosionVisuals)
     {
         ExplosionOnDestroy explosion = GetObjectFromPool();
         explosion.SetExplosionVisuals(explosionVisuals);

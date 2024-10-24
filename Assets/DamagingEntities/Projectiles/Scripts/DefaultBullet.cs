@@ -11,6 +11,6 @@ public class DefaultBullet : Projectile
 
     public override void OnHitCollision(Collider2D collision)
     {
-        Destroy(gameObject);
+        RemoveAndCacheProjectile();
     }
 }

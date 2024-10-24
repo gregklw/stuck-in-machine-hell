@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CircularRotateFireWeapon : Weapon
 {
-    [SerializeField] private Projectile projectilePrefab;
+    [SerializeField] private ProjectileData _projectileData;
 
     private int _angleOffset;
     private const int RotateOffsetAmount = 20;
@@ -14,7 +14,7 @@ public class CircularRotateFireWeapon : Weapon
     {
         if (_angleOffset % FullRotationValue == 0) _angleOffset = 0;
         float angle = _angleOffset;
-        Projectile shrapnel = InstantiateProjectile(projectilePrefab, transform.position, CommonCalculations.RotateTowardsUp(Vector3.up, angle));
+        Projectile shrapnel = CreateProjectile(transform.position, CommonCalculations.RotateTowardsUp(Vector3.up, angle), _projectileData);
         _angleOffset += RotateOffsetAmount;
     }
 }

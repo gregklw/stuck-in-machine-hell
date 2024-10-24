@@ -87,7 +87,7 @@ PrefabInstance:
     - target: {fileID: 4408266080736312895, guid: 2f8de9c3323d97c42b4ea1bc310369d0, type: 3}
       propertyPath: _healthBarRect
       value: 
-      objectReference: {fileID: 4395945972556751498}
+      objectReference: {fileID: 0}
     - target: {fileID: 4408266080736312895, guid: 2f8de9c3323d97c42b4ea1bc310369d0, type: 3}
       propertyPath: ProjectilePrefab
       value: 
@@ -199,11 +199,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 4912407376490468508}
   m_SourcePrefab: {fileID: 100100000, guid: 2f8de9c3323d97c42b4ea1bc310369d0, type: 3}
---- !u!224 &4395945972556751498 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 1642886145608070432, guid: 2f8de9c3323d97c42b4ea1bc310369d0, type: 3}
-  m_PrefabInstance: {fileID: 3156246726984914858}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6049670566691325283 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8663099390332310217, guid: 2f8de9c3323d97c42b4ea1bc310369d0, type: 3}
@@ -249,4 +244,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _damage: 4
   _attackSpeedFactor: 0.2
+  _projectileData: {fileID: 11400000, guid: 670f4738ef095834a844d68611a4bdc7, type: 2}
   _projectile: {fileID: 4834505046557526912, guid: 5a8405b54268f374c85e72d3be3911a0, type: 3}

@@ -191,7 +191,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _damage: 60
   _attackSpeedFactor: 1
-  projectilePrefab: {fileID: 4171843586196148198, guid: c76e44b57963cf34a97ce41cc4380bac, type: 3}
+  _projectileData: {fileID: 11400000, guid: cb92a253185f43241a61ed4bcf84655d, type: 2}
   _numberOfShrapnel: 16
 --- !u!114 &2323890737678531264 stripped
 MonoBehaviour:

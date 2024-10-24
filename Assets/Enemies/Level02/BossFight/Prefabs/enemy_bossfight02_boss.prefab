@@ -167,14 +167,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _damage: 5
   _attackSpeedFactor: 1
-  projectilePrefabs:
-  - {fileID: -7737871139423840434, guid: 875952ebeda3cfa48a81b9ba1a99913d, type: 3}
-  - {fileID: -7737871139423840434, guid: 640ff49f2f526294090cf637791b9009, type: 3}
-  - {fileID: -7737871139423840434, guid: db7413122b01f3b4f8fb63588cb06072, type: 3}
-  - {fileID: -7737871139423840434, guid: 9e698a7d5369fa8408b6d375acf97546, type: 3}
-  - {fileID: -7737871139423840434, guid: 1914afe8d8628034c85286022c7f3589, type: 3}
-  - {fileID: -7737871139423840434, guid: b0e6a8a4345f2df4094a79b7334f4011, type: 3}
-  - {fileID: -7737871139423840434, guid: 44fd23c4ec9ea2d4cafdec8d849703f2, type: 3}
-  - {fileID: -7737871139423840434, guid: b3532bf115ca13e4591da4d7ee9ee284, type: 3}
-  - {fileID: -7737871139423840434, guid: 91857b8a437cda944a3aea8e99b44432, type: 3}
-  - {fileID: -7737871139423840434, guid: a7f743a606932c4459ffe5c04420edda, type: 3}
+  bossProjectileData:
+  - {fileID: 11400000, guid: 9c8063e63f5e5f448aa90b2fd3982cb9, type: 2}
+  - {fileID: 11400000, guid: 9602cc2005dad1c448d34b8d8563caea, type: 2}
+  - {fileID: 11400000, guid: d0f8b7477b830584aa4e35d59464cb88, type: 2}
+  - {fileID: 11400000, guid: f9f8a163791347a4c9fc2efae75f75ab, type: 2}
+  - {fileID: 11400000, guid: b7316a0e8b6b6f044963ebe09daebdec, type: 2}
+  - {fileID: 11400000, guid: 2137463879b4e8246a80d04ede99c1f0, type: 2}
+  - {fileID: 11400000, guid: 6e80c0b99e54ece43978fa2f429b68b9, type: 2}
+  - {fileID: 11400000, guid: 03ff13ea2da8d5c498896ba9861718d8, type: 2}
+  - {fileID: 11400000, guid: 590e9c830da86a243a7412f013fdf641, type: 2}
+  - {fileID: 11400000, guid: cf353e025e1f2e0468e68ba9b31b2c24, type: 2}

@@ -175,4 +175,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _damage: 5
   _attackSpeedFactor: 1
-  projectilePrefab: {fileID: 5920996532799554359, guid: 7f111a55b95f4a947a0109430fadf0e5, type: 3}
+  _projectileData: {fileID: 11400000, guid: 03b54dce69bb7694c855e9afd70a1221, type: 2}
