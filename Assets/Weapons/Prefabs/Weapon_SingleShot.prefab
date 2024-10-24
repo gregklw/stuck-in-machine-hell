@@ -44,6 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bc54300267821c4da97ae4b6b8f5acb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 40
+  _damage: 0
   _attackSpeedFactor: 1
   _projectile: {fileID: 725052309357314102, guid: 1f48a845e66a5394394f6a8427f9e606, type: 3}
