@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DestroyOnEnd : StateMachineBehaviour
+public class ExplosionRemoveOnEnd : StateMachineBehaviour
 {
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     //override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -19,7 +19,8 @@ public class DestroyOnEnd : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        Destroy(animator.gameObject);
+        ExplosionOnDestroy explosionOnDestroy = animator.GetComponent<ExplosionOnDestroy>();
+        if (explosionOnDestroy) ExplosionObjectPool.Instance.AddUnusedExplosion(explosionOnDestroy);
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

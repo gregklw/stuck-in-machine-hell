@@ -2,19 +2,17 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(SpriteRenderer), typeof(BoxCollider2D))]
 public abstract class Projectile : MonoBehaviour, IDamagingEntity
 {
-    [Range(0.0f, 5.0f)][SerializeField] private float _projectileSpeed;
+    private float _projectileSpeed;
     public float ProjectileSpeed => _projectileSpeed;
 
-    [Range(0.0f, 20.0f)][SerializeField] private float _projectileLifeTime;
+    private float _projectileLifeTime;
     private float _lifeTimer;
 
-    private Vector3 _startDirection;
     public float Damage { get; set; }
-    [SerializeField] private string[] _collisionTagsForHit;
-    [SerializeField] private ProjectileType _projectileType;
+    private string[] _collisionTagsForHit;
+    private ProjectileType _projectileType;
     [SerializeField] private ProjectileData _projectileData;
 
     public ProjectileData ProjectileData => _projectileData;
@@ -24,18 +22,19 @@ public abstract class Projectile : MonoBehaviour, IDamagingEntity
 
     public void Init(Vector3 startDir, float damage, ProjectileData projectileData)
     {
-        _spriteRenderer ??= GetComponent<SpriteRenderer>();
+        _spriteRenderer ??= GetComponentInChildren<SpriteRenderer>();
         _boxCollder ??= GetComponent<BoxCollider2D>();
 
         _spriteRenderer.sprite = projectileData.ProjectileSprite;
-        _boxCollder.size = _spriteRenderer.bounds.size;
-        _startDirection = startDir;
-        transform.up = _startDirection;
+
+        SetUnitSizeForSprite(_spriteRenderer);
+        transform.up = startDir;
         Damage = damage;
         _projectileData = projectileData;
         _projectileSpeed = _projectileData.ProjectileSpeed;
         _projectileLifeTime = _projectileData.ProjectileLifeTime;
         _collisionTagsForHit = _projectileData.CollisionTagsForHit;
+        _projectileType = _projectileData.ProjectileType;
         
     }
 
@@ -75,8 +74,8 @@ public abstract class Projectile : MonoBehaviour, IDamagingEntity
     {
         ExplosionOnDestroy explosionOnDestroy = ExplosionObjectPool.Instance.GetNewExplosion(_projectileData);
         explosionOnDestroy.transform.position = transform.position;
-        explosionOnDestroy.InitSize(GetComponent<SpriteRenderer>());
-        ProjectilePool.Instance.AddUnusedProjectile(gameObject);
+        explosionOnDestroy.InitSize(_boxCollder.bounds.size);
+        ProjectilePool.Instance.CacheUnusedProjectile(gameObject);
         Destroy(this);
     }
 
@@ -87,5 +86,13 @@ public abstract class Projectile : MonoBehaviour, IDamagingEntity
             if (collision.CompareTag(tag)) return true;
         }
         return false;
+    }
+
+    private void SetUnitSizeForSprite(SpriteRenderer renderer)
+    {
+        Transform rendererT = renderer.transform;
+        Sprite rendererSprite = renderer.sprite;
+        rendererT.localScale = Vector3.one;
+        rendererT.localScale = (rendererT.localScale / rendererSprite.rect.size) * rendererSprite.pixelsPerUnit * _boxCollder.size;
     }
 }

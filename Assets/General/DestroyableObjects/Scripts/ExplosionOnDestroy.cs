@@ -19,15 +19,15 @@ public class ExplosionOnDestroy : MonoBehaviour
         _explosionAnimator.runtimeAnimatorController = explosionVisuals.ExplosionAnimationController;
     }
 
-    public void InitSize(SpriteRenderer destroyedObjectRenderer)
+    public void InitSize(Vector3 targetSize)
     {
-        Vector3 explosionRendererSize = GetComponent<SpriteRenderer>().bounds.size;
-        Vector3 destroyedRendererSize = destroyedObjectRenderer.bounds.size;
-        float xAspectRatio = destroyedRendererSize.x / explosionRendererSize.x;
-        float yAspectRatio = destroyedRendererSize.y / explosionRendererSize.y;
+        Vector3 explosionRendererSize = _explosionRenderer.size;
 
-        float preferredDimension = destroyedRendererSize.x > destroyedRendererSize.y ? xAspectRatio : yAspectRatio;
+        float xAspectRatio = targetSize.x / explosionRendererSize.x;
+        float yAspectRatio = targetSize.y / explosionRendererSize.y;
 
+        float preferredDimension = targetSize.x > targetSize.y ? xAspectRatio : yAspectRatio;
+        transform.localScale = Vector3.one;
         transform.localScale = new Vector3(preferredDimension, preferredDimension, preferredDimension);
     }
 
