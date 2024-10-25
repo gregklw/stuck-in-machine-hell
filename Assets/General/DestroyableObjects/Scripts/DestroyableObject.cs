@@ -54,7 +54,7 @@ public abstract class DestroyableObject : MonoBehaviour, IHealthyObject
         if (_destroyedAnimationPrefab != null)
         {
             Instantiate(_destroyedAnimationPrefab, transform.position, Quaternion.identity).InitSize(
-                GetComponentInChildren<SpriteRenderer>()
+                GetComponentInChildren<SpriteRenderer>().bounds.size
             );
         }
     }

@@ -10,11 +10,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 663324925036941581, guid: 297962453df8176478346bb9ebb7e6c0, type: 3}
       propertyPath: m_Size.x
-      value: 0.48
+      value: 0.06
       objectReference: {fileID: 0}
     - target: {fileID: 663324925036941581, guid: 297962453df8176478346bb9ebb7e6c0, type: 3}
       propertyPath: m_Size.y
-      value: 0.48
+      value: 0.09
       objectReference: {fileID: 0}
     - target: {fileID: 663324925036941581, guid: 297962453df8176478346bb9ebb7e6c0, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.x
@@ -43,6 +43,18 @@ PrefabInstance:
     - target: {fileID: 663324925036941581, guid: 297962453df8176478346bb9ebb7e6c0, type: 3}
       propertyPath: m_SpriteTilingProperty.adaptiveTilingThreshold
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1740031295297527326, guid: 297962453df8176478346bb9ebb7e6c0, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1740031295297527326, guid: 297962453df8176478346bb9ebb7e6c0, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1740031295297527326, guid: 297962453df8176478346bb9ebb7e6c0, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1740031295297527326, guid: 297962453df8176478346bb9ebb7e6c0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -126,9 +138,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab87722cd543f2a4f8eb5518eada18e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _projectileSpeed: 5
-  _projectileLifeTime: 0.5
-  _collisionTagsForHit:
-  - Enemy
-  _projectileType: 1
   _projectileData: {fileID: 11400000, guid: 0f43db4ac49fad34e899bc6f8d51aac7, type: 2}

@@ -226,4 +226,9 @@ public static class UnityUtils
 
         return interfaces;
     }
+
+    public static void SetUnitSizeForSprite(SpriteRenderer renderer)
+    {
+        renderer.transform.localScale = (renderer.transform.localScale / renderer.sprite.rect.size) * renderer.sprite.pixelsPerUnit;
+    }
 }
