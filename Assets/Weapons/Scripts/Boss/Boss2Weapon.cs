@@ -17,17 +17,19 @@ public class Boss2Weapon : Weapon
 
         float angle = _angleOffset;
 
-        if (_projectilePrefabSelectionCount % bossProjectileData.Length == 0) _projectilePrefabSelectionCount = 0;
-        CreateProjectile(transform.position, CommonCalculations.RotateTowardsUp(Vector3.up, angle), bossProjectileData[_projectilePrefabSelectionCount++]);
+        IProjectileBehaviour projectileBehaviour = new DefaultBullet();
 
         if (_projectilePrefabSelectionCount % bossProjectileData.Length == 0) _projectilePrefabSelectionCount = 0;
-        CreateProjectile(transform.position, CommonCalculations.RotateTowardsUp(Vector3.up, angle += 90), bossProjectileData[_projectilePrefabSelectionCount++]);
+        CreateProjectile(transform.position, CommonCalculations.RotateTowardsUp(Vector3.up, angle), bossProjectileData[_projectilePrefabSelectionCount++], projectileBehaviour);
 
         if (_projectilePrefabSelectionCount % bossProjectileData.Length == 0) _projectilePrefabSelectionCount = 0;
-        CreateProjectile(transform.position, CommonCalculations.RotateTowardsUp(Vector3.up, angle += 90), bossProjectileData[_projectilePrefabSelectionCount++]);
+        CreateProjectile(transform.position, CommonCalculations.RotateTowardsUp(Vector3.up, angle += 90), bossProjectileData[_projectilePrefabSelectionCount++], projectileBehaviour);
 
         if (_projectilePrefabSelectionCount % bossProjectileData.Length == 0) _projectilePrefabSelectionCount = 0;
-        CreateProjectile(transform.position, CommonCalculations.RotateTowardsUp(Vector3.up, angle += 90), bossProjectileData[_projectilePrefabSelectionCount++]);
+        CreateProjectile(transform.position, CommonCalculations.RotateTowardsUp(Vector3.up, angle += 90), bossProjectileData[_projectilePrefabSelectionCount++], projectileBehaviour);
+
+        if (_projectilePrefabSelectionCount % bossProjectileData.Length == 0) _projectilePrefabSelectionCount = 0;
+        CreateProjectile(transform.position, CommonCalculations.RotateTowardsUp(Vector3.up, angle += 90), bossProjectileData[_projectilePrefabSelectionCount++], projectileBehaviour);
 
         _angleOffset += RotateOffsetAmount;
     }

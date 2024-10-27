@@ -1421,8 +1421,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be2f213fbda02f246950aa0a1a000bb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _numberOfPrefabsToInstantiate: 500
-  _projectileBasePrefab: {fileID: 3720809658710638444, guid: 297962453df8176478346bb9ebb7e6c0, type: 3}
+  _numberOfPrefabsToInstantiate: 400
+  _projectileBasePrefab: {fileID: 1087581316283215687, guid: 297962453df8176478346bb9ebb7e6c0, type: 3}
 --- !u!1 &1354785152
 GameObject:
   m_ObjectHideFlags: 0

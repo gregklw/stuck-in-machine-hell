@@ -8,6 +8,7 @@ public class SinglePierceWeapon : Weapon
 
     public override void Fire(Vector3 spawnPos, Vector3 facingDirection)
     {
-        Projectile proj = CreateProjectile(spawnPos, facingDirection, _projectileData);
+        IProjectileBehaviour projectileBehaviour = new PiercingBullet();
+        Projectile proj = CreateProjectile(spawnPos, facingDirection, _projectileData, projectileBehaviour);
     }
 }

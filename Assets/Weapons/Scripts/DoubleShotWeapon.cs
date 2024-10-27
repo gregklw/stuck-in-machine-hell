@@ -9,8 +9,9 @@ public class DoubleShotWeapon : Weapon
 
     public override void Fire(Vector3 spawnPos, Vector3 facingDirection)
     {
+        IProjectileBehaviour projectileBehaviour = new SineBullet(spawnPos);
         Vector3 perpDir = Vector2.Perpendicular(facingDirection);
-        Projectile proj1 = CreateProjectile(spawnPos + facingDirection * _offset.y - perpDir * _offset.x, facingDirection, projectileData1);
-        Projectile proj2 = CreateProjectile(spawnPos + facingDirection * _offset.y + perpDir * _offset.x, facingDirection, projectileData2);
+        Projectile proj1 = CreateProjectile(spawnPos + facingDirection * _offset.y - perpDir * _offset.x, facingDirection, projectileData1, projectileBehaviour);
+        Projectile proj2 = CreateProjectile(spawnPos + facingDirection * _offset.y + perpDir * _offset.x, facingDirection, projectileData2, projectileBehaviour);
     }
 }

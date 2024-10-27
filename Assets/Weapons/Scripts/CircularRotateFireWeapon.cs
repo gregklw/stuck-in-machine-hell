@@ -14,7 +14,8 @@ public class CircularRotateFireWeapon : Weapon
     {
         if (_angleOffset % FullRotationValue == 0) _angleOffset = 0;
         float angle = _angleOffset;
-        Projectile shrapnel = CreateProjectile(transform.position, CommonCalculations.RotateTowardsUp(Vector3.up, angle), _projectileData);
+        IProjectileBehaviour projectileBehaviour = new DefaultBullet();
+        Projectile shrapnel = CreateProjectile(transform.position, CommonCalculations.RotateTowardsUp(Vector3.up, angle), _projectileData, projectileBehaviour);
         _angleOffset += RotateOffsetAmount;
     }
 }

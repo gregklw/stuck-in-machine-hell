@@ -1,21 +1,21 @@
 using UnityEngine;
 
-public class SineBullet : Projectile
+public class SineBullet : IProjectileBehaviour
 {
     private Vector2 _spawnPosition;
     private float _counter;
 
-    private void Awake()
-    {
-        _spawnPosition = transform.position;
+    public SineBullet(Vector2 spawnPosition)
+    { 
+        _spawnPosition = spawnPosition;
     }
-    public override void Move()
+    public void Move(Transform projectileTransform, float projectileSpeed)
     {
         _counter += Time.fixedDeltaTime;
-        _spawnPosition += (Vector2)transform.up;
+        _spawnPosition += (Vector2)projectileTransform.up;
         //Debug.Log($"{Mathf.Sin(_spawnPosition.x)}");
         //Debug.Log($"{transform.eulerAngles.z}/{Mathf.Sin(transform.eulerAngles.z * Mathf.Deg2Rad)}");
-        float angle = (transform.eulerAngles.z) * Mathf.Deg2Rad;
+        float angle = (projectileTransform.eulerAngles.z) * Mathf.Deg2Rad;
         float xSineOffset = Mathf.Sin(angle + Mathf.Sin(_counter * 30));
         float ySineOffset = Mathf.Cos(angle + Mathf.Sin(_counter * 30));
         //Debug.Log($"{xSineOffset}/{ySineOffset}");
@@ -24,16 +24,14 @@ public class SineBullet : Projectile
         //float xSineOffset = _counter * Mathf.Cos(angle) - y * Mathf.Sin(angle);
         //float ySineOffset = _counter * Mathf.Sin(angle) + y * Mathf.Cos(angle);
 
-        Vector2 modifiedDir = transform.up;
+        Vector2 modifiedDir = projectileTransform.up;
         modifiedDir.x -= xSineOffset;
         modifiedDir.y += ySineOffset;
 
-        transform.position += (Vector3) modifiedDir * ProjectileSpeed * Time.fixedDeltaTime;
+        projectileTransform.position += (Vector3) modifiedDir * projectileSpeed * Time.fixedDeltaTime;
     }
 
-    public override void OnHitCollision(Collider2D collision)
+    public void OnHitCollision()
     {
-        //Destroy(gameObject);
-        RemoveAndCacheProjectile();
     }
 }

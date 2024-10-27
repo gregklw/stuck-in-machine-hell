@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Projectile : MonoBehaviour, IDamagingEntity
+public class Projectile : MonoBehaviour, IDamagingEntity
 {
     private float _projectileSpeed;
     public float ProjectileSpeed => _projectileSpeed;
@@ -20,28 +20,38 @@ public abstract class Projectile : MonoBehaviour, IDamagingEntity
     private SpriteRenderer _spriteRenderer;
     private BoxCollider2D _boxCollder;
 
+    private IProjectileBehaviour _projectileBehaviour; //ProjectileBehaviour uses strategy pattern to separate logic
+
     public void Init(Vector3 startDir, float damage, ProjectileData projectileData)
     {
         _spriteRenderer ??= GetComponentInChildren<SpriteRenderer>();
         _boxCollder ??= GetComponent<BoxCollider2D>();
-
+        _projectileData = projectileData;
+        _projectileType = _projectileData.ProjectileType;
+        DamageTypesUtil.SetProjectileColliderSize(_boxCollder, _projectileType);
         _spriteRenderer.sprite = projectileData.ProjectileSprite;
-
         SetUnitSizeForSprite(_spriteRenderer);
         transform.up = startDir;
         Damage = damage;
-        _projectileData = projectileData;
         _projectileSpeed = _projectileData.ProjectileSpeed;
         _projectileLifeTime = _projectileData.ProjectileLifeTime;
         _collisionTagsForHit = _projectileData.CollisionTagsForHit;
-        _projectileType = _projectileData.ProjectileType;
-        
+    }
+
+    public void ResetProjectile()
+    {
+        _lifeTimer = 0;
+    }
+
+    public void SetProjectileBehaviour(IProjectileBehaviour projectileBehaviour)
+    {
+        _projectileBehaviour = projectileBehaviour;
     }
 
     private void FixedUpdate()
     {
         UpdateLifeTimer();
-        Move();
+        _projectileBehaviour.Move(transform, ProjectileSpeed);
     }
 
     private void UpdateLifeTimer()
@@ -53,15 +63,13 @@ public abstract class Projectile : MonoBehaviour, IDamagingEntity
         }
     }
 
-    public abstract void Move();
-    public abstract void OnHitCollision(Collider2D collision);
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.TryGetComponent<IHealthyObject>(out var damageable) && CompareTags(collision))
         {
             InflictDamage(damageable);
-            OnHitCollision(collision);
+            _projectileBehaviour.OnHitCollision();
+            RemoveAndCacheProjectile();
         }
     }
 
@@ -75,8 +83,7 @@ public abstract class Projectile : MonoBehaviour, IDamagingEntity
         ExplosionOnDestroy explosionOnDestroy = ExplosionObjectPool.Instance.GetNewExplosion(_projectileData);
         explosionOnDestroy.transform.position = transform.position;
         explosionOnDestroy.InitSize(_boxCollder.bounds.size);
-        ProjectilePool.Instance.CacheUnusedProjectile(gameObject);
-        Destroy(this);
+        ProjectilePool.Instance.CacheUnusedProjectile(this);
     }
 
     private bool CompareTags(Collider2D collision)

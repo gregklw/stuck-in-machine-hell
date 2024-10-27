@@ -31,10 +31,9 @@ public class ExplosionOnDestroy : MonoBehaviour
         transform.localScale = new Vector3(preferredDimension, preferredDimension, preferredDimension);
     }
 
-    public void DestroyObject()
-    {
-        _explosionRenderer.sprite = null;
-        _explosionAnimator.runtimeAnimatorController = null;
-        ExplosionObjectPool.Instance.AddUnusedExplosion(this);
-    }
+    //public void ResetExplosionAnimator()
+    //{
+    //    _explosionRenderer.sprite = null;
+    //    _explosionAnimator.runtimeAnimatorController = null;
+    //}
 }

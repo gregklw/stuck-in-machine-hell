@@ -5,31 +5,40 @@ using UnityEngine;
 /// <summary>
 /// Bullet that creates other shrapnel bullets when hit on impact
 /// </summary>
-public class ShrapnelBomb : Projectile
+public class ShrapnelBomb : IProjectileBehaviour
 {
-    [SerializeField][Range(0,100)] private int _shrapnelDamage;
-    [SerializeField][Range(0, 32)] private int _numberOfShrapnel;
-    [SerializeField] private Projectile _shrapnelPrefab;
-    public override void Move()
+    private int _shrapnelDamage;
+    private int _numberOfShrapnel;
+    private ProjectileData _shrapnelData;
+    private Transform _baseProjectileT;
+
+    public ShrapnelBomb(Transform baseProjectileT, int shrapnelDamage, int numberOfShrapnel, ProjectileData shrapnelData)
     {
-        transform.position += transform.up * ProjectileSpeed * Time.fixedDeltaTime;
+        _baseProjectileT = baseProjectileT;
+        _shrapnelDamage = shrapnelDamage;
+        _numberOfShrapnel = numberOfShrapnel;
+        _shrapnelData = shrapnelData;
     }
 
-    public override void OnHitCollision(Collider2D collision)
+    public void Move(Transform projectileTransform, float projectileSpeed)
+    {
+        projectileTransform.position += projectileTransform.up * projectileSpeed * Time.fixedDeltaTime;
+    }
+
+    public void OnHitCollision()
     {
         float angle = 0;
         for (int i = 0; i < _numberOfShrapnel; i++)
         {
             angle += (360 / (float) _numberOfShrapnel) * i;
 
-            GameObject projBase = ProjectilePool.Instance.GetNewProjectile();
-            projBase.transform.position = transform.position;
-            Projectile proj = projBase.AddComponent<DefaultBullet>();
-            proj.Init(CommonCalculations.RotateTowardsUp(Vector3.up, angle), Damage, ProjectileData);
-            proj.Damage = _shrapnelDamage;
+            Projectile shrapnelSpawn = ProjectilePool.Instance.GetNewProjectile();
+            shrapnelSpawn.SetProjectileBehaviour(new DefaultBullet());
+            Transform shrapnelSpawnT = shrapnelSpawn.transform;
+            shrapnelSpawnT.position = _baseProjectileT.position;
+            shrapnelSpawn.Init(CommonCalculations.RotateTowardsUp(Vector3.up, angle), _shrapnelDamage, _shrapnelData);
         }
         //ProjectilePool.Instance.AddUnusedProjectile(gameObject);
         //Destroy(this);
-        RemoveAndCacheProjectile();
     }
 }

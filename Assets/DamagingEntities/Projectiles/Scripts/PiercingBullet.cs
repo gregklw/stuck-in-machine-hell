@@ -2,15 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PiercingBullet : Projectile
+public class PiercingBullet : IProjectileBehaviour
 {
-    public override void Move()
+    public void Move(Transform projectileTransform, float projectileSpeed)
     {
-        transform.position += transform.up * ProjectileSpeed * Time.fixedDeltaTime;
+        projectileTransform.position += projectileTransform.up * projectileSpeed * Time.fixedDeltaTime;
     }
 
-    public override void OnHitCollision(Collider2D collision)
+    public void OnHitCollision()
     {
-        RemoveAndCacheProjectile();
     }
 }

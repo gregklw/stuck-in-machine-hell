@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-public class ProjectilePool : SimpleObjectPool<GameObject>
+public class ProjectilePool : SimpleObjectPool<Projectile>
 {
     [SerializeField] private int _numberOfPrefabsToInstantiate;
 
-    [SerializeField] private GameObject _projectileBasePrefab;
+    [SerializeField] private Projectile _projectileBasePrefab;
 
     public static ProjectilePool Instance;
 
@@ -20,29 +20,30 @@ public class ProjectilePool : SimpleObjectPool<GameObject>
         }
     }
 
-    public GameObject GetNewProjectile()
+    public Projectile GetNewProjectile()
     {
-        GameObject projectileBase = GetObjectFromPool();
-        projectileBase.SetActive(true);
+        Projectile projectileBase = GetObjectFromPool();
+        projectileBase.gameObject.SetActive(true);
         return projectileBase;
     }
 
-    public void CacheUnusedProjectile(GameObject projectileBase)
+    public void CacheUnusedProjectile(Projectile projectileBase)
     {
         AddProjectileToPool(projectileBase);
     }
 
     protected override void CreateObjectIfEmpty()
     {
-        GameObject projectileBase = Instantiate(_projectileBasePrefab);
+        Projectile projectileBase = Instantiate(_projectileBasePrefab);
         AddProjectileToPool(projectileBase);
     }
 
-    private void AddProjectileToPool(GameObject projectileBase)
+    private void AddProjectileToPool(Projectile projectileBase)
     {
         //PrefabUtility.RevertPrefabInstance(projectileBase, InteractionMode.AutomatedAction);
         //projectileBase.transform.localScale = Vector3.one;
-        projectileBase.SetActive(false);
+        projectileBase.ResetProjectile();
+        projectileBase.gameObject.SetActive(false);
         AddObjectToPool(projectileBase);
     }
 }
