@@ -20,7 +20,7 @@ public class Projectile : MonoBehaviour, IDamagingEntity
     private SpriteRenderer _spriteRenderer;
     private BoxCollider2D _boxCollder;
 
-    private IProjectileBehaviour _projectileBehaviour; //ProjectileBehaviour uses strategy pattern to separate logic
+    private IProjectileBehaviour _projectileBehaviour; //ProjectileBehaviour uses strategy pattern or state pattern to separate logic
 
     public void Init(Vector3 startDir, float damage, ProjectileData projectileData)
     {
