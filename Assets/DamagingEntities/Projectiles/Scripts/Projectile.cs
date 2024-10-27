@@ -80,7 +80,7 @@ public class Projectile : MonoBehaviour, IDamagingEntity
 
     public void RemoveAndCacheProjectile()
     {
-        ExplosionOnDestroy explosionOnDestroy = ExplosionObjectPool.Instance.GetNewExplosion(_projectileData);
+        ExplosionOnDestroy explosionOnDestroy = ExplosionObjectPool.Instance.GetNewExplosion(transform.position, _projectileData);
         explosionOnDestroy.transform.position = transform.position;
         explosionOnDestroy.InitSize(_boxCollder.bounds.size);
         ProjectilePool.Instance.CacheUnusedProjectile(this);

@@ -16,17 +16,19 @@ public class ExplosionObjectPool : SimpleObjectPool<ExplosionOnDestroy>
     }
 
     [SerializeField] private ExplosionOnDestroy _explosionPrefab;
-    public ExplosionOnDestroy GetNewExplosion(ProjectileData explosionVisuals)
+    public ExplosionOnDestroy GetNewExplosion(Vector2 spawnPoint, ProjectileData explosionVisuals)
     {
         ExplosionOnDestroy explosion = GetObjectFromPool();
         explosion.SetExplosionVisuals(explosionVisuals);
-        explosion.gameObject.SetActive(true);
+        //explosion.gameObject.SetActive(true);
+        explosion.transform.position = spawnPoint;
         return explosion;
     }
 
     public void AddUnusedExplosion(ExplosionOnDestroy explosionOnDestroy)
     {
-        explosionOnDestroy.gameObject.SetActive(false);
+        //explosionOnDestroy.gameObject.SetActive(false);
+        explosionOnDestroy.transform.position = transform.position;
         AddObjectToPool(explosionOnDestroy);
     }
 
