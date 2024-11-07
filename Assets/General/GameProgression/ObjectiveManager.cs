@@ -11,7 +11,7 @@ public class ObjectiveManager : MonoBehaviour
     {
         //consider using script execution orders in order to prevent search on excessive game objects
         _objectives = UnityUtils.FindInterfacesInScene<IObjective>(gameObject.scene);
-        Debug.Log($"Objective Count: {_objectives.Count}");
+        //Debug.Log($"Objective Count: {_objectives.Count}");
         _objectiveCompleteBinding = new BusEventBinding<ObjectiveCompleteEventWrapper>(AreAllObjectivesComplete);
     }
 
@@ -29,7 +29,7 @@ public class ObjectiveManager : MonoBehaviour
     {
         bool assertCompleted = true;
         _objectives.ForEach(x => assertCompleted = x.IsComplete);
-        Debug.Log($"Objectives complete: {assertCompleted}");
+        //Debug.Log($"Objectives complete: {assertCompleted}");
         if (assertCompleted)
         {
             EventBus<LevelProgressEventWrapper>.Raise(new LevelProgressEventWrapper());

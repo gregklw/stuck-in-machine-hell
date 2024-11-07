@@ -68,7 +68,7 @@ public class LevelManager : MonoBehaviour
 
         _loadingBar.ClearRegisteredScenesToProcess();
         _loadingBar.ToggleLoadingBarVisibility(true);
-        Debug.Log("Trigger after GoToMainMenu");
+        //Debug.Log("Trigger after GoToMainMenu");
 
         AsyncOperation menuOperation = SceneManager.LoadSceneAsync(_mainMenuScene, LoadSceneMode.Additive);
         _loadingBar.RegisterSceneOperation(menuOperation);
@@ -82,13 +82,13 @@ public class LevelManager : MonoBehaviour
         {
             _loadingBar.RegisterSceneOperation(SceneManager.UnloadSceneAsync(activeScenes[i]));
         }
-        Debug.Log(_loadingBar);
+        //Debug.Log(_loadingBar);
         while (!_loadingBar.CheckIfScenesFullyProcessed())
         {
-            Debug.Log(_loadingBar.UpdateLoadingBar());
+            //Debug.Log(_loadingBar.UpdateLoadingBar());
             yield return null;
         }
-        Debug.Log("Finished");
+        //Debug.Log("Finished");
         _loadingBar.ToggleLoadingBarVisibility(false);
     }
 
@@ -192,7 +192,7 @@ public class LevelManager : MonoBehaviour
 
         //enable loading bar panel
         _loadingBar.ToggleLoadingBarVisibility(true);
-        Debug.Log("Trigger after StartPlaythroughAtSelectedLevel");
+        //Debug.Log("Trigger after StartPlaythroughAtSelectedLevel");
 
         //async load level base and make it the preferred scene when it completes loading
         AsyncOperation baseSceneOperation = SceneManager.LoadSceneAsync(baseScene, LoadSceneMode.Additive);
