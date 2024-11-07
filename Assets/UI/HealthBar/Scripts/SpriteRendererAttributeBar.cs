@@ -21,8 +21,9 @@ public class SpriteRendererAttributeBar : MonoBehaviour, IAttributeBar
         }
     }
 
-    private void Start()
+    private IEnumerator Start()
     {
+        yield return new WaitForEndOfFrame();
         _maxSize = _attributeBarRenderer.size;
         _attributeBarInnerRenderer.size = _maxSize;
         CreatePivotForHealthBar();
@@ -37,6 +38,7 @@ public class SpriteRendererAttributeBar : MonoBehaviour, IAttributeBar
     {
         percentage = Mathf.Clamp01(percentage);
         _pivot.localScale = new Vector2(percentage, _pivot.localScale.y);
+        //Debug.Log(_pivot.localScale);
     }
 
     public void SetBarDisplayWidth(float width)
