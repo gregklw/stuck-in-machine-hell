@@ -12,7 +12,7 @@ public class EnemyHUD : MonoBehaviour
         BoxCollider2D boxCollider = GetComponent<BoxCollider2D>();
         _healthBar.SetBarDisplayWidth((boxCollider.bounds.size.x));
         _healthBar.BarPosition = transform.position;
-        _healthBar.BarPosition -= (Vector2)(transform.up * boxCollider.bounds.size.y);
+        _healthBar.BarPosition -= (Vector2)(transform.up * boxCollider.bounds.size.y) /2;
         _healthBar.CenterBarPosX();
     }
 
