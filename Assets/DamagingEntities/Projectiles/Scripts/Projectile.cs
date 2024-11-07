@@ -13,29 +13,30 @@ public class Projectile : MonoBehaviour, IDamagingEntity
     public float Damage { get; set; }
     private string[] _collisionTagsForHit;
     private ProjectileType _projectileType;
-    [SerializeField] private ProjectileData _projectileData;
+    [SerializeField] private ObjectSkinData _projectileData;
 
-    public ProjectileData ProjectileData => _projectileData;
+    public ObjectSkinData ProjectileData => _projectileData;
 
     private SpriteRenderer _spriteRenderer;
     private BoxCollider2D _boxCollder;
 
     private IProjectileBehaviour _projectileBehaviour; //ProjectileBehaviour uses strategy pattern or state pattern to separate logic
 
-    public void Init(Vector3 startDir, float damage, ProjectileData projectileData)
+    public void Init(Vector3 startDir, float damage, ObjectSkinData projectileData)
     {
         _spriteRenderer ??= GetComponentInChildren<SpriteRenderer>();
         _boxCollder ??= GetComponent<BoxCollider2D>();
         _projectileData = projectileData;
         _projectileType = _projectileData.ProjectileType;
         DamageTypesUtil.SetProjectileColliderSize(_boxCollder, _projectileType);
-        _spriteRenderer.sprite = projectileData.ProjectileSprite;
+
+
+        //_spriteRenderer.sprite = projectileData.ProjectileSprite;
         SetUnitSizeForSprite(_spriteRenderer);
         transform.up = startDir;
         Damage = damage;
         _projectileSpeed = _projectileData.ProjectileSpeed;
         _projectileLifeTime = _projectileData.ProjectileLifeTime;
-        _collisionTagsForHit = _projectileData.CollisionTagsForHit;
     }
 
     public void ResetProjectile()
@@ -59,7 +60,7 @@ public class Projectile : MonoBehaviour, IDamagingEntity
         _lifeTimer += Time.fixedDeltaTime;
         if (_lifeTimer > _projectileLifeTime)
         {
-            RemoveAndCacheProjectile();
+            HandleProjectileEnd();
         }
     }
 
@@ -69,7 +70,7 @@ public class Projectile : MonoBehaviour, IDamagingEntity
         {
             InflictDamage(damageable);
             _projectileBehaviour.OnHitCollision();
-            RemoveAndCacheProjectile();
+            HandleProjectileEnd();
         }
     }
 
@@ -78,9 +79,10 @@ public class Projectile : MonoBehaviour, IDamagingEntity
         damageable.ReceiveDamage(CommonCalculations.CalculateArmorAmplify(Damage, damageable.ArmorType, _projectileType));
     }
 
-    public void RemoveAndCacheProjectile()
+    public void HandleProjectileEnd()
     {
-        ExplosionOnDestroy explosionOnDestroy = ExplosionObjectPool.Instance.GetNewExplosion(transform.position, _projectileData);
+        Debug.Log("Create Explosion");
+        ExplosionObject explosionOnDestroy = ExplosionObjectPool.Instance.GetNewExplosion(transform.position, _projectileData);
         explosionOnDestroy.transform.position = transform.position;
         explosionOnDestroy.InitSize(_boxCollder.bounds.size);
         ProjectilePool.Instance.CacheUnusedProjectile(this);

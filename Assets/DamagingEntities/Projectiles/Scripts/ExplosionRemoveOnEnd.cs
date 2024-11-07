@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ExplosionRemoveOnEnd : StateMachineBehaviour
 {
+    private bool _doNotTriggerFirstTime = false;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     //override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     //{
@@ -19,7 +20,12 @@ public class ExplosionRemoveOnEnd : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        ExplosionOnDestroy explosionOnDestroy = animator.GetComponent<ExplosionOnDestroy>();
+        if (!_doNotTriggerFirstTime)
+        { 
+            _doNotTriggerFirstTime = true;
+            return;
+        }
+        ExplosionObject explosionOnDestroy = animator.GetComponent<ExplosionObject>();
         if (explosionOnDestroy) ExplosionObjectPool.Instance.AddUnusedExplosion(explosionOnDestroy);
     }
 

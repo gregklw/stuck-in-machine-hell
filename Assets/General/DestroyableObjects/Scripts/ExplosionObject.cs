@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class ExplosionOnDestroy : MonoBehaviour
+public class ExplosionObject : MonoBehaviour
 {
     private SpriteRenderer _explosionRenderer;
     private Animator _explosionAnimator;
@@ -15,7 +15,7 @@ public class ExplosionOnDestroy : MonoBehaviour
         _defaultAnimationName = _explosionAnimator.GetCurrentAnimatorClipInfo(0)[0].clip.name; //save default animation name for reuse
     }
 
-    public void SetExplosionVisuals(ProjectileData explosionVisuals)
+    public void SetExplosionVisuals(ObjectSkinData explosionVisuals)
     {
         _explosionRenderer.sprite = explosionVisuals.ExplosionSprite;
         _explosionAnimator.runtimeAnimatorController = explosionVisuals.ExplosionAnimationController;
