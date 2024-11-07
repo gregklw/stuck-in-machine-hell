@@ -19,6 +19,10 @@ public class Player : AttackingCharacter
 
     private float _counter;
 
+    private PlayerParticleWeapon _currentWeapon;
+
+    private BusEventBinding<EnemySpawnEventWrapper> _enemySpawnEventBinding;
+
     [SerializeField] private Transform _firingPivot;
 
     [SerializeField][Range(0, 10)] private float _baseMoveSpeed;
@@ -30,8 +34,19 @@ public class Player : AttackingCharacter
 
     private void Awake()
     {
+        _enemySpawnEventBinding = new BusEventBinding<EnemySpawnEventWrapper>(RegisterPlayerForEnemies);
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _mainCamera = Camera.main;
+    }
+
+    private void OnEnable()
+    {
+        EventBus<EnemySpawnEventWrapper>.Register(_enemySpawnEventBinding);
+    }
+
+    private void OnDisable()
+    {
+        EventBus<EnemySpawnEventWrapper>.Deregister(_enemySpawnEventBinding);
     }
 
     void FixedUpdate()
@@ -40,7 +55,6 @@ public class Player : AttackingCharacter
         {
             MovePlayerTowardsInput();
         }
-        FireWeapon();
     }
 
     private void Update()
@@ -48,6 +62,14 @@ public class Player : AttackingCharacter
         if (Input.GetMouseButton(0))
         {
             _latestTravelPosition = MainCamera.ScreenToWorldPoint(Input.mousePosition);
+        }
+    }
+
+    private void RegisterPlayerForEnemies(EnemySpawnEventWrapper enemySpawnEventWrapper)
+    {
+        foreach (EnemyParticleWeapon weapon in enemySpawnEventWrapper.EnemyParticleWeapons)
+        {
+            weapon.AddCollider(GetComponent<Collider2D>());
         }
     }
 
@@ -63,16 +85,8 @@ public class Player : AttackingCharacter
             _rigidbody2D.position += (playerToMouseDir * BaseMoveSpeed) * Time.fixedDeltaTime;
         }
         transform.Rotate(Vector3.forward, Vector2.SignedAngle(playerForwardVector, playerToMouseDir), Space.World);
-    }
-
-    private void FireWeapon()
-    {
-        _counter += Time.fixedDeltaTime;
-        if (_counter > CommonCalculations.CalculateAttackSpeed(BaseAttackSpeed * CurrentWeapon.AttackSpeedFactor))
-        {
-            CurrentWeapon.Fire(_firingPivot.transform.position, transform.up);
-            _counter = 0;
-        }
+        //_rigidbody2D.SetRotation(Vector2.SignedAngle(playerForwardVector, playerToMouseDir));
+        //_rigidbody2D.MoveRotation(Vector2.SignedAngle(playerForwardVector, playerToMouseDir));
     }
 
     public override void ReceiveDamage(float damage)
@@ -95,5 +109,10 @@ public class Player : AttackingCharacter
             MaxHealth = this.MaxHealth
         }
         );
+    }
+
+    public void SetCurrentWeapon(PlayerParticleWeapon weapon)
+    { 
+        _currentWeapon = weapon;
     }
 }
