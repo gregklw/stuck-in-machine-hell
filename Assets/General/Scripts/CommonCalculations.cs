@@ -5,11 +5,6 @@ using UnityEngine.Rendering;
 
 public static class CommonCalculations
 {
-    public static float CalculateAttackSpeed(float attackSpeed)
-    {
-        return Mathf.Clamp(120.0f / attackSpeed, 0.0001f, Mathf.Infinity);
-    }
-
     public static float CalculateArmorAmplify(float inputDamage, ArmorType armorType, ProjectileType projectileType)
     {
         if (armorType == ArmorType.Light && projectileType == ProjectileType.Large
