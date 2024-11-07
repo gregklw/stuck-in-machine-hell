@@ -11,19 +11,36 @@ public abstract class Enemy : AttackingCharacter
 
     protected Player TargetPlayer => _targetPlayer;
 
+    private Rigidbody2D _rigidbody;
+    protected Rigidbody2D ThisRigidbody => _rigidbody;
+
     private void Awake()
     {
         //HealthEventBinding = new LocalEventBinding<EnemyEvent>();
         _targetPlayer = FindObjectOfType<Player>();
+        _rigidbody = GetComponent<Rigidbody2D>();
+    }
+
+    private void Start()
+    {
+        EventBus<EnemySpawnEventWrapper>.Raise(
+            new EnemySpawnEventWrapper()
+            {
+                SpawnedEnemyCollider = GetComponent<Collider2D>(),
+                EnemyParticleWeapons = GetComponentsInChildren<EnemyParticleWeapon>()
+            }
+        );
     }
 
     private void OnEnable()
     {
+        //FindObjectOfType<PlayerParticleWeapon>().AddCollider(GetComponent<Collider2D>());
         OnDestroyEvent += TriggerScoring;
     }
 
     private void OnDisable()
     {
+        //FindObjectOfType<PlayerParticleWeapon>().RemoveCollider(GetComponent<Collider2D>());
         OnDestroyEvent -= TriggerScoring;
     }
 
@@ -33,7 +50,8 @@ public abstract class Enemy : AttackingCharacter
         EventBus<EnemyDeathEventWrapper>.Raise(
             new EnemyDeathEventWrapper
             {
-                Score = this.Score
+                Score = this.Score,
+                EnemyCollider = GetComponent<Collider2D>()
             }
         );
       
@@ -64,6 +82,4 @@ public abstract class Enemy : AttackingCharacter
     {
         return TargetPlayer.transform.position - transform.position;
     }
-
-    public abstract void ShootProjectile();
 }

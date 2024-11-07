@@ -1,3 +1,5 @@
+using System.Diagnostics;
+
 public class AttackSpeedPowerup : WeaponPowerup
 {
     //can be replaced with flyweight
@@ -6,5 +8,11 @@ public class AttackSpeedPowerup : WeaponPowerup
     public override void ActivatePowerup(Player player)
     {
         player.BaseAttackSpeed += AttackSpeedBoost;
+        EventBus<WeaponStatModifierEventWrapper>.Raise(
+            new WeaponStatModifierEventWrapper()
+            {
+                AttackSpeedValue = player.BaseAttackSpeed
+            }
+        );
     }
 }

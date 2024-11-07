@@ -5,5 +5,5 @@ using UnityEngine;
 
 public struct WeaponPickupEventWrapper : IEventWrapper
 {
-    public Weapon WeaponPrefab;
+    public PlayerParticleWeapon WeaponPrefab;
 }
