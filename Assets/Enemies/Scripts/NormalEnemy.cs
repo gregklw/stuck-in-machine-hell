@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class NormalEnemy : Enemy
 {
+    private const float MinimumDistance = 0.2f;
     [SerializeField][Range(0, 5)] private float _baseMoveSpeed;
     public float BaseMoveSpeed
     {
@@ -14,23 +15,15 @@ public class NormalEnemy : Enemy
     private void FixedUpdate()
     {
         MoveTowardsPlayer();
-        ShootProjectile();
-    }
-
-    public override void ShootProjectile()
-    {
-        _counter += Time.fixedDeltaTime;
-        if (_counter > CommonCalculations.CalculateAttackSpeed(BaseAttackSpeed))
-        {
-            CurrentWeapon.Fire(transform.position, transform.up);
-            _counter = 0;
-        }
     }
 
     private void MoveTowardsPlayer()
     {
         if (!TargetPlayer) return;
         transform.up = GetDirectionVectorTowardsPlayer();
-        transform.position += transform.up * BaseMoveSpeed * Time.fixedDeltaTime;
+        //ThisRigidbody.MovePosition(BaseMoveSpeed * 0.001f * Time.fixedDeltaTime * transform.up);
+        //transform.position += transform.up * BaseMoveSpeed * Time.fixedDeltaTime;
+        if (Mathf.Abs(transform.position.x - TargetPlayer.transform.position.x) >= MinimumDistance)
+            ThisRigidbody.velocity = BaseMoveSpeed * 40 * Time.fixedDeltaTime * (Vector2) transform.up;
     }
 }
