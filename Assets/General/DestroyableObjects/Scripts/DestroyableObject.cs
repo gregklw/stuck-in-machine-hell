@@ -9,7 +9,7 @@ public abstract class DestroyableObject : MonoBehaviour, IHealthyObject
     public abstract void ReceiveDamage(float damage);
 
     [SerializeField] private float _currentHealth, _maxHealth;
-    [SerializeField] private ExplosionOnDestroy _destroyedAnimationPrefab;
+    [SerializeField] private ObjectSkinData _objectSkinData;
     public Action OnDestroyEvent;
     public float CurrentHealth
     {
@@ -51,11 +51,7 @@ public abstract class DestroyableObject : MonoBehaviour, IHealthyObject
 
     private void InstantiateDestroyedAnimation()
     {
-        if (_destroyedAnimationPrefab != null)
-        {
-            Instantiate(_destroyedAnimationPrefab, transform.position, Quaternion.identity).InitSize(
-                GetComponentInChildren<SpriteRenderer>().bounds.size
-            );
-        }
+        ExplosionObject explosion = ExplosionObjectPool.Instance.GetNewExplosion(transform.position, _objectSkinData);
+        explosion.InitSize(GetComponent<Collider2D>().bounds.size);
     }
 }

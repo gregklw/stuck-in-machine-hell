@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class ExplosionObjectPool : SimpleObjectPool<ExplosionOnDestroy>
+public class ExplosionObjectPool : SimpleObjectPool<ExplosionObject>
 {
     public static ExplosionObjectPool Instance;
     [SerializeField] private int _numberOfPrefabsToInstantiate;
@@ -15,17 +15,17 @@ public class ExplosionObjectPool : SimpleObjectPool<ExplosionOnDestroy>
         }
     }
 
-    [SerializeField] private ExplosionOnDestroy _explosionPrefab;
-    public ExplosionOnDestroy GetNewExplosion(Vector2 spawnPoint, ProjectileData explosionVisuals)
+    [SerializeField] private ExplosionObject _explosionPrefab;
+    public ExplosionObject GetNewExplosion(Vector2 spawnPoint, ObjectSkinData explosionVisuals)
     {
-        ExplosionOnDestroy explosion = GetObjectFromPool();
+        ExplosionObject explosion = GetObjectFromPool();
         explosion.SetExplosionVisuals(explosionVisuals);
         //explosion.gameObject.SetActive(true);
         explosion.transform.position = spawnPoint;
         return explosion;
     }
 
-    public void AddUnusedExplosion(ExplosionOnDestroy explosionOnDestroy)
+    public void AddUnusedExplosion(ExplosionObject explosionOnDestroy)
     {
         //explosionOnDestroy.gameObject.SetActive(false);
         explosionOnDestroy.transform.position = transform.position;
@@ -34,7 +34,7 @@ public class ExplosionObjectPool : SimpleObjectPool<ExplosionOnDestroy>
 
     protected override void CreateObjectIfEmpty()
     {
-        ExplosionOnDestroy explosion = Instantiate(_explosionPrefab);
+        ExplosionObject explosion = Instantiate(_explosionPrefab);
         AddUnusedExplosion(explosion);
     }
 }

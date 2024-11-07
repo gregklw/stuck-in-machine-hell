@@ -20,7 +20,7 @@ public class BurstPlayerParticleWeapon : PlayerParticleWeapon
                 collider.GetComponent<IHealthyObject>().ReceiveDamage(Damage);
                 p.remainingLifetime = 0;
                 particles[i] = p;
-                ExplosionOnDestroy explosion = ExplosionObjectPool.Instance.GetNewExplosion(p.position, SkinData);
+                ExplosionObject explosion = ExplosionObjectPool.Instance.GetNewExplosion(p.position, SkinData);
                 explosion.InitSize(p.startSize3D);
                 break;
             }
