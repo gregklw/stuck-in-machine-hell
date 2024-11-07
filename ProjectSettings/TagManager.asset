@@ -14,9 +14,9 @@ TagManager:
   - UI
   - Enemy
   - PlayerBoundaries
-  - 
-  - 
-  - 
+  - Player
+  - TerrainObjects
+  - AirEnemy
   - 
   - 
   - 
@@ -51,11 +51,14 @@ TagManager:
   - name: Items
     uniqueID: 3491145563
     locked: 0
-  - name: Characters
+  - name: Enemies
     uniqueID: 21641765
     locked: 0
   - name: Projectiles
     uniqueID: 1317194387
+    locked: 0
+  - name: Player
+    uniqueID: 2793022021
     locked: 0
   - name: WorldSpaceUI
     uniqueID: 3317959033
