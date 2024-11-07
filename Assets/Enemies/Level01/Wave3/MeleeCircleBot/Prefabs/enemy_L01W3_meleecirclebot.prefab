@@ -165,10 +165,6 @@ PrefabInstance:
       value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 9145549861930222665, guid: 2f8de9c3323d97c42b4ea1bc310369d0, type: 3}
-      propertyPath: _currentWeapon
-      value: 
-      objectReference: {fileID: -2564816347701497889}
-    - target: {fileID: 9145549861930222665, guid: 2f8de9c3323d97c42b4ea1bc310369d0, type: 3}
       propertyPath: _objectSkinData
       value: 
       objectReference: {fileID: 11400000, guid: 13b6e057813c3fd45a4540243ca2b1be, type: 2}
@@ -179,37 +175,13 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 9122252050282382476, guid: 2f8de9c3323d97c42b4ea1bc310369d0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2110854701631000149}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4639596306609556541, guid: 2f8de9c3323d97c42b4ea1bc310369d0, type: 3}
-      insertIndex: 4
-      addedObject: {fileID: -2564816347701497889}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f8de9c3323d97c42b4ea1bc310369d0, type: 3}
 --- !u!4 &1946577799892212981 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9122252050282382476, guid: 2f8de9c3323d97c42b4ea1bc310369d0, type: 3}
   m_PrefabInstance: {fileID: 7321478443014920313}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2735995701622789188 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4639596306609556541, guid: 2f8de9c3323d97c42b4ea1bc310369d0, type: 3}
-  m_PrefabInstance: {fileID: 7321478443014920313}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &-2564816347701497889
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2735995701622789188}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b35e11b0bf1f9f24798cd9869994e2c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _damage: 5
-  _attackSpeedFactor: 0
-  _projectileData: {fileID: 11400000, guid: 13b6e057813c3fd45a4540243ca2b1be, type: 2}
-  _numberOfShrapnel: 16
 --- !u!1001 &8048753383297496269
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -248,7 +220,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4667116993163611736, guid: 13a0fe061526cfc49b9eae6408cee004, type: 3}
       propertyPath: InitialModule.startSize.scalar
-      value: 0.16
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 4667116993163611736, guid: 13a0fe061526cfc49b9eae6408cee004, type: 3}
       propertyPath: InitialModule.startSpeed.scalar
@@ -256,7 +228,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4667116993163611736, guid: 13a0fe061526cfc49b9eae6408cee004, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
-      value: 2.5
+      value: 2.7
       objectReference: {fileID: 0}
     - target: {fileID: 8284839511616551576, guid: 13a0fe061526cfc49b9eae6408cee004, type: 3}
       propertyPath: m_LocalPosition.x

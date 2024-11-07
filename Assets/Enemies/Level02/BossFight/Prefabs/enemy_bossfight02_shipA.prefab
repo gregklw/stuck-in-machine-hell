@@ -149,10 +149,6 @@ PrefabInstance:
       value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 9145549861930222665, guid: 2f8de9c3323d97c42b4ea1bc310369d0, type: 3}
-      propertyPath: _currentWeapon
-      value: 
-      objectReference: {fileID: -7763026518563407774}
-    - target: {fileID: 9145549861930222665, guid: 2f8de9c3323d97c42b4ea1bc310369d0, type: 3}
       propertyPath: _objectSkinData
       value: 
       objectReference: {fileID: 11400000, guid: 078e2d0378bc67b4b9aaf984d135ba90, type: 2}
@@ -167,31 +163,8 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 9122252050282382476, guid: 2f8de9c3323d97c42b4ea1bc310369d0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7198482581741834845}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4639596306609556541, guid: 2f8de9c3323d97c42b4ea1bc310369d0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: -7763026518563407774}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f8de9c3323d97c42b4ea1bc310369d0, type: 3}
---- !u!1 &45898726768021965 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4639596306609556541, guid: 2f8de9c3323d97c42b4ea1bc310369d0, type: 3}
-  m_PrefabInstance: {fileID: 4665791767001161200}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &-7763026518563407774
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 45898726768021965}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bc54300267821c4da97ae4b6b8f5acb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _damage: 2
-  _attackSpeedFactor: 1
-  _projectileData: {fileID: 11400000, guid: 75db4fcc2b7b29d4e894e20c05bab455, type: 2}
 --- !u!4 &4492489114794514812 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9122252050282382476, guid: 2f8de9c3323d97c42b4ea1bc310369d0, type: 3}
