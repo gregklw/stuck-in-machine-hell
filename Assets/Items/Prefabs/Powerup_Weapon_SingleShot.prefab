@@ -125,4 +125,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ac70f497eaf3dd409016cfad827d23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _weaponPrefab: {fileID: -5378346937278955182, guid: 17b44cac1184fc04c9bd6287575dbc30, type: 3}
+  _weaponPrefab: {fileID: 5782951817927686347, guid: ba34fbe3aa9cbde4681b8f0bb8f56a79, type: 3}
