@@ -5,7 +5,7 @@ using UnityEngine;
 
 public abstract class ParticleWeapon : MonoBehaviour
 {
-    [SerializeField] private ObjectSkinData _projectileData;
+    [SerializeField] private ProjectileSkinData _projectileData;
     [SerializeField] private float _damage;
     [SerializeField] private LayerMask _hitTriggerLayer;
 
@@ -13,7 +13,7 @@ public abstract class ParticleWeapon : MonoBehaviour
     private ParticleSystem _particleSystem;
 
     protected ParticleSystem ThisParticleSystem => _particleSystem;
-    protected ObjectSkinData SkinData => _projectileData;
+    protected ProjectileSkinData SkinData => _projectileData;
     protected float Damage => _damage;
     protected virtual void Awake()
     {

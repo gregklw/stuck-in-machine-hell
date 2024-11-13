@@ -12,7 +12,7 @@ public class EnemyParticleWeapon : ParticleWeapon
             {
                 collider.GetComponent<IHealthyObject>().ReceiveDamage(Damage);
                 p.remainingLifetime = 0;
-                ExplosionObject explosion = ExplosionObjectPool.Instance.GetNewExplosion(p.position, SkinData);
+                ExplosionObject explosion = ExplosionObjectPool.Instance.GetNewExplosion(p.position, SkinData.ExplosionSprite, SkinData.ExplosionAnimationController);
                 explosion.InitSize(p.startSize3D);
                 particles[i] = p;
                 break;

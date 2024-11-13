@@ -12,18 +12,12 @@ public class Player : AttackingCharacter
     {
         get => _mainCamera ??= Camera.main;
     }
-    //private Vector2 _currentSmoothedPosition;
     private Vector2 _latestTravelPosition;
-    //private const float SpeedSmoothTime = 0.3f;
     private const float MinimumMagnitudeToMove = 0.05f;
-
-    private float _counter;
 
     private PlayerParticleWeapon _currentWeapon;
 
     private BusEventBinding<EnemySpawnEventWrapper> _enemySpawnEventBinding;
-
-    [SerializeField] private Transform _firingPivot;
 
     [SerializeField][Range(0, 10)] private float _baseMoveSpeed;
     public float BaseMoveSpeed

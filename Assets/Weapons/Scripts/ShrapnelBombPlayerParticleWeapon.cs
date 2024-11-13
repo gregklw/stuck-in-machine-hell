@@ -23,7 +23,7 @@ public class ShrapnelBombPlayerParticleWeapon : PlayerParticleWeapon
                 p.remainingLifetime = 0;
                 _shrapnelWeapon.transform.position = p.position;
                 _shrapnelWeapon.PlayOnce(_numberOfShrapnel);
-                ExplosionObject explosion = ExplosionObjectPool.Instance.GetNewExplosion(p.position, SkinData);
+                ExplosionObject explosion = ExplosionObjectPool.Instance.GetNewExplosion(p.position, SkinData.ExplosionSprite, SkinData.ExplosionAnimationController);
                 explosion.InitSize(p.startSize3D);
                 particles[i] = p;
                 break;

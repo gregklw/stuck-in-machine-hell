@@ -2,8 +2,8 @@ using UnityEngine;
 /// <summary>
 /// Used as a flyweight for projectile info.
 /// </summary>
-[CreateAssetMenu(fileName = "ProjectileData", menuName = "ScriptableObjects/ProjectileData")]
-public class ObjectSkinData : ScriptableObject
+[CreateAssetMenu(fileName = "ProjectileSkinData", menuName = "ScriptableObjects/ProjectileSkinData")]
+public class ProjectileSkinData : ScriptableObject
 {
     public Sprite[] ProjectileSprites;
     public Sprite ExplosionSprite;
