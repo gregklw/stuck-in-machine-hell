@@ -9,30 +9,17 @@ public class SpriteRendererAttributeBar : MonoBehaviour, IAttributeBar
     private Vector2 _maxSize;
     private Transform _pivot;
 
-    public Vector2 BarPosition
-    {
-        get
-        {
-            return _attributeBarRenderer.transform.position;
-        }
-        set
-        {
-            _attributeBarRenderer.transform.position = value;
-        }
-    }
+    //private IEnumerator Start()
+    //{
+    //    yield return new WaitForEndOfFrame();
+    //    _maxSize = _attributeBarRenderer.size;
+    //    _attributeBarInnerRenderer.size = _maxSize;
+    //}
 
-    private IEnumerator Start()
-    {
-        yield return new WaitForEndOfFrame();
-        _maxSize = _attributeBarRenderer.size;
-        _attributeBarInnerRenderer.size = _maxSize;
-        CreatePivotForHealthBar();
-    }
-
-    public void CenterBarPosX()
-    {
-        transform.position -= new Vector3(0, _maxSize.y, 0);
-    }
+    //public void CenterBarPosX()
+    //{
+    //    transform.position -= new Vector3(0, _maxSize.y, 0);
+    //}
 
     public void SetBarAmount(float percentage)
     {
@@ -41,10 +28,14 @@ public class SpriteRendererAttributeBar : MonoBehaviour, IAttributeBar
         //Debug.Log(_pivot.localScale);
     }
 
-    public void SetBarDisplayWidth(float width)
+    public void SetupBar(float width, Vector2 position)
     {
         _attributeBarRenderer.size = new Vector2(width, _barThickness);
         _attributeBarInnerRenderer.size = new Vector2(width, _barThickness);
+        _maxSize = _attributeBarRenderer.size;
+        //_attributeBarInnerRenderer.size = _maxSize;
+        CreatePivotForHealthBar();
+        transform.position = position - new Vector2(0, _maxSize.y);
     }
 
     private void CreatePivotForHealthBar()

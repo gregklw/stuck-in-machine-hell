@@ -3,8 +3,6 @@ using UnityEngine;
 
 public interface IAttributeBar
 {
-    Vector2 BarPosition { get; set; }
-    void CenterBarPosX();
-    void SetBarDisplayWidth(float width);
+    void SetupBar(float width, Vector2 position);
     void SetBarAmount(float percentage);
 }

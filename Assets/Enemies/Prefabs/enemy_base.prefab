@@ -71,7 +71,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -977008263
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
@@ -157,7 +157,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -977008263
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.20754719, g: 0, b: 0, a: 1}
@@ -242,6 +242,7 @@ MonoBehaviour:
   _armorType: 0
   _baseAttackSpeed: 480
   Score: 0
+  _minimumDistance: 0.2
   _baseMoveSpeed: 0
 --- !u!114 &3027582213553334061
 MonoBehaviour:
@@ -256,6 +257,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemy: {fileID: 9145549861930222665}
+  _enemySprite: {fileID: 673099634115847356}
 --- !u!114 &428550616327492235
 MonoBehaviour:
   m_ObjectHideFlags: 0

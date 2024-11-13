@@ -7,8 +7,8 @@ using UnityEngine.UI;
 
 public class PlayerHUD : MonoBehaviour
 {
-    [SerializeField] private CanvasAttributeBar _healthBar;
     [SerializeField] private TMP_Text _scoreText;
+    private IAttributeBar _healthBar;
 
     private BusEventBinding<PlayerHealthEventWrapper> _healthEventBinding;
     private BusEventBinding<EnemyDeathEventWrapper> _scoringEventBinding;
@@ -17,6 +17,7 @@ public class PlayerHUD : MonoBehaviour
 
     private void Awake()
     {
+        _healthBar = GetComponentInChildren<IAttributeBar>();
         _healthEventBinding = new BusEventBinding<PlayerHealthEventWrapper>(HandleHealthEvent);
         _scoringEventBinding = new BusEventBinding<EnemyDeathEventWrapper>(HandleScoringEvent);
     }

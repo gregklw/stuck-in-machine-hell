@@ -168,6 +168,10 @@ PrefabInstance:
       propertyPath: _objectSkinData
       value: 
       objectReference: {fileID: 11400000, guid: b83e8e916bf00054ab4a561d7d6c3201, type: 2}
+    - target: {fileID: 9145549861930222665, guid: 2f8de9c3323d97c42b4ea1bc310369d0, type: 3}
+      propertyPath: _minimumDistance
+      value: 0.8
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
     - {fileID: 1944518598892549376, guid: 2f8de9c3323d97c42b4ea1bc310369d0, type: 3}

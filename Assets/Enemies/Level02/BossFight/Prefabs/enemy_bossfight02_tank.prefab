@@ -242,6 +242,10 @@ PrefabInstance:
       propertyPath: _objectSkinData
       value: 
       objectReference: {fileID: 11400000, guid: a4ea025681990384aa6465ff55db24cc, type: 2}
+    - target: {fileID: 9145549861930222665, guid: 2f8de9c3323d97c42b4ea1bc310369d0, type: 3}
+      propertyPath: _minimumDistance
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 9208958614255716188, guid: 2f8de9c3323d97c42b4ea1bc310369d0, type: 3}
