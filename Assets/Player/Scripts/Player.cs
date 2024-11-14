@@ -1,12 +1,8 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Player : AttackingCharacter
 {
-    private Rigidbody2D _rigidbody2D;
     private Camera _mainCamera;
     private Camera MainCamera
     {
@@ -26,11 +22,12 @@ public class Player : AttackingCharacter
         set => _baseMoveSpeed = value;
     }
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         _enemySpawnEventBinding = new BusEventBinding<EnemySpawnEventWrapper>(RegisterPlayerForEnemies);
-        _rigidbody2D = GetComponent<Rigidbody2D>();
         _mainCamera = Camera.main;
+        OnDestroyEvent += () => EventBus<PlayerDeathEventWrapper>.Raise(new PlayerDeathEventWrapper());
     }
 
     private void OnEnable()
@@ -76,7 +73,7 @@ public class Player : AttackingCharacter
         if (playerToMouseDistance.sqrMagnitude > MinimumMagnitudeToMove)
         {
             //transform.position += (Vector3)playerToMouseDir * CurrentMoveSpeed;
-            _rigidbody2D.position += (playerToMouseDir * BaseMoveSpeed) * Time.fixedDeltaTime;
+            ThisRigidbody.position += (playerToMouseDir * BaseMoveSpeed) * Time.fixedDeltaTime;
         }
         transform.Rotate(Vector3.forward, Vector2.SignedAngle(playerForwardVector, playerToMouseDir), Space.World);
         //_rigidbody2D.SetRotation(Vector2.SignedAngle(playerForwardVector, playerToMouseDir));

@@ -238,7 +238,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _currentHealth: 0
   _maxHealth: 0
-  _objectSkinData: {fileID: 0}
+  _characterDeathAnimation: {fileID: 0}
+  _characterRenderer: {fileID: 673099634115847356}
   _armorType: 0
   _baseAttackSpeed: 480
   Score: 0

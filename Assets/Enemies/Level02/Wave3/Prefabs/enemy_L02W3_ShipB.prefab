@@ -258,6 +258,10 @@ PrefabInstance:
       propertyPath: _minimumDistance
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9145549861930222665, guid: 2f8de9c3323d97c42b4ea1bc310369d0, type: 3}
+      propertyPath: _characterDeathAnimation
+      value: 
+      objectReference: {fileID: 22100000, guid: 14753e4a9e80aa64a86000ae74740022, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 9208958614255716188, guid: 2f8de9c3323d97c42b4ea1bc310369d0, type: 3}

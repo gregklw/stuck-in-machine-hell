@@ -134,7 +134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _currentHealth: 999999
   _maxHealth: 999999
-  _characterSkinData: {fileID: 11400000, guid: 9d3eaf63960c1f24996a15b00611847e, type: 2}
+  _characterDeathAnimation: {fileID: 22100000, guid: 4c9a407737b6cb346876d77d0e61044d, type: 2}
   _armorType: 0
   _baseAttackSpeed: 480
   _baseMoveSpeed: 2

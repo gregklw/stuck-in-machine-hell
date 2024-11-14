@@ -121,5 +121,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed4d2889f47ca554b97e5b01ced2fbe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _weaponInfo: {fileID: 0}
-  AttackSpeedBoost: 50
+  _weaponPrefab: {fileID: 0}
+  AttackSpeedBoost: 60

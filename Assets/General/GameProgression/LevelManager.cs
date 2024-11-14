@@ -13,6 +13,8 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private SceneField _mainMenuScene;
 
     private BusEventBinding<LevelProgressEventWrapper> _levelChangeBinding;
+    private BusEventBinding<PlayerDeathEventWrapper> _playerDeathBinding;
+
     private int _sceneCounter;
     //private List<AsyncOperation> _scenesToProcess = new List<AsyncOperation>();
     public LevelSceneGroup LevelSceneGroup
@@ -23,16 +25,19 @@ public class LevelManager : MonoBehaviour
     private void Awake()
     {
         _levelChangeBinding = new BusEventBinding<LevelProgressEventWrapper>(CommenceLevelProgressChange);
+        _playerDeathBinding = new BusEventBinding<PlayerDeathEventWrapper>(SetupGameOverSequence);
     }
 
     private void OnEnable()
     {
         EventBus<LevelProgressEventWrapper>.Register(_levelChangeBinding);
+        EventBus<PlayerDeathEventWrapper>.Register(_playerDeathBinding);
     }
 
     private void OnDisable()
     {
         EventBus<LevelProgressEventWrapper>.Deregister(_levelChangeBinding);
+        EventBus<PlayerDeathEventWrapper>.Deregister(_playerDeathBinding);
     }
 
     private void CommenceLevelProgressChange(LevelProgressEventWrapper levelChangeEvent)
@@ -181,6 +186,28 @@ public class LevelManager : MonoBehaviour
 
             );
     }
+
+    #region GAMEOVER
+
+    private void SetupGameOverSequence(PlayerDeathEventWrapper wrapper)
+    {
+        Debug.Log("SETUP GAME OVER SEQUENCE");
+        _cutsceneManager.TogglePanelVisibility(true);
+        _cutsceneManager.ToggleButtonVisibility(true);
+        _cutsceneManager.ChangeButtonText("Return to Main Menu");
+        _cutsceneManager.ChangeHeaderText("Game Over");
+        _cutsceneManager.AddButtonAction(
+            () =>
+            {
+                _cutsceneManager.ClearButtonActions();
+                _cutsceneManager.ToggleButtonVisibility(false);
+                GoToMainMenu();
+            }
+
+            );
+    }
+
+    #endregion
 
     #region STARTNEWLEVEL
 

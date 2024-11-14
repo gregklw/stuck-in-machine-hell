@@ -9,7 +9,8 @@ public abstract class DestroyableObject : MonoBehaviour, IHealthyObject
     public abstract void ReceiveDamage(float damage);
 
     [SerializeField] private float _currentHealth, _maxHealth;
-    [SerializeField] private CharacterSkinData _characterSkinData;
+    [SerializeField] private RuntimeAnimatorController _characterDeathAnimation;
+    private SpriteRenderer _characterRenderer;
     public Action OnDestroyEvent;
     public float CurrentHealth
     {
@@ -42,6 +43,11 @@ public abstract class DestroyableObject : MonoBehaviour, IHealthyObject
 
     [SerializeField] private ArmorType _armorType;
 
+    protected virtual void Awake()
+    {
+        _characterRenderer = GetComponentInChildren<SpriteRenderer>();
+    }
+
     private void DestroyObject()
     {
         InstantiateDestroyedAnimation();
@@ -51,7 +57,7 @@ public abstract class DestroyableObject : MonoBehaviour, IHealthyObject
 
     private void InstantiateDestroyedAnimation()
     {
-        ExplosionObject explosion = ExplosionObjectPool.Instance.GetNewExplosion(transform.position, _characterSkinData.CharacterSprite, _characterSkinData.DeathExplosionAnimation);
+        ExplosionObject explosion = ExplosionObjectPool.Instance.GetNewExplosion(transform.position, _characterRenderer.sprite, _characterDeathAnimation);
         explosion.InitSize(GetComponent<Collider2D>().bounds.size);
     }
 }

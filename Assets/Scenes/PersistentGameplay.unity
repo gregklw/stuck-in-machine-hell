@@ -2526,7 +2526,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7746235985061475845, guid: 8571d3bd3656bd041ba43d9a7a1ec86d, type: 3}
       propertyPath: _maxHealth
-      value: 1000
+      value: 1500
       objectReference: {fileID: 0}
     - target: {fileID: 7746235985061475845, guid: 8571d3bd3656bd041ba43d9a7a1ec86d, type: 3}
       propertyPath: _weaponInfo
@@ -2534,7 +2534,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 325e8eab00a8b624286de2891c065c6d, type: 2}
     - target: {fileID: 7746235985061475845, guid: 8571d3bd3656bd041ba43d9a7a1ec86d, type: 3}
       propertyPath: _currentHealth
-      value: 1000
+      value: 1500
       objectReference: {fileID: 0}
     - target: {fileID: 7746235985061475845, guid: 8571d3bd3656bd041ba43d9a7a1ec86d, type: 3}
       propertyPath: _currentWeapon

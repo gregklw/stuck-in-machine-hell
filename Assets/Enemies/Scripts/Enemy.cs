@@ -1,7 +1,5 @@
 using System;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public abstract class Enemy : AttackingCharacter
 {
@@ -11,14 +9,11 @@ public abstract class Enemy : AttackingCharacter
 
     protected Player TargetPlayer => _targetPlayer;
 
-    private Rigidbody2D _rigidbody;
-    protected Rigidbody2D ThisRigidbody => _rigidbody;
-
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         //HealthEventBinding = new LocalEventBinding<EnemyEvent>();
         _targetPlayer = FindObjectOfType<Player>();
-        _rigidbody = GetComponent<Rigidbody2D>();
     }
 
     private void Start()
