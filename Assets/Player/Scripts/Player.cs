@@ -1,4 +1,6 @@
 using System;
+using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Player : AttackingCharacter
@@ -82,6 +84,7 @@ public class Player : AttackingCharacter
 
     public override void ReceiveDamage(float damage)
     {
+        if (_flashDamageCoroutine == null) _flashDamageCoroutine = StartCoroutine(FlashDamage(3));
         this.CurrentHealth -= damage;
         RaiseHealthEvent();
     }
@@ -103,7 +106,40 @@ public class Player : AttackingCharacter
     }
 
     public void SetCurrentWeapon(PlayerParticleWeapon weapon)
-    { 
+    {
         _currentWeapon = weapon;
     }
+
+    #region FLASHINGDAMAGE
+    private const float ColorFlashDecrementValue = 17.0f / 255.0f;
+    private Coroutine _flashDamageCoroutine;
+
+    private IEnumerator FlashDamage(int numberOfRepeats)
+    {
+        Color color = Color.red;
+        WaitForSeconds delay = new WaitForSeconds(0.01f);
+        while (color.r > 0)
+        {
+            color.r -= ColorFlashDecrementValue;
+            CharacterRenderer.color = color;
+            if (color.r < 0) color.r = 0;
+            yield return delay;
+        }
+
+        while (color.r < 1)
+        {
+            color.r += ColorFlashDecrementValue;
+            CharacterRenderer.color = color;
+            if (color.r > 1) color.r = 1;
+            yield return delay;
+        }
+
+        if (numberOfRepeats != 0) yield return StartCoroutine(FlashDamage(numberOfRepeats - 1));
+        else
+        {
+            CharacterRenderer.color = Color.white;
+            _flashDamageCoroutine = null;
+        }
+    }
+    #endregion
 }

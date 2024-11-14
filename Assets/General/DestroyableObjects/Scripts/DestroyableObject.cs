@@ -11,6 +11,7 @@ public abstract class DestroyableObject : MonoBehaviour, IHealthyObject
     [SerializeField] private float _currentHealth, _maxHealth;
     [SerializeField] private RuntimeAnimatorController _characterDeathAnimation;
     private SpriteRenderer _characterRenderer;
+    protected SpriteRenderer CharacterRenderer => _characterRenderer;
     public Action OnDestroyEvent;
     public float CurrentHealth
     {
