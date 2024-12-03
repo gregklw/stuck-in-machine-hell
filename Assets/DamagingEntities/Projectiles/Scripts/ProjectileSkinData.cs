@@ -6,7 +6,6 @@ using UnityEngine;
 public class ProjectileSkinData : ScriptableObject
 {
     public Sprite[] ProjectileSprites;
-    public Sprite ExplosionSprite;
     public RuntimeAnimatorController ExplosionAnimationController;
     [Range(0.0f, 10.0f)] public float ProjectileSpeed;
     [Range(0.0f, 10.0f)] public float ProjectileLifeTime;

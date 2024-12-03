@@ -698,7 +698,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 48
+  m_fontSize: 51.75
   m_fontSizeBase: 48
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1305,7 +1305,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1688948926
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1339,10 +1339,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88ebcb549e468fa40b340969a85e9576, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cutscenePanelObj: {fileID: 1688948928}
-  _cutsceneButton: {fileID: 995926089}
   _cutsceneText: {fileID: 1507170079}
-  _cutsceneButtonText: {fileID: 660259208}
 --- !u!114 &1688948928
 MonoBehaviour:
   m_ObjectHideFlags: 0

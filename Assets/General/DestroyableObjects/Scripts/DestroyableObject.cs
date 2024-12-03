@@ -58,7 +58,7 @@ public abstract class DestroyableObject : MonoBehaviour, IHealthyObject
 
     private void InstantiateDestroyedAnimation()
     {
-        ExplosionObject explosion = ExplosionObjectPool.Instance.GetNewExplosion(transform.position, _characterRenderer.sprite, _characterDeathAnimation);
+        ExplosionObject explosion = ExplosionObjectPool.Instance.GetNewExplosion(transform.position, _characterDeathAnimation);
         explosion.InitSize(GetComponent<Collider2D>().bounds.size);
     }
 }

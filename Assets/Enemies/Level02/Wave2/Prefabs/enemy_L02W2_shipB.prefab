@@ -26,7 +26,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 810779449333d5b45aa529c428df346e, type: 3}
     - target: {fileID: 673099634115847356, guid: 2f8de9c3323d97c42b4ea1bc310369d0, type: 3}
       propertyPath: m_SortingLayer
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 673099634115847356, guid: 2f8de9c3323d97c42b4ea1bc310369d0, type: 3}
       propertyPath: m_SortingLayerID
@@ -154,7 +154,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9145549861930222665, guid: 2f8de9c3323d97c42b4ea1bc310369d0, type: 3}
       propertyPath: _minimumDistance
-      value: 0.8
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 9145549861930222665, guid: 2f8de9c3323d97c42b4ea1bc310369d0, type: 3}
       propertyPath: _characterDeathAnimation

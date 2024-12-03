@@ -8,23 +8,27 @@ using UnityEngine.UI;
 
 public class CutsceneManager : MonoBehaviour
 {
-    [SerializeField] private Image _cutscenePanelObj;
-    [SerializeField] private Button _cutsceneButton;
     [SerializeField] private TMP_Text _cutsceneText;
-    [SerializeField] private TMP_Text _cutsceneButtonText;
+    private Button _cutsceneButton;
+    private TMP_Text _cutsceneButtonText;
+    private Image _cutscenePanelObj;
 
-    private void OnDisable()
+    private void Awake()
     {
-        _cutsceneButtonText.text = "";
+        _cutscenePanelObj = GetComponent<Image>();
+        _cutsceneButton = GetComponentInChildren<Button>(true);
+        _cutsceneButtonText = _cutsceneButton.GetComponentInChildren<TMP_Text>(true);
     }
 
     public void ToggleButtonVisibility(bool isActive)
     {
+        if (isActive == false) _cutsceneButtonText.text = "";
         _cutsceneButton.gameObject.SetActive(isActive);
     }
 
     public void TogglePanelVisibility(bool isActive)
     {
+        if (isActive == false) _cutsceneText.text = "";
         _cutscenePanelObj.gameObject.SetActive(isActive);
     }
 

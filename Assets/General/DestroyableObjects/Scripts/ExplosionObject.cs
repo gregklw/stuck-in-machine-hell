@@ -15,9 +15,9 @@ public class ExplosionObject : MonoBehaviour
         _defaultAnimationName = _explosionAnimator.GetCurrentAnimatorClipInfo(0)[0].clip.name; //save default animation name for reuse
     }
 
-    public void SetExplosionVisuals(Sprite startingSprite, RuntimeAnimatorController animationController)
+    public void SetExplosionVisuals(RuntimeAnimatorController animationController)
     {
-        _explosionRenderer.sprite = startingSprite;
+        //_explosionRenderer.sprite = startingSprite;
         _explosionAnimator.runtimeAnimatorController = animationController;
         _explosionAnimator.Play(_defaultAnimationName);
     }

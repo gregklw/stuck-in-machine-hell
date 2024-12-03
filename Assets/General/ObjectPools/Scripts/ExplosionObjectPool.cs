@@ -16,10 +16,10 @@ public class ExplosionObjectPool : SimpleObjectPool<ExplosionObject>
     }
 
     [SerializeField] private ExplosionObject _explosionPrefab;
-    public ExplosionObject GetNewExplosion(Vector2 spawnPoint, Sprite startingSprite, RuntimeAnimatorController animationController)
+    public ExplosionObject GetNewExplosion(Vector2 spawnPoint, RuntimeAnimatorController animationController)
     {
         ExplosionObject explosion = GetObjectFromPool();
-        explosion.SetExplosionVisuals(startingSprite, animationController);
+        explosion.SetExplosionVisuals(animationController);
         //explosion.gameObject.SetActive(true);
         explosion.transform.position = spawnPoint;
         return explosion;

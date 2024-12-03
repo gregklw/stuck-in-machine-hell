@@ -384,7 +384,12 @@ MonoBehaviour:
   _hitTriggerLayer:
     serializedVersion: 2
     m_Bits: 1088
-  _persistParticleAfterTrigger: 0
+  _explosionParticleOnTrigger: {fileID: 8043676589181489475}
   _attackSpeedMultiplier: 0.1
   _numberOfShrapnel: 32
   _shrapnelWeapon: {fileID: 5946815293733147590}
+--- !u!198 &8043676589181489475 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 7110908512510526276, guid: ba34fbe3aa9cbde4681b8f0bb8f56a79, type: 3}
+  m_PrefabInstance: {fileID: 941222224939192839}
+  m_PrefabAsset: {fileID: 0}

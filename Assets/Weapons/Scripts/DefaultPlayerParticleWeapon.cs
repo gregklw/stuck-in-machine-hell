@@ -14,8 +14,7 @@ public class DefaultPlayerParticleWeapon : PlayerParticleWeapon
                 collider.GetComponent<IHealthyObject>().ReceiveDamage(Damage);
                 p.remainingLifetime = 0;
                 particles[i] = p;
-                ExplosionObject explosion = ExplosionObjectPool.Instance.GetNewExplosion(p.position, SkinData.ExplosionSprite, SkinData.ExplosionAnimationController);
-                explosion.InitSize(p.startSize3D);
+                TriggerExplosionEffect(p.position, p.startSize);
                 break;
             }
         }

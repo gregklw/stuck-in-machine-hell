@@ -22,9 +22,10 @@ public class ShrapnelBombPlayerParticleWeapon : PlayerParticleWeapon
                 collider.GetComponent<IHealthyObject>().ReceiveDamage(Damage);
                 p.remainingLifetime = 0;
                 _shrapnelWeapon.transform.position = p.position;
-                _shrapnelWeapon.PlayOnce(_numberOfShrapnel);
-                ExplosionObject explosion = ExplosionObjectPool.Instance.GetNewExplosion(p.position, SkinData.ExplosionSprite, SkinData.ExplosionAnimationController);
-                explosion.InitSize(p.startSize3D);
+                _shrapnelWeapon.FireBurstParticlesOnce(_numberOfShrapnel);
+                //ExplosionObject explosion = ExplosionObjectPool.Instance.GetNewExplosion(p.position, SkinData.ExplosionSprite, SkinData.ExplosionAnimationController);
+                //explosion.InitSize(p.startSize3D);
+                TriggerExplosionEffect(p.position, p.startSize);
                 particles[i] = p;
                 break;
             }

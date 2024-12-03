@@ -142,6 +142,7 @@ public class LevelManager : MonoBehaviour
             {
                 _cutsceneManager.ClearButtonActions();
                 _cutsceneManager.ToggleButtonVisibility(false);
+                _cutsceneManager.TogglePanelVisibility(false);
                 StartCoroutine(AdvanceToNextLevelCoroutine());
             }
             );

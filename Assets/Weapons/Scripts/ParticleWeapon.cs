@@ -8,6 +8,7 @@ public abstract class ParticleWeapon : MonoBehaviour
     [SerializeField] private ProjectileSkinData _projectileData;
     [SerializeField] private float _damage;
     [SerializeField] private LayerMask _hitTriggerLayer;
+    [SerializeField] private ParticleSystem _explosionParticleOnTrigger;
 
     private List<ParticleSystem.Particle> _insideParticles = new List<ParticleSystem.Particle>();
     private ParticleSystem _particleSystem;
@@ -75,8 +76,16 @@ public abstract class ParticleWeapon : MonoBehaviour
         _particleSystem.Stop();
     }
 
-    public void PlayOnce(int count)
+    public void FireBurstParticlesOnce(int count)
     {
         _particleSystem.Emit(count);
+    }
+
+    public void TriggerExplosionEffect(Vector2 spawnPosition, float startSize)
+    {
+        ParticleSystem.MainModule main = _explosionParticleOnTrigger.main;
+        main.startSize = startSize;
+        _explosionParticleOnTrigger.transform.position = spawnPosition;
+        _explosionParticleOnTrigger.Emit(1);
     }
 }
