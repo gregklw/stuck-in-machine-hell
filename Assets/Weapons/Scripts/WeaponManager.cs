@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -25,9 +26,9 @@ public class WeaponManager : MonoBehaviour
         _weaponStatModifierEventBinding = new BusEventBinding<WeaponStatModifierEventWrapper>(UpdateWeaponAttackSpeedValues);
         _player ??= FindObjectOfType<Player>();
         _weaponCollection = _weaponsCollectionRoot.GetComponentsInChildren<PlayerParticleWeapon>().ToList();
-        UnlockWeapon(_startingWeaponPrefab);
         _changeWeaponButton = GetComponent<Button>();
     }
+
 
     private void OnEnable()
     {
@@ -51,6 +52,8 @@ public class WeaponManager : MonoBehaviour
                 AttackSpeedValue = _player.BaseAttackSpeed
             }
         );
+
+        UnlockWeapon(_startingWeaponPrefab);
     }
 
     private void UnlockWeapon(PlayerParticleWeapon weaponToBeUnlocked)

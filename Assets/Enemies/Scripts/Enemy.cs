@@ -6,6 +6,7 @@ public abstract class Enemy : AttackingCharacter
     private Player _targetPlayer;
     public int Score;
     public Action<EnemyHealthEventWrapper> HealthEvent;
+    private ItemDropper _dropper;
 
     protected Player TargetPlayer => _targetPlayer;
 
@@ -14,6 +15,7 @@ public abstract class Enemy : AttackingCharacter
         base.Awake();
         //HealthEventBinding = new LocalEventBinding<EnemyEvent>();
         _targetPlayer = FindObjectOfType<Player>();
+        _dropper = GetComponent<ItemDropper>();
     }
 
     private void Start()
@@ -30,18 +32,20 @@ public abstract class Enemy : AttackingCharacter
     private void OnEnable()
     {
         //FindObjectOfType<PlayerParticleWeapon>().AddCollider(GetComponent<Collider2D>());
-        OnDestroyEvent += TriggerScoring;
+        OnDestroyEvent += TriggerDeathEvents;
     }
 
     private void OnDisable()
     {
         //FindObjectOfType<PlayerParticleWeapon>().RemoveCollider(GetComponent<Collider2D>());
-        OnDestroyEvent -= TriggerScoring;
+        OnDestroyEvent -= TriggerDeathEvents;
     }
 
 
-    private void TriggerScoring()
+    private void TriggerDeathEvents()
     {
+        _dropper.SpawnItemByChance();
+
         EventBus<EnemyDeathEventWrapper>.Raise(
             new EnemyDeathEventWrapper
             {
@@ -49,7 +53,6 @@ public abstract class Enemy : AttackingCharacter
                 EnemyCollider = GetComponent<Collider2D>()
             }
         );
-      
     }
 
     public override void ReceiveDamage(float damage)

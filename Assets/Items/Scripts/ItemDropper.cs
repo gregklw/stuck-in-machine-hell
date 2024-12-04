@@ -9,13 +9,13 @@ public class ItemDropper : MonoBehaviour
 {
     [SerializeField] private DropInfoContainer _dropInfoContainer;
 
-    //need to replace in the future with OnDisable
-    private void OnDisable()
-    {
-        SpawnItemByChance();
-    }
+    ////need to replace in the future with OnDisable
+    //private void OnDisable()
+    //{
+    //    SpawnItemByChance();
+    //}
 
-    private void SpawnItemByChance()
+    public void SpawnItemByChance()
     {
         if (_dropInfoContainer == null) return;
 

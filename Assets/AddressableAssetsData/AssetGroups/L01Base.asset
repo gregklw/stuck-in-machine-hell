@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: L01Base
+  m_EditorClassIdentifier: 
+  m_GroupName: L01Base
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 8d0d85f0ea63ccc48aeffdf441272a51
+  m_SerializeEntries:
+  - m_GUID: f0d91f46b866b92409954a8fac1608d2
+    m_Address: Assets/LoadableAddressables/L01Base/Background_L01.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - L01Base
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 73c6bf2dc72c3ca48ac940e0f5611eda, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 6c501d8fe272b9140a171ae24b8bed18, type: 2}
+    - {fileID: 11400000, guid: 7dfeb1b6bcbf295438671b2196dc9e67, type: 2}

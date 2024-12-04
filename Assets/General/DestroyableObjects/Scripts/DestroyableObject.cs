@@ -21,7 +21,7 @@ public abstract class DestroyableObject : MonoBehaviour, IHealthyObject
             if (value <= 0)
             {
                 _currentHealth = 0;
-                DestroyObject();
+                StartCoroutine(DestroyObject());
             }
             else if (value > _maxHealth)
             {
@@ -49,10 +49,11 @@ public abstract class DestroyableObject : MonoBehaviour, IHealthyObject
         _characterRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
-    private void DestroyObject()
+    private IEnumerator DestroyObject()
     {
         InstantiateDestroyedAnimation();
         OnDestroyEvent?.Invoke();
+        yield return new WaitForEndOfFrame();
         Destroy(gameObject);
     }
 
