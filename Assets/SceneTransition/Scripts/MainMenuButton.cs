@@ -7,12 +7,12 @@ public class MainMenuButton : MonoBehaviour
 {
     [SerializeField] private LevelSceneGroup _startingLevelSceneGroup;
     private Button _button;
-    private MainMenuManager _manager;
+    private LevelManager _manager;
 
     private void Awake()
     {
         _button = GetComponent<Button>();
-        _manager = FindObjectOfType<MainMenuManager>();
+        _manager = FindObjectOfType<LevelManager>();
         _button.onClick.AddListener(
             () =>
             {

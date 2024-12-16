@@ -3,11 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.UI;
 
 public class LoadingBar : MonoBehaviour
 {
     private List<AsyncOperation> _scenesToProcess = new List<AsyncOperation>();
+    private List<AsyncOperationHandle> _assetsToProcess = new List<AsyncOperationHandle>();
 
     [SerializeField] private Image _loadingBarImage;
     [SerializeField] private TMP_Text _loadingBarText;
@@ -15,22 +17,26 @@ public class LoadingBar : MonoBehaviour
     {
         gameObject.SetActive(isActive);
     }
-
-    public float UpdateLoadingBar()
+    private float UpdateLoadingBar(float loadProgress)
     {
-        float loadProgress = 0f;
-        for (int i = 0; i < _scenesToProcess.Count; i++)
-        {
-            loadProgress += _scenesToProcess[i].progress;
-        }
-        loadProgress /= _scenesToProcess.Count;
-
         _loadingBarImage.fillAmount = loadProgress;
-        _loadingBarText.text = (Mathf.Round(loadProgress * 1000)/10).ToString() + "%";
+        _loadingBarText.text += (Mathf.Round(loadProgress * 1000) / 10).ToString() + "%";
         return loadProgress;
     }
 
-    public IEnumerator ProcessScenes(Action onFinishLoading)
+    #region LOADING SCENE PROGRESS
+
+    public float UpdateSceneLoadingProgress()
+    {
+        float loadProgress = 0f;
+        _scenesToProcess.ForEach(i => loadProgress += i.progress);
+        loadProgress /= _scenesToProcess.Count;
+        _loadingBarText.text = "Scene Loading: ";
+        UpdateLoadingBar(loadProgress);
+        return loadProgress;
+    }
+
+    public IEnumerator ProcessScenes()
     {
         for (int i = 0; i < _scenesToProcess.Count; i++)
         {
@@ -39,26 +45,6 @@ public class LoadingBar : MonoBehaviour
                 yield return null;
             }
         }
-        onFinishLoading?.Invoke();
-        _scenesToProcess.Clear();
-    }
-
-    public IEnumerator ProgressLoadingBar(Action onLoadingCompleteAfterDelay)
-    {
-        Debug.Log($"Number of scenes to process: {_scenesToProcess.Count}");
-
-        ToggleLoadingBarVisibility(true);
-
-        while (CheckIfScenesNinetyProcessed())
-        {
-            //UpdateLoadingBar();
-            yield return null;
-        }
-        yield return new WaitForSeconds(1.0f);
-
-        onLoadingCompleteAfterDelay?.Invoke();
-
-        ToggleLoadingBarVisibility(false);
     }
 
     public void RegisterSceneOperation(AsyncOperation sceneOperationToProcess)
@@ -80,8 +66,6 @@ public class LoadingBar : MonoBehaviour
 
     public bool CheckIfScenesFullyProcessed()
     {
-        //Debug.Log(_scenesToProcess.Count);
-
         bool assertTrue = true;
         for (int i = 0; i < _scenesToProcess.Count; i++)
         {
@@ -102,4 +86,53 @@ public class LoadingBar : MonoBehaviour
     {
         _scenesToProcess.Clear();
     }
+    #endregion
+
+
+    #region LOADING ASSET PROGRESS
+    public IEnumerator ProcessAssets()
+    {
+        for (int i = 0; i < _assetsToProcess.Count; i++)
+        {
+            while (!_assetsToProcess[i].IsDone)
+            {
+                yield return null;
+            }
+        }
+    }
+
+    public bool CheckIfAssetsFullyProcessed()
+    {
+        bool assertTrue = true;
+        for (int i = 0; i < _assetsToProcess.Count; i++)
+        {
+            if (!_assetsToProcess[i].IsDone)
+            {
+                assertTrue = false;
+            }
+        }
+        return assertTrue;
+    }
+
+    public float UpdateAssetLoadingProgress()
+    {
+        float loadProgress = 0f;
+        Debug.Log(_assetsToProcess.Count);
+        _assetsToProcess.ForEach(i =>
+        {
+            Debug.Log(i.DebugName + " " + i.PercentComplete);
+            loadProgress += i.PercentComplete;
+        }
+        );
+        loadProgress /= _assetsToProcess.Count;
+        _loadingBarText.text = "Asset Loading: ";
+        UpdateLoadingBar(loadProgress);
+        return loadProgress;
+    }
+
+    public void RegisterAssetLoadOperation(AsyncOperationHandle handleToProcess)
+    {
+        _assetsToProcess.Add(handleToProcess);
+    }
+    #endregion
 }

@@ -15,12 +15,12 @@ public class EnemyKillObjective : MonoBehaviour, IObjective
 
     [SerializeField] private int _totalEnemiesRemaining;
 
-    private void Awake()
+    private void Start()
     {
         WaveSpawner[] spawners = GetComponentsInChildren<WaveSpawner>();
         foreach (WaveSpawner spawner in spawners)
         {
-            spawner.InitSpawner();
+            //spawner.InitSpawner();
             _totalEnemiesRemaining += spawner.TotalAmountToSpawn;
         }
         _killEvent = new BusEventBinding<EnemyDeathEventWrapper>(DecrementEnemiesKilled);

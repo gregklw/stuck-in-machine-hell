@@ -259,6 +259,18 @@ PrefabInstance:
       propertyPath: _cameraEdgeInstantiationData.Array.data[3]._edgeDistanceMinRange
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2425884637753499723, guid: eb8f545fc969c0045ba0f21f491d4b7d, type: 3}
+      propertyPath: _cameraEdgeInstantiationData.Array.data[0]._assetReferencePrefab.m_AssetGUID
+      value: b2f090dddb0e0fb4fab2f92808fa7859
+      objectReference: {fileID: 0}
+    - target: {fileID: 2425884637753499723, guid: eb8f545fc969c0045ba0f21f491d4b7d, type: 3}
+      propertyPath: _cameraEdgeInstantiationData.Array.data[1]._assetReferencePrefab.m_AssetGUID
+      value: 02ac2b2be7ff88942bd51b52b8af3c24
+      objectReference: {fileID: 0}
+    - target: {fileID: 2425884637753499723, guid: eb8f545fc969c0045ba0f21f491d4b7d, type: 3}
+      propertyPath: _cameraEdgeInstantiationData.Array.data[1]._assetReferencePrefab.m_EditorAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3425575820673323581, guid: eb8f545fc969c0045ba0f21f491d4b7d, type: 3}
       propertyPath: m_Name
       value: WaveSpawner2
@@ -407,6 +419,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2425884637753499723, guid: eb8f545fc969c0045ba0f21f491d4b7d, type: 3}
       propertyPath: _cameraEdgeInstantiationData.Array.data[3]._edgeDistanceMinRange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2425884637753499723, guid: eb8f545fc969c0045ba0f21f491d4b7d, type: 3}
+      propertyPath: _cameraEdgeInstantiationData.Array.data[0]._assetReferencePrefab.m_AssetGUID
+      value: 2a4dc0a23f9137c44bf25ba27c229e51
+      objectReference: {fileID: 0}
+    - target: {fileID: 2425884637753499723, guid: eb8f545fc969c0045ba0f21f491d4b7d, type: 3}
+      propertyPath: _cameraEdgeInstantiationData.Array.data[1]._assetReferencePrefab.m_AssetGUID
+      value: 709435ea3a1c02540b205de14adf698f
+      objectReference: {fileID: 0}
+    - target: {fileID: 2425884637753499723, guid: eb8f545fc969c0045ba0f21f491d4b7d, type: 3}
+      propertyPath: _cameraEdgeInstantiationData.Array.data[1]._assetReferencePrefab.m_EditorAssetChanged
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3425575820673323581, guid: eb8f545fc969c0045ba0f21f491d4b7d, type: 3}
@@ -633,6 +657,14 @@ PrefabInstance:
     - target: {fileID: 2425884637753499723, guid: eb8f545fc969c0045ba0f21f491d4b7d, type: 3}
       propertyPath: _cameraEdgeInstantiationData.Array.data[3]._edgeDistanceMinRange
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2425884637753499723, guid: eb8f545fc969c0045ba0f21f491d4b7d, type: 3}
+      propertyPath: _cameraEdgeInstantiationData.Array.data[0]._assetReferencePrefab.m_AssetGUID
+      value: 047c24d998316ec4ab3a91eb8e1c79c6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2425884637753499723, guid: eb8f545fc969c0045ba0f21f491d4b7d, type: 3}
+      propertyPath: _cameraEdgeInstantiationData.Array.data[1]._assetReferencePrefab.m_AssetGUID
+      value: 056307814a31f6e44a592edcf56383f0
       objectReference: {fileID: 0}
     - target: {fileID: 3425575820673323581, guid: eb8f545fc969c0045ba0f21f491d4b7d, type: 3}
       propertyPath: m_Name
