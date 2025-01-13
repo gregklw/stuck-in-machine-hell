@@ -12,6 +12,10 @@ public class ExplosionObject : MonoBehaviour
     {
         _explosionRenderer = GetComponent<SpriteRenderer>();
         _explosionAnimator = GetComponent<Animator>();
+    }
+
+    private void Start()
+    {
         _defaultAnimationName = _explosionAnimator.GetCurrentAnimatorClipInfo(0)[0].clip.name; //save default animation name for reuse
     }
 

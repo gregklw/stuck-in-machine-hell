@@ -50,7 +50,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _currentHealth: 999999
   _maxHealth: 999999
-  _characterDeathAnimation: {fileID: 22100000, guid: 4c9a407737b6cb346876d77d0e61044d, type: 2}
+  _deathAnimation:
+    m_AssetGUID: 4c9a407737b6cb346876d77d0e61044d
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  _deathAnimatorController: {fileID: 22100000, guid: 4c9a407737b6cb346876d77d0e61044d, type: 2}
   _armorType: 0
   _baseAttackSpeed: 480
   _baseMoveSpeed: 2
@@ -197,7 +202,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1501945275
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 99d60556134a1c844b41156c1127db1e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

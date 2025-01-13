@@ -705,7 +705,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c35243fadb7838e43b9a08d0c493a2b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startingLevelSceneGroup: {fileID: 0}
+  _startingLevelSceneGroup: {fileID: 11400000, guid: 7d8d54ce1895980428a7278518672eb3, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

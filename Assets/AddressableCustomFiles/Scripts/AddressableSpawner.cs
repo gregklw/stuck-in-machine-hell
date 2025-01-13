@@ -1,11 +1,9 @@
 using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
 
-public class AddressableSpawner : MonoBehaviour, IAddressableLoadable
+public class AddressableSpawner : MonoBehaviour, IAddressableSceneStartLoadable
 {
     [SerializeField] private AssetReferenceGameObject _objectToSpawn;
     private GameObject _loadedPrefab;
@@ -14,13 +12,6 @@ public class AddressableSpawner : MonoBehaviour, IAddressableLoadable
         get => _objectToSpawn;
         set => _objectToSpawn = value;
     }
-
-    //private IEnumerator SpawnAssetReferenceObject()
-    //{
-    //    AsyncOperationHandle<GameObject> handle = Addressables.LoadAssetAsync<GameObject>(_objectToSpawn);
-    //    yield return handle;
-    //    if (handle.Result != null) Instantiate(handle.Result, transform.position, Quaternion.identity);
-    //}
 
 #if UNITY_EDITOR
     private GameObject _preview;
@@ -39,31 +30,28 @@ public class AddressableSpawner : MonoBehaviour, IAddressableLoadable
     {
         AsyncOperationHandle<GameObject> handle = Addressables.LoadAssetAsync<GameObject>(_objectToSpawn);
         yield return handle;
-        //_preview ??= Instantiate(handle.Result, transform.position, Quaternion.identity);
-        //Debug.Log(_preview);
         if (_preview == null)
         {
             _preview = Instantiate(handle.Result, transform.position, Quaternion.identity);
             _preview.hideFlags = HideFlags.DontSave;
         }
-
-        Debug.Log("EXECUTE: " + _preview);
     }
 #endif
 
-    public IEnumerator LoadAddressables(List<AsyncOperationHandle> handles)
+    public IEnumerator LoadAddressables()
     {
-        List<AsyncOperationHandle> handleList = new List<AsyncOperationHandle>();
         AsyncOperationHandle<GameObject> handle = Addressables.LoadAssetAsync<GameObject>(_objectToSpawn);
-        handles.Add(handle);
+        //handles.Add(handle);
+        LoadingBar.Instance.RegisterHandleOperation(handle);
         yield return handle;
         _loadedPrefab = handle.Result;
-        Debug.Log(_loadedPrefab);
+        Init();
     }
 
     public void Init()
     {
-        Debug.Log(_loadedPrefab + " Initialized");
-        Instantiate(_loadedPrefab, transform.position, Quaternion.identity);
+        //Debug.Log(_loadedPrefab + " Initialized" + " " + gameObject.name);
+        GameObject instance = Instantiate(_loadedPrefab, transform);
+        instance.transform.localPosition = Vector3.zero;
     }
 }

@@ -6,7 +6,7 @@ public class NormalEnemy : Enemy
 {
     [SerializeField][Range(0.2f, 1.0f)] private float _minimumDistance;
     private const float MinimumDistance = 0.2f;
-    [SerializeField][Range(0, 5)] private float _baseMoveSpeed;
+    [SerializeField][Range(0.8f, 5)] private float _baseMoveSpeed;
     public float BaseMoveSpeed
     {
         get => _baseMoveSpeed;

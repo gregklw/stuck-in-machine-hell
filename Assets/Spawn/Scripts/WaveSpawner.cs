@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
 
-public class WaveSpawner : MonoBehaviour, IAddressableLoadable
+public class WaveSpawner : MonoBehaviour, IAddressableLevelLoadable
 {
     [SerializeField] private CameraEdgeInstantiationDatum[] _cameraEdgeInstantiationData;
     [SerializeField][Range(0, 20)] private float _spawnTimeInterval;
@@ -17,11 +17,16 @@ public class WaveSpawner : MonoBehaviour, IAddressableLoadable
     private void Awake()
     {
         _spawnPoint = FindObjectOfType<CameraEdgeSpawnPoint>();
+        _objectPool = new Stack<GameObject>();
+        for (int i = 0; i < _cameraEdgeInstantiationData.Length; i++)
+        {
+            _totalAmountToSpawn += _cameraEdgeInstantiationData[i].AmountToCreate;
+        }
     }
 
-    public void InitSpawner()
+    private void InitSpawner()
     {
-        _objectPool = new Stack<GameObject>();
+        Debug.Log("RUNNING");
         List<GameObject> initialList = new List<GameObject>();
         for (int i = 0; i < _cameraEdgeInstantiationData.Length; i++)
         {
@@ -31,26 +36,14 @@ public class WaveSpawner : MonoBehaviour, IAddressableLoadable
                 _spawnPoint.SetSpawnPoint(go, _cameraEdgeInstantiationData[i].EdgeDistanceMinRange, _cameraEdgeInstantiationData[i].EdgeDistanceMaxRange);
                 initialList.Add(go);
             }
-            _totalAmountToSpawn += _cameraEdgeInstantiationData[i].AmountToCreate;
         }
         UnityUtils.Shuffle(initialList);
         initialList.ForEach(x => _objectPool.Push(x));
     }
 
-    public IEnumerator SpawnGameObjectsPerRoutine()
-    {
-        int currentAmountRemaining = _totalAmountToSpawn;
-        while (currentAmountRemaining > 0)
-        {
-            SpawnGameObjects(_amountToSpawnPerRoutine);
-            currentAmountRemaining -= _amountToSpawnPerRoutine;
-            yield return Helpers.GetWaitForSeconds(_spawnTimeInterval);
-        }
-
-    }
-
     private void SpawnGameObjects(int amountToSpawn)
     {
+        Debug.Log(_objectPool.Count + "/" + amountToSpawn);
         while (_objectPool.Count > 0 && amountToSpawn > 0)
         {
             SpawnGameObject();
@@ -67,8 +60,9 @@ public class WaveSpawner : MonoBehaviour, IAddressableLoadable
         }
     }
 
-    public IEnumerator LoadAddressables(List<AsyncOperationHandle> handles)
+    public IEnumerator Setup()
     {
+        Debug.Log("Setup Enabled");
         List<AsyncOperationHandle> handleList = new List<AsyncOperationHandle>();
 
         foreach (var cameraEdgeInstantiationDatum in _cameraEdgeInstantiationData)
@@ -77,17 +71,18 @@ public class WaveSpawner : MonoBehaviour, IAddressableLoadable
             yield return handle;
             handleList.Add(handle);
             cameraEdgeInstantiationDatum.LoadedGameObject = handle.Result;
-            Debug.Log(cameraEdgeInstantiationDatum.LoadedGameObject);
-            //GameObject go = UnityUtils.InstantiateDisabled(handle.Result);
-        }
-    }
-
-    public void Init()
-    {
-        foreach (var datum in _cameraEdgeInstantiationData)
-        {
-            Debug.Log(datum.LoadedGameObject);
         }
         InitSpawner();
+    }
+
+    public IEnumerator Activate()
+    {
+        int currentAmountRemaining = _totalAmountToSpawn;
+        while (currentAmountRemaining > 0)
+        {
+            SpawnGameObjects(_amountToSpawnPerRoutine);
+            currentAmountRemaining -= _amountToSpawnPerRoutine;
+            yield return Helpers.GetWaitForSeconds(_spawnTimeInterval);
+        }
     }
 }

@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
 
 public abstract class DestroyableObject : MonoBehaviour, IHealthyObject
 {
@@ -9,7 +11,7 @@ public abstract class DestroyableObject : MonoBehaviour, IHealthyObject
     public abstract void ReceiveDamage(float damage);
 
     [SerializeField] private float _currentHealth, _maxHealth;
-    [SerializeField] private RuntimeAnimatorController _characterDeathAnimation;
+    [SerializeField] private RuntimeAnimatorController _deathAnimatorController;
     private SpriteRenderer _characterRenderer;
     protected SpriteRenderer CharacterRenderer => _characterRenderer;
     public Action OnDestroyEvent;
@@ -59,7 +61,7 @@ public abstract class DestroyableObject : MonoBehaviour, IHealthyObject
 
     private void InstantiateDestroyedAnimation()
     {
-        ExplosionObject explosion = ExplosionObjectPool.Instance.GetNewExplosion(transform.position, _characterDeathAnimation);
+        ExplosionObject explosion = ExplosionObjectPool.Instance.GetNewExplosion(transform.position, _deathAnimatorController);
         explosion.InitSize(GetComponent<Collider2D>().bounds.size);
     }
 }

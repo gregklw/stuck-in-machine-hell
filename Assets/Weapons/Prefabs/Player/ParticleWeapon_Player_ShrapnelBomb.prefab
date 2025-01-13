@@ -380,7 +380,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _projectileData: {fileID: 11400000, guid: d4f2b7f1be7261d4ca5058dd8329ec7b, type: 2}
-  _damage: 20
+  _damage: 25
   _hitTriggerLayer:
     serializedVersion: 2
     m_Bits: 1088

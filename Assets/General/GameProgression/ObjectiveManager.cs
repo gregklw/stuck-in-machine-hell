@@ -11,7 +11,7 @@ public class ObjectiveManager : MonoBehaviour
     {
         //consider using script execution orders in order to prevent search on excessive game objects
         _objectives = UnityUtils.FindInterfacesInScene<IObjective>(gameObject.scene);
-        //Debug.Log($"Objective Count: {_objectives.Count}");
+        Debug.Log($"Objective Count: {_objectives.Count}");
         _objectiveCompleteBinding = new BusEventBinding<ObjectiveCompleteEventWrapper>(AreAllObjectivesComplete);
     }
 
@@ -32,7 +32,7 @@ public class ObjectiveManager : MonoBehaviour
         //Debug.Log($"Objectives complete: {assertCompleted}");
         if (assertCompleted)
         {
-            EventBus<LevelProgressEventWrapper>.Raise(new LevelProgressEventWrapper());
+            EventBus<SubLevelProgressionEventWrapper>.Raise(new SubLevelProgressionEventWrapper());
             //Destroy(gameObject);
         }
     }

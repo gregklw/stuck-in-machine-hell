@@ -254,9 +254,25 @@ PrefabInstance:
       propertyPath: _cameraEdgeInstantiationData.Array.data[3]._edgeDistanceMinRange
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2425884637753499723, guid: eb8f545fc969c0045ba0f21f491d4b7d, type: 3}
+      propertyPath: _cameraEdgeInstantiationData.Array.data[0]._assetReferencePrefab.m_AssetGUID
+      value: 91f8bf5f671715f4a8f4af409de4fb7b
+      objectReference: {fileID: 0}
+    - target: {fileID: 2425884637753499723, guid: eb8f545fc969c0045ba0f21f491d4b7d, type: 3}
+      propertyPath: _cameraEdgeInstantiationData.Array.data[1]._assetReferencePrefab.m_AssetGUID
+      value: 24142cdf98d924848980953c44fcde09
+      objectReference: {fileID: 0}
+    - target: {fileID: 2425884637753499723, guid: eb8f545fc969c0045ba0f21f491d4b7d, type: 3}
+      propertyPath: _cameraEdgeInstantiationData.Array.data[1]._assetReferencePrefab.m_EditorAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3425575820673323581, guid: eb8f545fc969c0045ba0f21f491d4b7d, type: 3}
       propertyPath: m_Name
       value: WaveSpawner3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3425575820673323581, guid: eb8f545fc969c0045ba0f21f491d4b7d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -405,9 +421,25 @@ PrefabInstance:
       propertyPath: _cameraEdgeInstantiationData.Array.data[3]._edgeDistanceMinRange
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2425884637753499723, guid: eb8f545fc969c0045ba0f21f491d4b7d, type: 3}
+      propertyPath: _cameraEdgeInstantiationData.Array.data[0]._assetReferencePrefab.m_AssetGUID
+      value: 55ff09d11a984e2459b615d4cb95cd1e
+      objectReference: {fileID: 0}
+    - target: {fileID: 2425884637753499723, guid: eb8f545fc969c0045ba0f21f491d4b7d, type: 3}
+      propertyPath: _cameraEdgeInstantiationData.Array.data[1]._assetReferencePrefab.m_AssetGUID
+      value: ecbcea010af5a2f489736074e393ec1e
+      objectReference: {fileID: 0}
+    - target: {fileID: 2425884637753499723, guid: eb8f545fc969c0045ba0f21f491d4b7d, type: 3}
+      propertyPath: _cameraEdgeInstantiationData.Array.data[1]._assetReferencePrefab.m_EditorAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3425575820673323581, guid: eb8f545fc969c0045ba0f21f491d4b7d, type: 3}
       propertyPath: m_Name
       value: WaveSpawner2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3425575820673323581, guid: eb8f545fc969c0045ba0f21f491d4b7d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -620,6 +652,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2425884637753499723, guid: eb8f545fc969c0045ba0f21f491d4b7d, type: 3}
       propertyPath: _cameraEdgeInstantiationData.Array.data[3]._edgeDistanceMinRange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2425884637753499723, guid: eb8f545fc969c0045ba0f21f491d4b7d, type: 3}
+      propertyPath: _cameraEdgeInstantiationData.Array.data[0]._assetReferencePrefab.m_AssetGUID
+      value: 907fbb5babebfa1429d05eee4a37a9e5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2425884637753499723, guid: eb8f545fc969c0045ba0f21f491d4b7d, type: 3}
+      propertyPath: _cameraEdgeInstantiationData.Array.data[1]._assetReferencePrefab.m_AssetGUID
+      value: 394bf5d6432075840ac18fb94f535816
+      objectReference: {fileID: 0}
+    - target: {fileID: 2425884637753499723, guid: eb8f545fc969c0045ba0f21f491d4b7d, type: 3}
+      propertyPath: _cameraEdgeInstantiationData.Array.data[2]._assetReferencePrefab.m_AssetGUID
+      value: c93621cba97541b4882305fa9ccb28f3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2425884637753499723, guid: eb8f545fc969c0045ba0f21f491d4b7d, type: 3}
+      propertyPath: _cameraEdgeInstantiationData.Array.data[3]._assetReferencePrefab.m_AssetGUID
+      value: 5876645558c39ac45b2a6e47178dcb4d
+      objectReference: {fileID: 0}
+    - target: {fileID: 2425884637753499723, guid: eb8f545fc969c0045ba0f21f491d4b7d, type: 3}
+      propertyPath: _cameraEdgeInstantiationData.Array.data[3]._assetReferencePrefab.m_EditorAssetChanged
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3425575820673323581, guid: eb8f545fc969c0045ba0f21f491d4b7d, type: 3}

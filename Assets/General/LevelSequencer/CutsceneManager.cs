@@ -39,6 +39,7 @@ public class CutsceneManager : MonoBehaviour
 
     public void ClearButtonActions()
     {
+        Debug.Log("Actions for button cleared!");
         _cutsceneButton.onClick.RemoveAllListeners();
     }
 

@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.ResourceManagement.AsyncOperations;
 
-public interface IAddressableLoadable
+public interface IAddressableSceneStartLoadable
 {
-    IEnumerator LoadAddressables(List<AsyncOperationHandle> handles);
+    IEnumerator LoadAddressables();
     void Init();
 }

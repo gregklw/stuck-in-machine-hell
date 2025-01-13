@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class MainMenuButton : MonoBehaviour
 {
-    [SerializeField] private LevelSceneGroup _startingLevelSceneGroup;
+    //[SerializeField] private LevelSceneGroup _startingLevelSceneGroup;
     private Button _button;
     private LevelManager _manager;
 
@@ -16,7 +16,7 @@ public class MainMenuButton : MonoBehaviour
         _button.onClick.AddListener(
             () =>
             {
-                _manager.StartGame(_startingLevelSceneGroup);
+                _manager.StartGame();
                 _button.enabled = false;
             }
         );

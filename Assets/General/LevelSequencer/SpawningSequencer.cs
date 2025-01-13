@@ -8,14 +8,20 @@ public class SpawningSequencer : MonoBehaviour
 {
     [SerializeField] private List<WaveSpawner> _spawners = new List<WaveSpawner>();
 
-    private IEnumerator Start()
-    {
-        _spawners = GetComponentsInChildren<WaveSpawner>().ToList();
+    //private IEnumerator Start()
+    //{
+    //    _spawners = GetComponentsInChildren<WaveSpawner>().ToList();
 
-        foreach (var spawner in _spawners)
-        {
-            //Debug.Log("RUN");
-            yield return spawner.SpawnGameObjectsPerRoutine();
-        }
-    }
+    //    foreach (var spawner in _spawners)
+    //    {
+    //        //Debug.Log("RUN");
+    //        //yield return StartCoroutine(spawner.SpawnGameObjectsPerRoutine());
+    //    }
+
+    //    //foreach (var spawner in _spawners)
+    //    //{
+    //    //    //Debug.Log("RUN");
+    //    //    yield return spawner.SpawnGameObjectsPerRoutine();
+    //    //}
+    //}
 }

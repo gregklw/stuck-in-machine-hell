@@ -8,131 +8,146 @@ using UnityEngine.UI;
 
 public class LoadingBar : MonoBehaviour
 {
-    private List<AsyncOperation> _scenesToProcess = new List<AsyncOperation>();
-    private List<AsyncOperationHandle> _assetsToProcess = new List<AsyncOperationHandle>();
+    public static LoadingBar Instance { get; private set; }
+
+    //private List<AsyncOperationHandle<SceneInstance>> _scenesToProcess = new List<AsyncOperationHandle<SceneInstance>>();
+    private List<AsyncOperationHandle> _operationsToProcess = new List<AsyncOperationHandle>();
 
     [SerializeField] private Image _loadingBarImage;
     [SerializeField] private TMP_Text _loadingBarText;
+
+    private void Awake()
+    {
+        Instance ??= this;
+        Debug.Log(Instance);
+    }
+
     public void ToggleLoadingBarVisibility(bool isActive)
     {
         gameObject.SetActive(isActive);
     }
-    private float UpdateLoadingBar(float loadProgress)
-    {
-        _loadingBarImage.fillAmount = loadProgress;
-        _loadingBarText.text += (Mathf.Round(loadProgress * 1000) / 10).ToString() + "%";
-        return loadProgress;
-    }
 
     #region LOADING SCENE PROGRESS
-
-    public float UpdateSceneLoadingProgress()
+    //load operations
+    public IEnumerator ProcessOperations(string nameOfLoadingOperation, Action callbackDuringProcess = null)
     {
-        float loadProgress = 0f;
-        _scenesToProcess.ForEach(i => loadProgress += i.progress);
-        loadProgress /= _scenesToProcess.Count;
-        _loadingBarText.text = "Scene Loading: ";
-        UpdateLoadingBar(loadProgress);
-        return loadProgress;
-    }
-
-    public IEnumerator ProcessScenes()
-    {
-        for (int i = 0; i < _scenesToProcess.Count; i++)
+        bool assertAllLoaded;
+        do
         {
-            while (!_scenesToProcess[i].isDone)
+            int operationsCount = _operationsToProcess.Count;
+            if (operationsCount == 0) yield break;
+
+            assertAllLoaded = true;
+            float totalProgress = 0;
+            for (int i = 0; i < operationsCount; i++)
             {
-                yield return null;
+                var currentOperation = _operationsToProcess[i];
+                if (!currentOperation.IsDone)
+                { 
+                    assertAllLoaded = false;
+                }
+                if (currentOperation.IsValid()) totalProgress += currentOperation.PercentComplete;
             }
+
+            totalProgress /= operationsCount;
+            _loadingBarText.text = $"Operation: {nameOfLoadingOperation} ";
+            _loadingBarImage.fillAmount = totalProgress;
+            _loadingBarText.text += (Mathf.Round(totalProgress * 1000) / 10).ToString() + "%";
+
+            callbackDuringProcess?.Invoke();
+            yield return null;
         }
+        while (!assertAllLoaded);
+        
+        _operationsToProcess.Clear();
     }
 
-    public void RegisterSceneOperation(AsyncOperation sceneOperationToProcess)
+    public void RegisterHandleOperation(AsyncOperationHandle operationToProcess)
     {
-        _scenesToProcess.Add(sceneOperationToProcess);
+        _operationsToProcess.Add(operationToProcess);
     }
-    public bool CheckIfScenesNinetyProcessed()
-    {
-        bool assertTrue = true;
-        for (int i = 0; i < _scenesToProcess.Count; i++)
-        {
-            if (_scenesToProcess[i].progress < 0.9f)
-            {
-                assertTrue = false;
-            }
-        }
-        return assertTrue;
-    }
+    //public bool CheckIfOperationsNinetyProcessed()
+    //{
+    //    bool assertTrue = true;
+    //    for (int i = 0; i < _operationsToProcess.Count; i++)
+    //    {
+    //        if (_operationsToProcess[i].PercentComplete < 0.9f)
+    //        {
+    //            assertTrue = false;
+    //        }
+    //    }
+    //    return assertTrue;
+    //}
 
-    public bool CheckIfScenesFullyProcessed()
-    {
-        bool assertTrue = true;
-        for (int i = 0; i < _scenesToProcess.Count; i++)
-        {
-            if (!_scenesToProcess[i].isDone)
-            {
-                assertTrue = false;
-            }
-        }
-        return assertTrue;
-    }
+    //public bool CheckIfOperationsFullyProcessed()
+    //{
+    //    bool assertTrue = true;
+    //    for (int i = 0; i < _operationsToProcess.Count; i++)
+    //    {
+    //        //Debug.Log(operationsToProcess[i].IsDone + "/" + operationsToProcess.Count);
+    //        if (!_operationsToProcess[i].IsDone)
+    //        {
+    //            assertTrue = false;
+    //        }
+    //    }
+    //    return assertTrue;
+    //}
 
-    public void ActivateAllProcessedScenes()
-    {
-        _scenesToProcess.ForEach(scene => scene.allowSceneActivation = true);
-    }
+    //public void ActivateAllProcessedScenes(List<AsyncOperationHandle> operationsToProcess)
+    //{
+    //    _scenesToProcess.ForEach(scene => scene.Result.ActivateAsync());
+    //}
 
-    public void ClearRegisteredScenesToProcess()
-    {
-        _scenesToProcess.Clear();
-    }
+    //public void ClearRegisteredScenesToProcess()
+    //{
+    //    _scenesToProcess.Clear();
+    //}
     #endregion
 
+    //#region LOADING ASSET PROGRESS
+    //public IEnumerator ProcessAssets()
+    //{
+    //    for (int i = 0; i < _assetsToProcess.Count; i++)
+    //    {
+    //        while (!_assetsToProcess[i].IsDone)
+    //        {
+    //            yield return null;
+    //        }
+    //    }
+    //}
 
-    #region LOADING ASSET PROGRESS
-    public IEnumerator ProcessAssets()
-    {
-        for (int i = 0; i < _assetsToProcess.Count; i++)
-        {
-            while (!_assetsToProcess[i].IsDone)
-            {
-                yield return null;
-            }
-        }
-    }
+    //public bool CheckIfAssetsFullyProcessed()
+    //{
+    //    bool assertTrue = true;
+    //    for (int i = 0; i < _assetsToProcess.Count; i++)
+    //    {
+    //        if (!_assetsToProcess[i].IsDone)
+    //        {
+    //            assertTrue = false;
+    //        }
+    //    }
+    //    return assertTrue;
+    //}
 
-    public bool CheckIfAssetsFullyProcessed()
-    {
-        bool assertTrue = true;
-        for (int i = 0; i < _assetsToProcess.Count; i++)
-        {
-            if (!_assetsToProcess[i].IsDone)
-            {
-                assertTrue = false;
-            }
-        }
-        return assertTrue;
-    }
+    //public float UpdateAssetLoadingProgress()
+    //{
+    //    float loadProgress = 0f;
+    //    Debug.Log(_assetsToProcess.Count);
+    //    _assetsToProcess.ForEach(i =>
+    //    {
+    //        Debug.Log(i.DebugName + " " + i.PercentComplete);
+    //        loadProgress += i.PercentComplete;
+    //    }
+    //    );
+    //    loadProgress /= _assetsToProcess.Count;
+    //    _loadingBarText.text = "Asset Loading: ";
+    //    UpdateLoadingBar(loadProgress);
+    //    return loadProgress;
+    //}
 
-    public float UpdateAssetLoadingProgress()
-    {
-        float loadProgress = 0f;
-        Debug.Log(_assetsToProcess.Count);
-        _assetsToProcess.ForEach(i =>
-        {
-            Debug.Log(i.DebugName + " " + i.PercentComplete);
-            loadProgress += i.PercentComplete;
-        }
-        );
-        loadProgress /= _assetsToProcess.Count;
-        _loadingBarText.text = "Asset Loading: ";
-        UpdateLoadingBar(loadProgress);
-        return loadProgress;
-    }
-
-    public void RegisterAssetLoadOperation(AsyncOperationHandle handleToProcess)
-    {
-        _assetsToProcess.Add(handleToProcess);
-    }
-    #endregion
+    //public void RegisterAssetLoadOperation(AsyncOperationHandle handleToProcess)
+    //{
+    //    _assetsToProcess.Add(handleToProcess);
+    //}
+    //#endregion
 }

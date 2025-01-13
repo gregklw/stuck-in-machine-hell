@@ -17,6 +17,8 @@ public class Player : AttackingCharacter
 
     private BusEventBinding<EnemySpawnEventWrapper> _enemySpawnEventBinding;
 
+    private bool _screenTapped = false;
+
     [SerializeField][Range(0, 10)] private float _baseMoveSpeed;
     public float BaseMoveSpeed
     {
@@ -52,6 +54,15 @@ public class Player : AttackingCharacter
 
     private void Update()
     {
+        if (Input.GetMouseButtonDown(0))
+        {
+            _screenTapped = true;
+        }
+        else if (Input.GetMouseButtonUp(0))
+        { 
+            _screenTapped = false;
+        }
+
         if (Input.GetMouseButton(0))
         {
             _latestTravelPosition = MainCamera.ScreenToWorldPoint(Input.mousePosition);
@@ -80,6 +91,14 @@ public class Player : AttackingCharacter
         transform.Rotate(Vector3.forward, Vector2.SignedAngle(playerForwardVector, playerToMouseDir), Space.World);
         //_rigidbody2D.SetRotation(Vector2.SignedAngle(playerForwardVector, playerToMouseDir));
         //_rigidbody2D.MoveRotation(Vector2.SignedAngle(playerForwardVector, playerToMouseDir));
+        if (!_screenTapped) LockPlayerMovement();
+    }
+
+    private void LockPlayerMovement()
+    {
+        ThisRigidbody.angularDrag = 0;
+        ThisRigidbody.angularVelocity = 0;
+        ThisRigidbody.velocity = Vector3.zero;
     }
 
     public override void ReceiveDamage(float damage)

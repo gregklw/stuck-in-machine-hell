@@ -218,9 +218,25 @@ PrefabInstance:
       propertyPath: _cameraEdgeInstantiationData.Array.data[1]._edgeDistanceMinRange
       value: 1.31
       objectReference: {fileID: 0}
+    - target: {fileID: 2425884637753499723, guid: eb8f545fc969c0045ba0f21f491d4b7d, type: 3}
+      propertyPath: _cameraEdgeInstantiationData.Array.data[0]._assetReferencePrefab.m_AssetGUID
+      value: 83e653773ce05c24b8493fa400f9296e
+      objectReference: {fileID: 0}
+    - target: {fileID: 2425884637753499723, guid: eb8f545fc969c0045ba0f21f491d4b7d, type: 3}
+      propertyPath: _cameraEdgeInstantiationData.Array.data[1]._assetReferencePrefab.m_AssetGUID
+      value: f41ff05890310be46871daa83dccb662
+      objectReference: {fileID: 0}
+    - target: {fileID: 2425884637753499723, guid: eb8f545fc969c0045ba0f21f491d4b7d, type: 3}
+      propertyPath: _cameraEdgeInstantiationData.Array.data[1]._assetReferencePrefab.m_EditorAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3425575820673323581, guid: eb8f545fc969c0045ba0f21f491d4b7d, type: 3}
       propertyPath: m_Name
       value: WaveSpawner2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3425575820673323581, guid: eb8f545fc969c0045ba0f21f491d4b7d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -383,9 +399,17 @@ PrefabInstance:
       propertyPath: _cameraEdgeInstantiationData.Array.data[0]._edgeDistanceMinRange
       value: 1.31
       objectReference: {fileID: 0}
+    - target: {fileID: 2425884637753499723, guid: eb8f545fc969c0045ba0f21f491d4b7d, type: 3}
+      propertyPath: _cameraEdgeInstantiationData.Array.data[0]._assetReferencePrefab.m_AssetGUID
+      value: 2e59dd0b1b5d67440b8a67b40cd6b2d6
+      objectReference: {fileID: 0}
     - target: {fileID: 3425575820673323581, guid: eb8f545fc969c0045ba0f21f491d4b7d, type: 3}
       propertyPath: m_Name
       value: WaveSpawner3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3425575820673323581, guid: eb8f545fc969c0045ba0f21f491d4b7d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -476,6 +500,10 @@ PrefabInstance:
     - target: {fileID: 2425884637753499723, guid: eb8f545fc969c0045ba0f21f491d4b7d, type: 3}
       propertyPath: _cameraEdgeInstantiationData.Array.data[0]._edgeDistanceMinRange
       value: 1.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 2425884637753499723, guid: eb8f545fc969c0045ba0f21f491d4b7d, type: 3}
+      propertyPath: _cameraEdgeInstantiationData.Array.data[0]._assetReferencePrefab.m_AssetGUID
+      value: 19290c39ee320b54689a193ae3211ac9
       objectReference: {fileID: 0}
     - target: {fileID: 3425575820673323581, guid: eb8f545fc969c0045ba0f21f491d4b7d, type: 3}
       propertyPath: m_Name

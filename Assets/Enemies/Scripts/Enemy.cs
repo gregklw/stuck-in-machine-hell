@@ -44,8 +44,8 @@ public abstract class Enemy : AttackingCharacter
 
     private void TriggerDeathEvents()
     {
-        _dropper.SpawnItemByChance();
 
+        _dropper.SpawnItemByChance();
         EventBus<EnemyDeathEventWrapper>.Raise(
             new EnemyDeathEventWrapper
             {

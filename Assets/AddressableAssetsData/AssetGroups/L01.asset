@@ -29,12 +29,6 @@ MonoBehaviour:
     m_SerializedLabels:
     - L01Base
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: dffe43538f7ec0e459dd3d3f9b47eaf4
-    m_Address: Assets/Background/Textures/L01Base/background_L01.png
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - L01Base
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1e79c5ee0c9260c419ec618f0b409ae1
     m_Address: Assets/Enemies/Level01/BossFight/Boss/Prefabs/enemy_boss01.prefab
     m_ReadOnly: 0
@@ -82,6 +76,27 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - L01W3
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ab83a463168ae434a9d21d8a0b25d705
+    m_Address: Assets/DamagingEntities/Projectiles/Textures/DestroyedExplosions/Level1/Boss/Explosion_Enemy_L01Boss_Minion.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - L01Boss
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 02b609f0cc7ecf14da322130e73a1e0f
+    m_Address: Assets/Scenes/Level1_base.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 151c53454c8dbd4458b5432475f14ef0
+    m_Address: Assets/Scenes/Level1_wave1.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5a3420bce1eae484584ca28c0f6c34c9
+    m_Address: Assets/Scenes/Level1_boss.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 73c6bf2dc72c3ca48ac940e0f5611eda, type: 2}

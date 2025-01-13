@@ -15,6 +15,16 @@ MonoBehaviour:
   DropInfoAllItems:
   - DropPercentage: 20
     DropPrefab: {fileID: 1548696160750521830, guid: 82ef5fe0e98e6d740bd5b2ca2a2a0a94, type: 3}
+    DropPrefabReference:
+      m_AssetGUID: 82ef5fe0e98e6d740bd5b2ca2a2a0a94
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
   - DropPercentage: 50
     DropPrefab: {fileID: 5014997281323560394, guid: 81af32093d93008478c7ee6272d89000, type: 3}
+    DropPrefabReference:
+      m_AssetGUID: 81af32093d93008478c7ee6272d89000
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 1
   DropProbabilityTotal: 100

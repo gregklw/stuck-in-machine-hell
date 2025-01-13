@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6195270535172328016, guid: 1cb806de3602b2d4896680f03b2d37e9, type: 3}
       propertyPath: m_Name
-      value: ParticleWeapon_Enemy_CircleShot
+      value: ParticleWeapon_Enemy_CircleBurstShot
       objectReference: {fileID: 0}
     - target: {fileID: 6348465309357468146, guid: 1cb806de3602b2d4896680f03b2d37e9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -119,6 +119,10 @@ PrefabInstance:
     - target: {fileID: 7649082602583153970, guid: 1cb806de3602b2d4896680f03b2d37e9, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
       value: 1.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7649082602583153970, guid: 1cb806de3602b2d4896680f03b2d37e9, type: 3}
+      propertyPath: UVModule.sprites.Array.data[0].sprite
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7649082602583153970, guid: 1cb806de3602b2d4896680f03b2d37e9, type: 3}
       propertyPath: EmissionModule.m_Bursts.Array.data[1].time

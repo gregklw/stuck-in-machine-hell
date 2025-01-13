@@ -252,7 +252,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9145549861930222665, guid: 2f8de9c3323d97c42b4ea1bc310369d0, type: 3}
       propertyPath: _baseMoveSpeed
-      value: 0.3
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 9145549861930222665, guid: 2f8de9c3323d97c42b4ea1bc310369d0, type: 3}
       propertyPath: _currentHealth
@@ -270,6 +270,14 @@ PrefabInstance:
       propertyPath: _characterDeathAnimation
       value: 
       objectReference: {fileID: 22100000, guid: 989b0c2fb981ac3449d9509165f4e82a, type: 2}
+    - target: {fileID: 9145549861930222665, guid: 2f8de9c3323d97c42b4ea1bc310369d0, type: 3}
+      propertyPath: _deathAnimatorController
+      value: 
+      objectReference: {fileID: 22100000, guid: 989b0c2fb981ac3449d9509165f4e82a, type: 2}
+    - target: {fileID: 9145549861930222665, guid: 2f8de9c3323d97c42b4ea1bc310369d0, type: 3}
+      propertyPath: _deathAnimation.m_AssetGUID
+      value: 989b0c2fb981ac3449d9509165f4e82a
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 9208958614255716188, guid: 2f8de9c3323d97c42b4ea1bc310369d0, type: 3}

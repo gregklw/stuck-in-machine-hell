@@ -1,66 +1,77 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
+using UnityEngine.AddressableAssets.ResourceLocators;
 using UnityEngine.ResourceManagement.AsyncOperations;
+using UnityEngine.ResourceManagement.ResourceProviders;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
-    private LevelSceneGroup _levelSceneGroup;
-    [SerializeField] private LoadingBar _loadingBar;
     [SerializeField] private CutsceneManager _cutsceneManager;
-    [SerializeField] private SceneField _mainMenuScene;
-    [SerializeField] private SceneField _persistentGameplay;
+    [SerializeField] private AssetReference _mainMenuScene;
+    [SerializeField] private AssetReference _persistentGameplay;
+    [SerializeField] private AssetLabelReference _mainMenuLabelReference;
+    [SerializeField] private LevelSceneGroup _currentLevelSceneGroup;
 
-    private BusEventBinding<LevelProgressEventWrapper> _levelChangeBinding;
+    private BusEventBinding<LevelCompleteEventWrapper> _levelChangeBinding;
     private BusEventBinding<PlayerDeathEventWrapper> _playerDeathBinding;
+    private Action<LevelCompleteEventWrapper> _levelChangeAction;
 
     private int _sceneCounter;
-    //private List<AsyncOperation> _scenesToProcess = new List<AsyncOperation>();
-    public LevelSceneGroup LevelSceneGroup
+    private SceneInstance _currentFocusSceneInstance;
+    private SceneInstance _persistentGameplaySceneInstance;
+
+    private LoadingBar _loadingBar;
+
+    private SceneInstance CurrentFocusSceneInstance
     {
-        get => _levelSceneGroup;
-        set => _levelSceneGroup = value;
+        get
+        {
+            Debug.Log($"Current active scene name: {_currentFocusSceneInstance.Scene.name}");
+            return _currentFocusSceneInstance;
+        }
+        set
+        {
+            string previousSceneInstanceName = _currentFocusSceneInstance.Scene.name;
+            _currentFocusSceneInstance = value;
+            Debug.Log($"Changing from {previousSceneInstanceName} to {value.Scene.name}");
+        }
     }
+
+    private bool _loadedMainMenuBefore = false;
+
+    private const string InitializationSceneName = "Initialization";
+
     private void Awake()
     {
-        _levelChangeBinding = new BusEventBinding<LevelProgressEventWrapper>(CommenceLevelProgressChange);
+        _loadingBar = LoadingBar.Instance;
+        _levelChangeAction = (levelCompleteEventWrapper) => StartCoroutine(SetupEndOfLevelChange(levelCompleteEventWrapper));
+        _levelChangeBinding = new BusEventBinding<LevelCompleteEventWrapper>(_levelChangeAction);
         _playerDeathBinding = new BusEventBinding<PlayerDeathEventWrapper>(SetupGameOverSequence);
     }
 
     private void OnEnable()
     {
-        EventBus<LevelProgressEventWrapper>.Register(_levelChangeBinding);
+        EventBus<LevelCompleteEventWrapper>.Register(_levelChangeBinding);
         EventBus<PlayerDeathEventWrapper>.Register(_playerDeathBinding);
     }
 
     private void OnDisable()
     {
-        EventBus<LevelProgressEventWrapper>.Deregister(_levelChangeBinding);
+        EventBus<LevelCompleteEventWrapper>.Deregister(_levelChangeBinding);
         EventBus<PlayerDeathEventWrapper>.Deregister(_playerDeathBinding);
     }
 
-    private void CommenceLevelProgressChange(LevelProgressEventWrapper levelChangeEvent)
-    {
-        if (_sceneCounter < LevelSceneGroup.LevelScenes.Length)
-        {
-            StartCoroutine(AdvanceToNextSectionOfLevel());
-            Debug.Log("Load next part!");
-        }
-        else if (LevelSceneGroup.NextLevel == null)
-        {
-            StartCoroutine(SetupMainMenuChange());
-            Debug.Log("Return to main menu!");
-        }
-        else
-        {
-            StartCoroutine(SetupLevelChange());
-            Debug.Log("Load next level!");
-        }
-    }
+    //private void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.K))
+    //    { 
+    //        Caching.ClearCache();
+    //    }
+    //}
 
     #region MENU_TRAVERSAL
     public void GoToMainMenu()
@@ -72,157 +83,119 @@ public class LevelManager : MonoBehaviour
     {
         _cutsceneManager.TogglePanelVisibility(false);
         _cutsceneManager.ToggleButtonVisibility(false);
-        Scene[] activeScenes = SceneManager.GetAllScenes();
 
-
-        _loadingBar.ClearRegisteredScenesToProcess();
         _loadingBar.ToggleLoadingBarVisibility(true);
-        //Debug.Log("Trigger after GoToMainMenu");
 
-        AsyncOperation menuOperation = SceneManager.LoadSceneAsync(_mainMenuScene, LoadSceneMode.Additive);
-        _loadingBar.RegisterSceneOperation(menuOperation);
+        //yield return DownloadGameData(_mainMenuLabelReference.labelString);
 
-        while (!menuOperation.isDone)
+        //yield return new WaitForSeconds(1);
+
+        yield return CheckDownloadStatus(_mainMenuLabelReference.labelString);
+
+        AsyncOperationHandle<SceneInstance> menuOperation = Addressables.LoadSceneAsync(_mainMenuScene, LoadSceneMode.Additive);
+        _loadingBar.RegisterHandleOperation(menuOperation);
+        yield return _loadingBar.ProcessOperations("Loading Menu");
+
+        SceneManager.SetActiveScene(SceneManager.GetSceneByName(menuOperation.Result.Scene.name));
+
+        if (!_loadedMainMenuBefore) SceneManager.UnloadSceneAsync(InitializationSceneName);
+        else
         {
-            yield return null;
+            AsyncOperationHandle<SceneInstance> persistentGameplayUnload = Addressables.UnloadSceneAsync(_persistentGameplaySceneInstance, false);
+            _loadingBar.RegisterHandleOperation(persistentGameplayUnload);
         }
-        SceneManager.SetActiveScene(SceneManager.GetSceneByName(_mainMenuScene));
-        for (int i = 0; i < activeScenes.Length; i++)
-        {
-            _loadingBar.RegisterSceneOperation(SceneManager.UnloadSceneAsync(activeScenes[i]));
-        }
-        //Debug.Log(_loadingBar);
-        while (!_loadingBar.CheckIfScenesFullyProcessed())
-        {
-            //Debug.Log(_loadingBar.UpdateLoadingBar());
-            yield return null;
-        }
+
+        //yield return _loadingBar.ProcessOperations("Unloading Unneeded Scenes");
+
+        CurrentFocusSceneInstance = menuOperation.Result;
 
         LoadAllCurrentLevelAssets();
 
-        //disable loading bar panel at 100% and enable standby modal panel
-        while (!_loadingBar.CheckIfAssetsFullyProcessed())
-        {
-            _loadingBar.UpdateAssetLoadingProgress();
-            yield return null;
-        }
+        yield return _loadingBar.ProcessOperations("Loading Unneeded Scenes and Menu Assets");
 
-        List<IAddressableLoadable> addressableLoadables = UnityUtils.FindInterfaces<IAddressableLoadable>();
-        addressableLoadables.ForEach((addressable) => addressable.Init());
-
-        //Debug.Log("Finished");
         _loadingBar.ToggleLoadingBarVisibility(false);
+        if (!_loadedMainMenuBefore) _loadedMainMenuBefore = true;
     }
 
-    private IEnumerator SetupMainMenuChange()
-    {
-        yield return StartCoroutine(_cutsceneManager.StartOutroCoroutine());
-        _cutsceneManager.AddButtonAction(
-            () =>
-            {
-                GoToMainMenu();
-                _cutsceneManager.ClearButtonActions();
-            }
-        );
-    }
+    
     #endregion
 
     #region LEVEL_TRAVERSAL
 
-    //public IEnumerator StartNewLevel()
-    //{
-    //    _sceneCounter = 0;
-    //    //null reference exception if scenes don't exist
-    //    SceneField startScene = LevelSceneGroup.StartScene;
-    //    SceneField firstWave = LevelSceneGroup.LevelScenes[_sceneCounter++];
 
-    //    Debug.Log($"Current scene group: {LevelSceneGroup} | Start scene name: {startScene.SceneName} | First wave name: {firstWave.SceneName}");
-    //    Debug.Log($"Next scene: {LevelSceneGroup.NextLevel}");
-
-    //    AsyncOperation startSceneOperation = SceneManager.LoadSceneAsync(startScene, LoadSceneMode.Additive);
-    //    startSceneOperation.allowSceneActivation = true;
-    //    AsyncOperation firstWaveOperation = SceneManager.LoadSceneAsync(firstWave, LoadSceneMode.Additive);
-    //    firstWaveOperation.allowSceneActivation = false;
-
-    //    MarkAsActiveSceneAfterLoad(startSceneOperation, startScene);
-
-    //    _loadingBar.RegisterSceneOperation(firstWaveOperation);
-
-    //    yield return StartCoroutine(_loadingBar.ProgressLoadingBar(SetupCutsceneAfterLoadFinish));
-    //}
-
-    public void StartGame(LevelSceneGroup startingLevelSceneGroup)
+    //need this because main menu button leaves when scene changes thus stopping the coroutine
+    public void StartGame()
     {
-        StartCoroutine(StartGameCoroutine(startingLevelSceneGroup));
+        StartCoroutine(StartGameCoroutine(_currentLevelSceneGroup));
     }
 
     private IEnumerator StartGameCoroutine(LevelSceneGroup startingLevelSceneGroup)
     {
+        var nextLevelSceneGroup = startingLevelSceneGroup.NextLevel;
+
         //need to enable loading bar before anything else
         LoadingBar loadingbar = FindObjectOfType<LoadingBar>(true);
         loadingbar.ToggleLoadingBarVisibility(true);
-        LevelManager levelManager = FindObjectOfType<LevelManager>();
-        levelManager.LevelSceneGroup = startingLevelSceneGroup;
-        Scene menuScene = SceneManager.GetActiveScene();
-        AsyncOperation async = SceneManager.LoadSceneAsync(_persistentGameplay, LoadSceneMode.Additive);
-        loadingbar.RegisterSceneOperation(async);
-        while (!async.isDone)
-        {
-            yield return null;
-        }
 
-        SceneManager.SetActiveScene(SceneManager.GetSceneByName(_persistentGameplay));
-        AsyncOperation menuUnloadAsync = SceneManager.UnloadSceneAsync(menuScene);
-        loadingbar.RegisterSceneOperation(menuUnloadAsync);
-        //Debug.Log(SceneManager.GetActiveScene().name);
-        StartCoroutine(levelManager.StartPlaythroughAtSelectedLevel());
+        //yield return DownloadGameData(_persistentGameplay);
+
+        AsyncOperationHandle<SceneInstance> persistentGameplayHandle = Addressables.LoadSceneAsync(_persistentGameplay, LoadSceneMode.Additive);
+        _loadingBar.RegisterHandleOperation(persistentGameplayHandle);
+        yield return _loadingBar.ProcessOperations("Loading Persistent Gameplay Scene");
+
+        _persistentGameplaySceneInstance = persistentGameplayHandle.Result;
+        SceneManager.SetActiveScene(SceneManager.GetSceneByName(persistentGameplayHandle.Result.Scene.name));
+
+        //unload menu scene
+        AsyncOperationHandle<SceneInstance> unloadMenuHandle = Addressables.UnloadSceneAsync(CurrentFocusSceneInstance, false);
+        _loadingBar.RegisterHandleOperation(unloadMenuHandle);
+        yield return _loadingBar.ProcessOperations("Unloading Menu Scene");
+
+        StartCoroutine(StartPlaythroughAtSelectedLevel(startingLevelSceneGroup));
+    }
+    public IEnumerator AdvanceToNextLevelCoroutine(LevelSceneGroup currentLevelGroup)
+    {
+        yield return StartCoroutine(StartPlaythroughAtSelectedLevel(currentLevelGroup.NextLevel));
     }
 
-    private IEnumerator SetupLevelChange()
+    private IEnumerator SetupEndOfLevelChange(LevelCompleteEventWrapper levelCompleteEventWrapper)
     {
+        Debug.Log($"Does next level exist?: {levelCompleteEventWrapper.CurrentLevelGroup.NextLevel}");
         yield return StartCoroutine(_cutsceneManager.StartOutroCoroutine());
         _cutsceneManager.AddButtonAction(
             () =>
             {
-                _cutsceneManager.ClearButtonActions();
-                _cutsceneManager.ToggleButtonVisibility(false);
-                _cutsceneManager.TogglePanelVisibility(false);
-                StartCoroutine(AdvanceToNextLevelCoroutine());
+                StartCoroutine(EndOfLevelButtonCoroutine(levelCompleteEventWrapper));
+                //_cutsceneManager.ClearButtonActions();
             }
-            );
-
+        );
     }
-    private IEnumerator AdvanceToNextSectionOfLevel()
+
+
+    private IEnumerator EndOfLevelButtonCoroutine(LevelCompleteEventWrapper levelCompleteEventWrapper)
     {
-        if (_sceneCounter != 0) SceneManager.UnloadSceneAsync(_levelSceneGroup.LevelScenes[_sceneCounter - 1]);
-        SceneField levelPartScene = LevelSceneGroup.LevelScenes[_sceneCounter++];
-        _loadingBar.RegisterSceneOperation(SceneManager.LoadSceneAsync(levelPartScene, LoadSceneMode.Additive));
-        //StartCoroutine(_loadingBar.ProcessScenes(() => SceneManager.SetActiveScene(SceneManager.GetSceneByName(levelPartScene))));
-        yield return _loadingBar.ProcessScenes();
-        _loadingBar.ClearRegisteredScenesToProcess();
-        SceneManager.SetActiveScene(SceneManager.GetSceneByName(levelPartScene));
-    }
+        AsyncOperationHandle unloadBaseLevelHandle = Addressables.UnloadSceneAsync(levelCompleteEventWrapper.BaseSceneInstance, false);
+        _loadingBar.RegisterHandleOperation(unloadBaseLevelHandle);
+        Debug.Log($"Is handle done loading: {unloadBaseLevelHandle.IsDone}");
 
+        yield return _loadingBar.ProcessOperations("Unloading Base Level Scene");
+
+        if (levelCompleteEventWrapper.CurrentLevelGroup.NextLevel == null)
+        {
+            GoToMainMenu();
+        }
+        else
+        {
+            StartCoroutine(AdvanceToNextLevelCoroutine(levelCompleteEventWrapper.CurrentLevelGroup));
+        }
+    }
     #endregion
 
-    private void MarkAsActiveSceneAfterLoad(AsyncOperation operation, SceneField scene)
-    {
-        operation.completed += (asyncOperation) => SceneManager.SetActiveScene(SceneManager.GetSceneByName(scene));
-    }
-
-    public IEnumerator AdvanceToNextLevelCoroutine()
-    {
-        _loadingBar.RegisterSceneOperation(SceneManager.UnloadSceneAsync(LevelSceneGroup.StartScene));
-        AsyncOperation currentLevelOperation = SceneManager.UnloadSceneAsync(LevelSceneGroup.LevelScenes[_sceneCounter - 1]);
-        LevelSceneGroup = LevelSceneGroup.NextLevel;
-        yield return StartCoroutine(StartPlaythroughAtSelectedLevel());
-    }
 
     #region GAMEOVER
 
     private void SetupGameOverSequence(PlayerDeathEventWrapper wrapper)
     {
-        Debug.Log("SETUP GAME OVER SEQUENCE");
         _cutsceneManager.TogglePanelVisibility(true);
         _cutsceneManager.ToggleButtonVisibility(true);
         _cutsceneManager.ChangeButtonText("Return to Main Menu");
@@ -230,7 +203,8 @@ public class LevelManager : MonoBehaviour
         _cutsceneManager.AddButtonAction(
             () =>
             {
-                _cutsceneManager.ClearButtonActions();
+                Debug.Log("GAMEOVER RAN");
+                //_cutsceneManager.ClearButtonActions();
                 _cutsceneManager.ToggleButtonVisibility(false);
                 GoToMainMenu();
             }
@@ -242,113 +216,122 @@ public class LevelManager : MonoBehaviour
 
     #region STARTNEWLEVEL
 
-    public IEnumerator StartPlaythroughAtSelectedLevel()
+    public IEnumerator StartPlaythroughAtSelectedLevel(LevelSceneGroup currentSceneGroup)
     {
         _sceneCounter = 0;
-        SceneField baseScene = LevelSceneGroup.StartScene;
-        SceneField firstWave = LevelSceneGroup.LevelScenes[_sceneCounter++];
+        AssetReference baseScene = currentSceneGroup.StartScene;
 
         //enable loading bar panel
         _loadingBar.ToggleLoadingBarVisibility(true);
-        //Debug.Log("Trigger after StartPlaythroughAtSelectedLevel");
 
         //async load level base and make it the preferred scene when it completes loading
-        AsyncOperation baseSceneOperation = SceneManager.LoadSceneAsync(baseScene, LoadSceneMode.Additive);
-        _loadingBar.RegisterSceneOperation(baseSceneOperation);
-        baseSceneOperation.completed += (async) => SceneManager.SetActiveScene(SceneManager.GetSceneByName(baseScene));
+        AsyncOperationHandle<SceneInstance> baseSceneOperation = Addressables.LoadSceneAsync(baseScene, LoadSceneMode.Additive);
+        _loadingBar.RegisterHandleOperation(baseSceneOperation);
 
-        //async load 1st wave of level and disable scene activation
-        AsyncOperation firstWaveSceneOperation = SceneManager.LoadSceneAsync(firstWave, LoadSceneMode.Additive);
-        _loadingBar.RegisterSceneOperation(firstWaveSceneOperation);
-        firstWaveSceneOperation.allowSceneActivation = false;
+        baseSceneOperation.Completed += (async) => SceneManager.SetActiveScene(SceneManager.GetSceneByName(baseSceneOperation.Result.Scene.name));
 
-        //disable loading bar panel at 90% and enable standby modal panel
-        while (!_loadingBar.CheckIfScenesNinetyProcessed() || !baseSceneOperation.isDone)
-        {
-            _loadingBar.UpdateSceneLoadingProgress();
-            yield return null;
-        }
+        yield return _loadingBar.ProcessOperations("Loading Base Scene");
 
+        //_handlesForLoadingOperations.Clear();
+        SubLevelSequencer levelSequencer = FindObjectOfType<SubLevelSequencer>();
+        levelSequencer.BaseLevelInstance = baseSceneOperation.Result;
+        yield return levelSequencer.SetupLevelPart(currentSceneGroup);
+
+        //load starting addressables
         LoadAllCurrentLevelAssets();
 
-        //disable loading bar panel at 100% and enable standby modal panel
-        while (!_loadingBar.CheckIfAssetsFullyProcessed())
-        {
-            _loadingBar.UpdateAssetLoadingProgress();
-            yield return null;
-        }
-
-        Debug.Log("Yep");
-        List<IAddressableLoadable> addressableLoadables = UnityUtils.FindInterfaces<IAddressableLoadable>();
-        addressableLoadables.ForEach((addressable) => addressable.Init());
+        yield return _loadingBar.ProcessOperations("Loading Addressable Scene Assets");
 
         _loadingBar.ToggleLoadingBarVisibility(false);
-        _cutsceneManager.TogglePanelVisibility(true);
-        _cutsceneManager.ToggleButtonVisibility(true);
-        _cutsceneManager.ChangeButtonText("Start Wave");
-        _cutsceneManager.AddButtonAction(
-        () =>
-            {
-                _cutsceneManager.ToggleButtonVisibility(false);
-                StartCoroutine(EnableWaveStart());
-                _cutsceneManager.ClearButtonActions();
-            }
-         );
     }
 
-    private IEnumerator EnableWaveStart()
-    {
-        _cutsceneManager.TogglePanelVisibility(true);
-
-        _cutsceneManager.ChangeHeaderText("Loading Wave Assets...");
-
-        //activate all scenes on standby once intro is finished
-        _loadingBar.ActivateAllProcessedScenes();
-
-        //stall coroutine until all scenes on standby finish loading
-        while (!_loadingBar.CheckIfScenesFullyProcessed())
-        {
-            _loadingBar.UpdateSceneLoadingProgress();
-            yield return null;
-        }
-
-        //clear loaded scenes from list and hide standby modal
-        _loadingBar.ClearRegisteredScenesToProcess();
-
-        //play intro coroutine
-        WaitForSeconds delay = new WaitForSeconds(1);
-        int numberOfSeconds = 5;
-
-        while (numberOfSeconds > 0)
-        {
-            _cutsceneManager.ChangeHeaderText($"Wave starting in {numberOfSeconds}");
-            numberOfSeconds--;
-            yield return delay;
-        }
-        _cutsceneManager.ChangeHeaderText("");
-        _cutsceneManager.TogglePanelVisibility(false);
-    }
     #endregion
 
     private void LoadAllCurrentLevelAssets()
     {
-        List<IAddressableLoadable> addressableLoadables = UnityUtils.FindInterfaces<IAddressableLoadable>();
-        List<AsyncOperationHandle> handles = new List<AsyncOperationHandle>();
+        List<IAddressableSceneStartLoadable> addressableLoadables = UnityUtils.FindInterfaces<IAddressableSceneStartLoadable>();
 
-
-        addressableLoadables.ForEach(addressable =>
+        foreach (var loadable in addressableLoadables)
         {
-            Debug.Log(handles.Count + "/" + addressable);
-            StartCoroutine(addressable.LoadAddressables(handles));
-            Debug.Log(handles.Count + "/" + addressable);
-            //handles = handles.Union(temp).ToList();
-
-        });
-        handles.ForEach(handle =>
-        {
-            _loadingBar.RegisterAssetLoadOperation(handle);
-            Debug.Log(handle.DebugName);
+            StartCoroutine(loadable.LoadAddressables());
         }
-        );
     }
+
+    #region DOWNLOAD_CODE
+
+    private IEnumerator CheckDownloadStatus(string label)
+    {
+        //AsyncOperationHandle<IResourceLocator> resourceHandle = default;
+        AsyncOperationHandle<long> downloadSizeHandle = default;
+
+        try
+        {
+            downloadSizeHandle = Addressables.GetDownloadSizeAsync(label);
+        }
+        catch (Exception ex)
+        {
+            Debug.Log("Error occured: " + ex.Message);
+        }
+
+        yield return downloadSizeHandle;
+
+        if (downloadSizeHandle.Status == AsyncOperationStatus.Succeeded)
+        {
+            float downloadSize = downloadSizeHandle.Result / (1024f * 1024f);
+            Debug.Log($"Download Size Currently: {downloadSize}");
+            //if (downloadSizeHandle.Result > 0)
+            //{
+            //}
+        }
+    }
+
+    //private void InitiateDownload(string label)
+    //{
+    //    Debug.Log($"Downloading {label}" );
+    //    StartCoroutine(DownloadGameData(label));
+    //}
+
+    //private IEnumerator DownloadGameData(string label)
+    //{
+    //    yield return CheckDownloadStatus(label);
+    //    //AsyncOperationHandle downloadHandle = default;
+    //    //try
+    //    //{
+    //    //    downloadHandle = Addressables.DownloadDependenciesAsync(label);
+    //    //    _loadingBar.RegisterHandleOperation(downloadHandle);
+    //    //    downloadHandle.Completed += OnDownloadComplete;
+    //    //}
+    //    //catch (Exception ex)
+    //    //{ 
+    //    //    Debug.Log("Error occured: " + ex.Message);
+    //    //}
+    //    List<string> caches = new List<string>();
+    //    Caching.GetAllCachePaths(caches);
+
+    //    foreach (var cache in caches)
+    //    {
+    //        Debug.Log(cache);
+    //    }
+
+    //    Addressables.ClearDependencyCacheAsync(label);
+
+    //    yield return _loadingBar.ProcessOperations("Downloading");
+    //}
+
+    //private void OnDownloadComplete(AsyncOperationHandle handle)
+    //{
+    //    if (handle.Status == AsyncOperationStatus.Succeeded)
+    //    {
+    //        Addressables.Release(handle);
+    //        Debug.Log("Download Completed!");
+    //    }
+
+    //    else
+    //    {
+    //        Addressables.Release(handle);
+    //        Debug.Log("Download Failed!");
+    //    }
+    //}
+
+    #endregion
 }

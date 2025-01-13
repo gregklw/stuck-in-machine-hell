@@ -15,16 +15,19 @@ public class EnemyKillObjective : MonoBehaviour, IObjective
 
     [SerializeField] private int _totalEnemiesRemaining;
 
+    private void Awake()
+    {
+        _killEvent = new BusEventBinding<EnemyDeathEventWrapper>(DecrementEnemiesKilled);
+        _playerDeathEvent = new BusEventBinding<PlayerDeathEventWrapper>(DisableObjective);
+    }
+
     private void Start()
     {
         WaveSpawner[] spawners = GetComponentsInChildren<WaveSpawner>();
         foreach (WaveSpawner spawner in spawners)
         {
-            //spawner.InitSpawner();
             _totalEnemiesRemaining += spawner.TotalAmountToSpawn;
         }
-        _killEvent = new BusEventBinding<EnemyDeathEventWrapper>(DecrementEnemiesKilled);
-        _playerDeathEvent = new BusEventBinding<PlayerDeathEventWrapper>(DisableObjective);
     }
 
     private void DisableObjective(PlayerDeathEventWrapper wrapper)
@@ -54,6 +57,6 @@ public class EnemyKillObjective : MonoBehaviour, IObjective
             EventBus<ObjectiveCompleteEventWrapper>.Raise(new ObjectiveCompleteEventWrapper());
             //EventBus<EnemyDeathEventWrapper>.Deregister(_killEvent);
         }
-        //Debug.Log($"Enemies remaining: {_totalEnemiesRemaining} | Kill objective complete: {_isComplete}");
+        Debug.Log($"Enemies remaining: {_totalEnemiesRemaining} | Kill objective complete: {_isComplete}");
     }
 }

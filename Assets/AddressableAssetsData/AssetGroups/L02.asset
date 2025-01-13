@@ -29,12 +29,6 @@ MonoBehaviour:
     m_SerializedLabels:
     - L02Base
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: a66c96ee76135a0479cb28b59beaff66
-    m_Address: Assets/Background/Textures/background02.png
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - L02Base
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 83e653773ce05c24b8493fa400f9296e
     m_Address: Assets/Enemies/Level02/BossFight/Prefabs/enemy_bossfight02_shipA.prefab
     m_ReadOnly: 0
@@ -106,6 +100,21 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - L02W3
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b82cb4aa38172634e8f15400daad8f01
+    m_Address: Assets/Scenes/Level2_base.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 56d18579a4b3f9d41812e43694bc3701
+    m_Address: Assets/Scenes/Level2_wave1.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e3fa1e99cbf073046ba62f01841b17be
+    m_Address: Assets/Scenes/Level2_boss.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 73c6bf2dc72c3ca48ac940e0f5611eda, type: 2}

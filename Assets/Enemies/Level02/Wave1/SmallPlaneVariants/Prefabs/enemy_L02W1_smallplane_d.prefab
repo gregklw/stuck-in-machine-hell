@@ -26,7 +26,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: c227046ec7051804ba6baf99049d82a2, type: 3}
     - target: {fileID: 673099634115847356, guid: 2f8de9c3323d97c42b4ea1bc310369d0, type: 3}
       propertyPath: m_SortingLayer
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 673099634115847356, guid: 2f8de9c3323d97c42b4ea1bc310369d0, type: 3}
       propertyPath: m_SortingLayerID
@@ -134,7 +134,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9145549861930222665, guid: 2f8de9c3323d97c42b4ea1bc310369d0, type: 3}
       propertyPath: _baseMoveSpeed
-      value: 0.5
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 9145549861930222665, guid: 2f8de9c3323d97c42b4ea1bc310369d0, type: 3}
       propertyPath: _currentHealth
@@ -156,6 +156,14 @@ PrefabInstance:
       propertyPath: _characterDeathAnimation
       value: 
       objectReference: {fileID: 22100000, guid: d890030bf7452594f8c960cff132985b, type: 2}
+    - target: {fileID: 9145549861930222665, guid: 2f8de9c3323d97c42b4ea1bc310369d0, type: 3}
+      propertyPath: _deathAnimatorController
+      value: 
+      objectReference: {fileID: 22100000, guid: d890030bf7452594f8c960cff132985b, type: 2}
+    - target: {fileID: 9145549861930222665, guid: 2f8de9c3323d97c42b4ea1bc310369d0, type: 3}
+      propertyPath: _deathAnimation.m_AssetGUID
+      value: d890030bf7452594f8c960cff132985b
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 9208958614255716188, guid: 2f8de9c3323d97c42b4ea1bc310369d0, type: 3}

@@ -13,11 +13,17 @@ MonoBehaviour:
   m_Name: Level2
   m_EditorClassIdentifier: 
   StartScene:
-    m_SceneAsset: {fileID: 102900000, guid: b82cb4aa38172634e8f15400daad8f01, type: 3}
-    m_SceneName: Level2_base
+    m_AssetGUID: b82cb4aa38172634e8f15400daad8f01
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
   LevelScenes:
-  - m_SceneAsset: {fileID: 102900000, guid: 56d18579a4b3f9d41812e43694bc3701, type: 3}
-    m_SceneName: Level2_wave1
-  - m_SceneAsset: {fileID: 102900000, guid: e3fa1e99cbf073046ba62f01841b17be, type: 3}
-    m_SceneName: Level2_boss
+  - m_AssetGUID: 56d18579a4b3f9d41812e43694bc3701
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  - m_AssetGUID: e3fa1e99cbf073046ba62f01841b17be
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 1
   NextLevel: {fileID: 0}
