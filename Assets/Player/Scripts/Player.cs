@@ -1,7 +1,10 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class Player : AttackingCharacter
 {
@@ -18,6 +21,7 @@ public class Player : AttackingCharacter
     private BusEventBinding<EnemySpawnEventWrapper> _enemySpawnEventBinding;
 
     [SerializeField][Range(0, 10)] private float _baseMoveSpeed;
+
     public float BaseMoveSpeed
     {
         get => _baseMoveSpeed;
@@ -44,7 +48,7 @@ public class Player : AttackingCharacter
 
     void FixedUpdate()
     {
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && !LevelManager.DidMousePressUI)
         {
             MovePlayerTowardsInput();
         }

@@ -4,9 +4,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.AddressableAssets.ResourceLocators;
+using UnityEngine.EventSystems;
 using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.ResourceManagement.ResourceProviders;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
@@ -45,8 +47,16 @@ public class LevelManager : MonoBehaviour
 
     private const string InitializationSceneName = "Initialization";
 
+    public static bool DidMousePressUI;
+
+    private GraphicRaycaster _graphicRaycaster;
+    private PointerEventData _pointerEventData;
+    private EventSystem _eventSystem;
+
     private void Awake()
     {
+        _eventSystem = FindObjectOfType<EventSystem>();
+        _graphicRaycaster = GetComponent<GraphicRaycaster>();
         _loadingBar = LoadingBar.Instance;
         _levelChangeAction = (levelCompleteEventWrapper) => StartCoroutine(SetupEndOfLevelChange(levelCompleteEventWrapper));
         _levelChangeBinding = new BusEventBinding<LevelCompleteEventWrapper>(_levelChangeAction);
@@ -65,13 +75,29 @@ public class LevelManager : MonoBehaviour
         EventBus<PlayerDeathEventWrapper>.Deregister(_playerDeathBinding);
     }
 
-    //private void Update()
-    //{
-    //    if (Input.GetKeyDown(KeyCode.K))
-    //    { 
-    //        Caching.ClearCache();
-    //    }
-    //}
+    private void FixedUpdate()
+    {
+        if (Input.GetMouseButton(0))
+        {
+            PointerEventData eventData = new PointerEventData(_eventSystem);
+            List<RaycastResult> raycastResults = new List<RaycastResult>();
+            eventData.position = Input.mousePosition;
+            _graphicRaycaster.Raycast(eventData, raycastResults);
+
+            if (raycastResults.Count > 0)
+            {
+                DidMousePressUI = true;
+            }
+        }
+        else
+        {   
+            DidMousePressUI = false;
+        }
+        //if (Input.GetKeyDown(KeyCode.K))
+        //{
+        //    Caching.ClearCache();
+        //}
+    }
 
     #region MENU_TRAVERSAL
     public void GoToMainMenu()
