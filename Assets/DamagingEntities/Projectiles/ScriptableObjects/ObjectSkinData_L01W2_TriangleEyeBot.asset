@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32dbb1894c444d64db91a0e410e318dc, type: 3}
   m_Name: ObjectSkinData_L01W2_TriangleEyeBot
   m_EditorClassIdentifier: 
-  ProjectileSprite: {fileID: 21300000, guid: e57b6c8e5dd73c1498fd55a12bc716d7, type: 3}
   ProjectileSprites:
   - {fileID: 21300000, guid: e57b6c8e5dd73c1498fd55a12bc716d7, type: 3}
-  ExplosionSprite: {fileID: -1460533542, guid: e6b00a343f7292f4ca23fbb63891e66a, type: 3}
   ExplosionAnimationController: {fileID: 22100000, guid: 989b0c2fb981ac3449d9509165f4e82a, type: 2}
+  DeathExplosionMaterial: {fileID: 2100000, guid: 4b1256b9b4edf7749a65f80aeb3060b9, type: 2}
+  SpriteSheetRows: 8
+  SpriteSheetColumns: 4
   ProjectileSpeed: 1.5
   ProjectileLifeTime: 2
   CollisionTagsForHit:

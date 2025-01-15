@@ -8,3 +8,6 @@ How to setup Remote Asset Addressables with CCD:
 -Create/link Addressables for assets
 -Build to CCD
 -Copy link generated on CCD Unity DevOps website and use it as remote (should already be done automatically if using build to CCD option)
+
+ParticleSystem:
+-Start speed set to 0 will not make particles appear

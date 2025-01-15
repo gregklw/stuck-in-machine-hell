@@ -3,17 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class ParticleWeapon : MonoBehaviour
+public abstract class ParticleWeapon : MonoBehaviour, IParticleSystemHelper
 {
     [SerializeField] private ProjectileSkinData _projectileData;
     [SerializeField] private float _damage;
     [SerializeField] private LayerMask _hitTriggerLayer;
-    [SerializeField] private ParticleSystem _explosionParticleOnTrigger;
+    [SerializeField] private ExplosionEmitter _explosionEmitter;
 
     private List<ParticleSystem.Particle> _insideParticles = new List<ParticleSystem.Particle>();
     private ParticleSystem _particleSystem;
 
     protected ParticleSystem ThisParticleSystem => _particleSystem;
+    protected ExplosionEmitter ThisExplosionEmitter => _explosionEmitter;
     protected ProjectileSkinData SkinData => _projectileData;
     protected float Damage => _damage;
     protected virtual void Awake()
@@ -83,9 +84,18 @@ public abstract class ParticleWeapon : MonoBehaviour
 
     public void TriggerExplosionEffect(Vector2 spawnPosition, float startSize)
     {
-        ParticleSystem.MainModule main = _explosionParticleOnTrigger.main;
-        main.startSize = startSize;
-        _explosionParticleOnTrigger.transform.position = spawnPosition;
-        _explosionParticleOnTrigger.Emit(1);
+        _explosionEmitter.InitAnimation(startSize, _projectileData.DeathExplosionMaterial, _projectileData.SpriteSheetRows, _projectileData.SpriteSheetColumns);
+        _explosionEmitter.ExplodeOnLocation(spawnPosition);
+    }
+
+    public IEnumerator DetachAndDestroyWhenParticlesDead()
+    {
+        transform.SetParent(null);
+        _particleSystem.Stop();
+        while (_particleSystem.IsAlive())
+        {
+            yield return null;
+        }
+        Destroy(gameObject);
     }
 }

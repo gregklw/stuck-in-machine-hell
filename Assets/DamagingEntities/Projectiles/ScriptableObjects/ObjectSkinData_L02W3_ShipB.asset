@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32dbb1894c444d64db91a0e410e318dc, type: 3}
   m_Name: ObjectSkinData_L02W3_ShipB
   m_EditorClassIdentifier: 
-  ProjectileSprite: {fileID: 21300000, guid: d383813a007c8dd418f31cc5aeb2303a, type: 3}
   ProjectileSprites:
   - {fileID: 21300000, guid: d383813a007c8dd418f31cc5aeb2303a, type: 3}
-  ExplosionSprite: {fileID: -339057557, guid: 06402d667ada9374c8e54579cd88466c, type: 3}
   ExplosionAnimationController: {fileID: 22100000, guid: 14753e4a9e80aa64a86000ae74740022, type: 2}
+  DeathExplosionMaterial: {fileID: 2100000, guid: 7a6474e67162f27449887c5b4b87976f, type: 2}
+  SpriteSheetRows: 8
+  SpriteSheetColumns: 5
   ProjectileSpeed: 1.5
   ProjectileLifeTime: 1.5
   CollisionTagsForHit:

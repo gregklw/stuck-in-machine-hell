@@ -11,7 +11,8 @@ public abstract class DestroyableObject : MonoBehaviour, IHealthyObject
     public abstract void ReceiveDamage(float damage);
 
     [SerializeField] private float _currentHealth, _maxHealth;
-    [SerializeField] private RuntimeAnimatorController _deathAnimatorController;
+    [SerializeField] private ProjectileSkinData _projectileSkinData;
+    [SerializeField] private ExplosionEmitter _deathExplosionEmitter;
     private SpriteRenderer _characterRenderer;
     protected SpriteRenderer CharacterRenderer => _characterRenderer;
     public Action OnDestroyEvent;
@@ -53,15 +54,21 @@ public abstract class DestroyableObject : MonoBehaviour, IHealthyObject
 
     private IEnumerator DestroyObject()
     {
-        InstantiateDestroyedAnimation();
+        TriggerExplosion();
         OnDestroyEvent?.Invoke();
         yield return new WaitForEndOfFrame();
         Destroy(gameObject);
     }
 
-    private void InstantiateDestroyedAnimation()
+    private void TriggerExplosion()
     {
-        ExplosionObject explosion = ExplosionObjectPool.Instance.GetNewExplosion(transform.position, _deathAnimatorController);
-        explosion.InitSize(GetComponent<Collider2D>().bounds.size);
+        //ExplosionObject explosion = ExplosionObjectPool.Instance.GetNewExplosion(transform.position, _deathAnimatorController);
+        //ExplosionEmitter explosion = ExplosionEmitterPool.Instance.GetCachedExplosionObject(_projectileSkinData.DeathExplosionMaterial);
+        _deathExplosionEmitter.InitAnimation(GetComponent<Collider2D>().bounds.size.x * 2, _projectileSkinData.DeathExplosionMaterial, _projectileSkinData.SpriteSheetRows, _projectileSkinData.SpriteSheetColumns);
+        _deathExplosionEmitter.ExplodeOnLocation(transform.position);
+
+        IParticleSystemHelper[] particlesToDetachAndDestroy = GetComponentsInChildren<IParticleSystemHelper>();
+
+        Array.ForEach<IParticleSystemHelper>(particlesToDetachAndDestroy, x => StartCoroutine(x.DetachAndDestroyWhenParticlesDead()));
     }
 }

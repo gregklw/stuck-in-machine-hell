@@ -14,8 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ProjectileSprites:
   - {fileID: 21300000, guid: c4cf3a80f0420d24881dce125e166fd6, type: 3}
-  ExplosionSprite: {fileID: -1793714065, guid: 1ff1925557856594ebab705ec8ac814f, type: 3}
   ExplosionAnimationController: {fileID: 22100000, guid: bfdcea0c7db8375448e3956e2a2636e8, type: 2}
+  DeathExplosionMaterial: {fileID: 2100000, guid: ec8114da814f2d340a4ac40cb864a421, type: 2}
+  SpriteSheetRows: 5
+  SpriteSheetColumns: 7
   ProjectileSpeed: 1
   ProjectileLifeTime: 2.25
   CollisionTagsForHit:

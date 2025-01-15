@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32dbb1894c444d64db91a0e410e318dc, type: 3}
   m_Name: ObjectSkinData_L01W3_MeleeCircleBot_Default
   m_EditorClassIdentifier: 
-  ProjectileSprite: {fileID: 21300000, guid: 0637f29f58dfaf94fac9f71dffbb1e9b, type: 3}
   ProjectileSprites:
   - {fileID: 21300000, guid: 0637f29f58dfaf94fac9f71dffbb1e9b, type: 3}
-  ExplosionSprite: {fileID: -1914701984, guid: 1f7b9b7de1dfa6841bef046eed97faed, type: 3}
   ExplosionAnimationController: {fileID: 22100000, guid: 635d10011fd97ee4e9092577995305ae, type: 2}
+  DeathExplosionMaterial: {fileID: 2100000, guid: fe4671d23491a0446af40536dfec4c19, type: 2}
+  SpriteSheetRows: 6
+  SpriteSheetColumns: 6
   ProjectileSpeed: 1.5
   ProjectileLifeTime: 0.2
   CollisionTagsForHit:

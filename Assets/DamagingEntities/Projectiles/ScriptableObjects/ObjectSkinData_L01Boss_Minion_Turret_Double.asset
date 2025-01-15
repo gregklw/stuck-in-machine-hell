@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32dbb1894c444d64db91a0e410e318dc, type: 3}
   m_Name: ObjectSkinData_L01Boss_Minion_Turret_Double
   m_EditorClassIdentifier: 
-  ProjectileSprite: {fileID: 21300000, guid: b79702db74a4cb44fbc22c42ca9fd20b, type: 3}
   ProjectileSprites:
   - {fileID: 21300000, guid: b79702db74a4cb44fbc22c42ca9fd20b, type: 3}
-  ExplosionSprite: {fileID: -1671029848, guid: a214092901b430f41a117b50768d552e, type: 3}
   ExplosionAnimationController: {fileID: 22100000, guid: 873af8ee9f1b8644bb67f8b6e07914d7, type: 2}
+  DeathExplosionMaterial: {fileID: 2100000, guid: ab83a463168ae434a9d21d8a0b25d705, type: 2}
+  SpriteSheetRows: 8
+  SpriteSheetColumns: 6
   ProjectileSpeed: 3.5
   ProjectileLifeTime: 1.5
   CollisionTagsForHit:

@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32dbb1894c444d64db91a0e410e318dc, type: 3}
   m_Name: ObjectSkinData_Player_ShrapnelBomb
   m_EditorClassIdentifier: 
-  ProjectileSprite: {fileID: 21300000, guid: de8775bfc2d83204493634a6f7fa4885, type: 3}
   ProjectileSprites:
   - {fileID: 21300000, guid: de8775bfc2d83204493634a6f7fa4885, type: 3}
-  ExplosionSprite: {fileID: -457605262, guid: d355ece8c0eb2db44867649b63ac7ec4, type: 3}
   ExplosionAnimationController: {fileID: 22100000, guid: 4c9a407737b6cb346876d77d0e61044d, type: 2}
+  DeathExplosionMaterial: {fileID: 2100000, guid: bb7d7c0dcdfb8f84491acf0d1b6a95df, type: 2}
+  SpriteSheetRows: 5
+  SpriteSheetColumns: 5
   ProjectileSpeed: 3.5
   ProjectileLifeTime: 1.5
   CollisionTagsForHit:

@@ -71,7 +71,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -977008263
-  m_SortingLayer: 7
+  m_SortingLayer: 8
   m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
@@ -157,7 +157,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -977008263
-  m_SortingLayer: 7
+  m_SortingLayer: 8
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.20754719, g: 0, b: 0, a: 1}
@@ -238,13 +238,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _currentHealth: 0
   _maxHealth: 0
-  _characterDeathAnimation: {fileID: 0}
-  _characterRenderer: {fileID: 673099634115847356}
+  _projectileSkinData: {fileID: 0}
+  _deathExplosionEmitter: {fileID: 1458824098411275285}
   _armorType: 0
   _baseAttackSpeed: 480
   Score: 0
   _minimumDistance: 0.2
-  _baseMoveSpeed: 0
+  _baseMoveSpeed: 0.8
 --- !u!114 &3027582213553334061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -480,11 +480,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6856351192897662562, guid: 1cb806de3602b2d4896680f03b2d37e9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1cb806de3602b2d4896680f03b2d37e9, type: 3}
+--- !u!114 &1458824098411275285 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4469829648511740185, guid: 1cb806de3602b2d4896680f03b2d37e9, type: 3}
+  m_PrefabInstance: {fileID: 3041845835820715276}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b439b6a36631f70409138c0e0927e27a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &8227101509699773694 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6348465309357468146, guid: 1cb806de3602b2d4896680f03b2d37e9, type: 3}

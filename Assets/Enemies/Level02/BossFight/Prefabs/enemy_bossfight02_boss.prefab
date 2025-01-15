@@ -16,6 +16,10 @@ PrefabInstance:
       propertyPath: _projectileData
       value: 
       objectReference: {fileID: 11400000, guid: a5401efd68fdbbf469d84a45e92af51d, type: 2}
+    - target: {fileID: 1005865474033519722, guid: afdc7e0547e7b794da4ab21db15a6fa4, type: 3}
+      propertyPath: _explosionEmitter
+      value: 
+      objectReference: {fileID: 6891082951449413259}
     - target: {fileID: 6275786692904806740, guid: afdc7e0547e7b794da4ab21db15a6fa4, type: 3}
       propertyPath: startDelay.scalar
       value: 0
@@ -129,7 +133,8 @@ PrefabInstance:
       value: ParticleWeapon_Enemy_CircleSingleArcShot (3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1431041975530072564, guid: afdc7e0547e7b794da4ab21db15a6fa4, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: afdc7e0547e7b794da4ab21db15a6fa4, type: 3}
@@ -154,6 +159,10 @@ PrefabInstance:
       propertyPath: _projectileData
       value: 
       objectReference: {fileID: 11400000, guid: 5bd1e507eca485443ab2409ecc2f8287, type: 2}
+    - target: {fileID: 1005865474033519722, guid: afdc7e0547e7b794da4ab21db15a6fa4, type: 3}
+      propertyPath: _explosionEmitter
+      value: 
+      objectReference: {fileID: 6891082951449413259}
     - target: {fileID: 6275786692904806740, guid: afdc7e0547e7b794da4ab21db15a6fa4, type: 3}
       propertyPath: startDelay.scalar
       value: 0
@@ -267,7 +276,8 @@ PrefabInstance:
       value: ParticleWeapon_Enemy_CircleSingleArcShot (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1431041975530072564, guid: afdc7e0547e7b794da4ab21db15a6fa4, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: afdc7e0547e7b794da4ab21db15a6fa4, type: 3}
@@ -292,6 +302,10 @@ PrefabInstance:
       propertyPath: _projectileData
       value: 
       objectReference: {fileID: 11400000, guid: d2a3a33781bd7ea41bcd508161b6269b, type: 2}
+    - target: {fileID: 1005865474033519722, guid: afdc7e0547e7b794da4ab21db15a6fa4, type: 3}
+      propertyPath: _explosionEmitter
+      value: 
+      objectReference: {fileID: 6891082951449413259}
     - target: {fileID: 6275786692904806740, guid: afdc7e0547e7b794da4ab21db15a6fa4, type: 3}
       propertyPath: startDelay.scalar
       value: 0
@@ -405,7 +419,8 @@ PrefabInstance:
       value: ParticleWeapon_Enemy_CircleSingleArcShot (9)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1431041975530072564, guid: afdc7e0547e7b794da4ab21db15a6fa4, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: afdc7e0547e7b794da4ab21db15a6fa4, type: 3}
@@ -440,7 +455,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 1a35de652cfe9794db658e26a32af08b, type: 3}
     - target: {fileID: 673099634115847356, guid: 2f8de9c3323d97c42b4ea1bc310369d0, type: 3}
       propertyPath: m_SortingLayer
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 673099634115847356, guid: 2f8de9c3323d97c42b4ea1bc310369d0, type: 3}
       propertyPath: m_SortingLayerID
@@ -579,6 +594,14 @@ PrefabInstance:
       value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 9145549861930222665, guid: 2f8de9c3323d97c42b4ea1bc310369d0, type: 3}
+      propertyPath: _projectileSkinData
+      value: 
+      objectReference: {fileID: 11400000, guid: 9c8063e63f5e5f448aa90b2fd3982cb9, type: 2}
+    - target: {fileID: 9145549861930222665, guid: 2f8de9c3323d97c42b4ea1bc310369d0, type: 3}
+      propertyPath: _deathExplosionEmitter
+      value: 
+      objectReference: {fileID: 6891082951449413259}
+    - target: {fileID: 9145549861930222665, guid: 2f8de9c3323d97c42b4ea1bc310369d0, type: 3}
       propertyPath: _characterDeathAnimation
       value: 
       objectReference: {fileID: 22100000, guid: bfdcea0c7db8375448e3956e2a2636e8, type: 2}
@@ -647,6 +670,10 @@ PrefabInstance:
       propertyPath: _projectileData
       value: 
       objectReference: {fileID: 11400000, guid: b7dccaf062c651b44a4dab629f255b82, type: 2}
+    - target: {fileID: 1005865474033519722, guid: afdc7e0547e7b794da4ab21db15a6fa4, type: 3}
+      propertyPath: _explosionEmitter
+      value: 
+      objectReference: {fileID: 6891082951449413259}
     - target: {fileID: 6275786692904806740, guid: afdc7e0547e7b794da4ab21db15a6fa4, type: 3}
       propertyPath: startDelay.scalar
       value: 0
@@ -760,7 +787,8 @@ PrefabInstance:
       value: ParticleWeapon_Enemy_CircleSingleArcShot (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1431041975530072564, guid: afdc7e0547e7b794da4ab21db15a6fa4, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: afdc7e0547e7b794da4ab21db15a6fa4, type: 3}
@@ -785,6 +813,10 @@ PrefabInstance:
       propertyPath: _projectileData
       value: 
       objectReference: {fileID: 11400000, guid: 5f99bcc2b5b0e3f44b531f13f7d8009c, type: 2}
+    - target: {fileID: 1005865474033519722, guid: afdc7e0547e7b794da4ab21db15a6fa4, type: 3}
+      propertyPath: _explosionEmitter
+      value: 
+      objectReference: {fileID: 6891082951449413259}
     - target: {fileID: 6275786692904806740, guid: afdc7e0547e7b794da4ab21db15a6fa4, type: 3}
       propertyPath: startDelay.scalar
       value: 0
@@ -898,7 +930,8 @@ PrefabInstance:
       value: ParticleWeapon_Enemy_CircleSingleArcShot (6)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1431041975530072564, guid: afdc7e0547e7b794da4ab21db15a6fa4, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: afdc7e0547e7b794da4ab21db15a6fa4, type: 3}
@@ -923,6 +956,10 @@ PrefabInstance:
       propertyPath: _projectileData
       value: 
       objectReference: {fileID: 11400000, guid: 9c8063e63f5e5f448aa90b2fd3982cb9, type: 2}
+    - target: {fileID: 1322829392248536199, guid: afdc7e0547e7b794da4ab21db15a6fa4, type: 3}
+      propertyPath: InitialModule.startRotationX.scalar
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6275786692904806740, guid: afdc7e0547e7b794da4ab21db15a6fa4, type: 3}
       propertyPath: ShapeModule.arc.spread
       value: 0.98
@@ -1041,6 +1078,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7288325265288355220, guid: afdc7e0547e7b794da4ab21db15a6fa4, type: 3}
   m_PrefabInstance: {fileID: 6671273244546931700}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6891082951449413259 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 231676740197227903, guid: afdc7e0547e7b794da4ab21db15a6fa4, type: 3}
+  m_PrefabInstance: {fileID: 6671273244546931700}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b439b6a36631f70409138c0e0927e27a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8006282898136528467
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1057,6 +1105,10 @@ PrefabInstance:
       propertyPath: _projectileData
       value: 
       objectReference: {fileID: 11400000, guid: 11b7189977a17e84294acc6684ef8b56, type: 2}
+    - target: {fileID: 1005865474033519722, guid: afdc7e0547e7b794da4ab21db15a6fa4, type: 3}
+      propertyPath: _explosionEmitter
+      value: 
+      objectReference: {fileID: 6891082951449413259}
     - target: {fileID: 6275786692904806740, guid: afdc7e0547e7b794da4ab21db15a6fa4, type: 3}
       propertyPath: startDelay.scalar
       value: 0
@@ -1170,7 +1222,8 @@ PrefabInstance:
       value: ParticleWeapon_Enemy_CircleSingleArcShot (8)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1431041975530072564, guid: afdc7e0547e7b794da4ab21db15a6fa4, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: afdc7e0547e7b794da4ab21db15a6fa4, type: 3}
@@ -1195,6 +1248,10 @@ PrefabInstance:
       propertyPath: _projectileData
       value: 
       objectReference: {fileID: 11400000, guid: 1f300399b1368a349844c4acd5b3e64f, type: 2}
+    - target: {fileID: 1005865474033519722, guid: afdc7e0547e7b794da4ab21db15a6fa4, type: 3}
+      propertyPath: _explosionEmitter
+      value: 
+      objectReference: {fileID: 6891082951449413259}
     - target: {fileID: 6275786692904806740, guid: afdc7e0547e7b794da4ab21db15a6fa4, type: 3}
       propertyPath: startDelay.scalar
       value: 0
@@ -1308,7 +1365,8 @@ PrefabInstance:
       value: ParticleWeapon_Enemy_CircleSingleArcShot (5)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1431041975530072564, guid: afdc7e0547e7b794da4ab21db15a6fa4, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: afdc7e0547e7b794da4ab21db15a6fa4, type: 3}
@@ -1333,6 +1391,10 @@ PrefabInstance:
       propertyPath: _projectileData
       value: 
       objectReference: {fileID: 11400000, guid: 51bfcc593a2852b43be5aae51e82b41a, type: 2}
+    - target: {fileID: 1005865474033519722, guid: afdc7e0547e7b794da4ab21db15a6fa4, type: 3}
+      propertyPath: _explosionEmitter
+      value: 
+      objectReference: {fileID: 6891082951449413259}
     - target: {fileID: 6275786692904806740, guid: afdc7e0547e7b794da4ab21db15a6fa4, type: 3}
       propertyPath: startDelay.scalar
       value: 0
@@ -1446,7 +1508,8 @@ PrefabInstance:
       value: ParticleWeapon_Enemy_CircleSingleArcShot (4)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1431041975530072564, guid: afdc7e0547e7b794da4ab21db15a6fa4, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: afdc7e0547e7b794da4ab21db15a6fa4, type: 3}
@@ -1471,6 +1534,10 @@ PrefabInstance:
       propertyPath: _projectileData
       value: 
       objectReference: {fileID: 11400000, guid: f94ce14c55beffc45aaaa7d3eabdf4dc, type: 2}
+    - target: {fileID: 1005865474033519722, guid: afdc7e0547e7b794da4ab21db15a6fa4, type: 3}
+      propertyPath: _explosionEmitter
+      value: 
+      objectReference: {fileID: 6891082951449413259}
     - target: {fileID: 6275786692904806740, guid: afdc7e0547e7b794da4ab21db15a6fa4, type: 3}
       propertyPath: startDelay.scalar
       value: 0
@@ -1584,7 +1651,8 @@ PrefabInstance:
       value: ParticleWeapon_Enemy_CircleSingleArcShot (7)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1431041975530072564, guid: afdc7e0547e7b794da4ab21db15a6fa4, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: afdc7e0547e7b794da4ab21db15a6fa4, type: 3}

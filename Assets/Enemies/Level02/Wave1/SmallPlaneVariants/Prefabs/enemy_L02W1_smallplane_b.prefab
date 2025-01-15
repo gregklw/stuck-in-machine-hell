@@ -153,6 +153,14 @@ PrefabInstance:
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 9145549861930222665, guid: 2f8de9c3323d97c42b4ea1bc310369d0, type: 3}
+      propertyPath: _projectileSkinData
+      value: 
+      objectReference: {fileID: 11400000, guid: 2830c8b374b373743ad07daccb49b2e9, type: 2}
+    - target: {fileID: 9145549861930222665, guid: 2f8de9c3323d97c42b4ea1bc310369d0, type: 3}
+      propertyPath: _deathExplosionEmitter
+      value: 
+      objectReference: {fileID: 87706140386462975}
+    - target: {fileID: 9145549861930222665, guid: 2f8de9c3323d97c42b4ea1bc310369d0, type: 3}
       propertyPath: _characterDeathAnimation
       value: 
       objectReference: {fileID: 22100000, guid: d890030bf7452594f8c960cff132985b, type: 2}
@@ -255,6 +263,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44a10c2b65345c045920daea6d954443, type: 3}
+--- !u!114 &87706140386462975 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4980926410988750802, guid: 44a10c2b65345c045920daea6d954443, type: 3}
+  m_PrefabInstance: {fileID: 4911270412769528621}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b439b6a36631f70409138c0e0927e27a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &7432586141010906132 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2525833142765471545, guid: 44a10c2b65345c045920daea6d954443, type: 3}

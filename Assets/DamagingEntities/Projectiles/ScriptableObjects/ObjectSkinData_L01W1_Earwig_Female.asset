@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32dbb1894c444d64db91a0e410e318dc, type: 3}
   m_Name: ObjectSkinData_L01W1_Earwig_Female
   m_EditorClassIdentifier: 
-  ProjectileSprite: {fileID: 21300000, guid: 35d7cbb0da59b944880b7196b09b78a3, type: 3}
   ProjectileSprites:
   - {fileID: 21300000, guid: 35d7cbb0da59b944880b7196b09b78a3, type: 3}
-  ExplosionSprite: {fileID: -1671029848, guid: a214092901b430f41a117b50768d552e, type: 3}
   ExplosionAnimationController: {fileID: 22100000, guid: 9c39fed06e5454e43a4d482e665f8089, type: 2}
+  DeathExplosionMaterial: {fileID: 2100000, guid: f2f4b47da338a254493ed85ceb4ac319, type: 2}
+  SpriteSheetRows: 8
+  SpriteSheetColumns: 6
   ProjectileSpeed: 0.6
   ProjectileLifeTime: 8
   CollisionTagsForHit:

@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32dbb1894c444d64db91a0e410e318dc, type: 3}
   m_Name: ObjectSkinData_L01Boss_Boss_Default
   m_EditorClassIdentifier: 
-  ProjectileSprite: {fileID: 21300000, guid: 18ec2e6dcec94c64a890d6689e657314, type: 3}
   ProjectileSprites:
   - {fileID: 21300000, guid: 18ec2e6dcec94c64a890d6689e657314, type: 3}
-  ExplosionSprite: {fileID: 460353002, guid: f520541fb28aa434e9760abeec81e006, type: 3}
   ExplosionAnimationController: {fileID: 22100000, guid: bb923c7e19b7cda4ea0894b303772c9a, type: 2}
+  DeathExplosionMaterial: {fileID: 2100000, guid: 9bfea3028cc20184ab5ae7b5e7bbf321, type: 2}
+  SpriteSheetRows: 5
+  SpriteSheetColumns: 11
   ProjectileSpeed: 2.5
   ProjectileLifeTime: 0.6
   CollisionTagsForHit:

@@ -169,6 +169,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 13b6e057813c3fd45a4540243ca2b1be, type: 2}
     - target: {fileID: 9145549861930222665, guid: 2f8de9c3323d97c42b4ea1bc310369d0, type: 3}
+      propertyPath: _projectileSkinData
+      value: 
+      objectReference: {fileID: 11400000, guid: 13b6e057813c3fd45a4540243ca2b1be, type: 2}
+    - target: {fileID: 9145549861930222665, guid: 2f8de9c3323d97c42b4ea1bc310369d0, type: 3}
+      propertyPath: _deathExplosionEmitter
+      value: 
+      objectReference: {fileID: 8888138470355406526}
+    - target: {fileID: 9145549861930222665, guid: 2f8de9c3323d97c42b4ea1bc310369d0, type: 3}
       propertyPath: _characterDeathAnimation
       value: 
       objectReference: {fileID: 22100000, guid: 635d10011fd97ee4e9092577995305ae, type: 2}
@@ -296,3 +304,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8284839511616551576, guid: 13a0fe061526cfc49b9eae6408cee004, type: 3}
   m_PrefabInstance: {fileID: 8048753383297496269}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8888138470355406526 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1507553957024578163, guid: 13a0fe061526cfc49b9eae6408cee004, type: 3}
+  m_PrefabInstance: {fileID: 8048753383297496269}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b439b6a36631f70409138c0e0927e27a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

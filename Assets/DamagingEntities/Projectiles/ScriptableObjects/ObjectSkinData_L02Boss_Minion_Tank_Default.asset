@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32dbb1894c444d64db91a0e410e318dc, type: 3}
   m_Name: ObjectSkinData_L02Boss_Minion_Tank_Default
   m_EditorClassIdentifier: 
-  ProjectileSprite: {fileID: 21300000, guid: 03a5977a55d36284aa83e9b66dc6a67c, type: 3}
   ProjectileSprites:
   - {fileID: 21300000, guid: 03a5977a55d36284aa83e9b66dc6a67c, type: 3}
-  ExplosionSprite: {fileID: -339057557, guid: 06402d667ada9374c8e54579cd88466c, type: 3}
   ExplosionAnimationController: {fileID: 22100000, guid: 2a10f5fad0600a94fae5803c4658ddef, type: 2}
+  DeathExplosionMaterial: {fileID: 2100000, guid: 8790c59befd430045bb8d60e91942568, type: 2}
+  SpriteSheetRows: 8
+  SpriteSheetColumns: 6
   ProjectileSpeed: 5
   ProjectileLifeTime: 1.5
   CollisionTagsForHit:
