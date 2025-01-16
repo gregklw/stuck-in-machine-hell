@@ -15,6 +15,7 @@ public abstract class DestroyableObject : MonoBehaviour, IHealthyObject
     [SerializeField] private ExplosionEmitter _deathExplosionEmitter;
     private SpriteRenderer _characterRenderer;
     protected SpriteRenderer CharacterRenderer => _characterRenderer;
+    private Coroutine _destroyCoroutine;
     public Action OnDestroyEvent;
     public float CurrentHealth
     {
@@ -24,7 +25,7 @@ public abstract class DestroyableObject : MonoBehaviour, IHealthyObject
             if (value <= 0)
             {
                 _currentHealth = 0;
-                StartCoroutine(DestroyObject());
+                if (_destroyCoroutine == null) _destroyCoroutine = StartCoroutine(DestroyObject());
             }
             else if (value > _maxHealth)
             {
@@ -67,8 +68,8 @@ public abstract class DestroyableObject : MonoBehaviour, IHealthyObject
         _deathExplosionEmitter.InitAnimation(GetComponent<Collider2D>().bounds.size.x * 2, _projectileSkinData.DeathExplosionMaterial, _projectileSkinData.SpriteSheetRows, _projectileSkinData.SpriteSheetColumns);
         _deathExplosionEmitter.ExplodeOnLocation(transform.position);
 
-        IParticleSystemHelper[] particlesToDetachAndDestroy = GetComponentsInChildren<IParticleSystemHelper>();
+        ParticleWeapon[] particlesToDetachAndDestroy = GetComponentsInChildren<ParticleWeapon>();
 
-        Array.ForEach<IParticleSystemHelper>(particlesToDetachAndDestroy, x => StartCoroutine(x.DetachAndDestroyWhenParticlesDead()));
+        Array.ForEach<ParticleWeapon>(particlesToDetachAndDestroy, x => x.DetachAndDestroyWhenParticlesDead());
     }
 }

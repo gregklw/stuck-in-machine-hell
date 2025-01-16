@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-public class ExplosionEmitter : MonoBehaviour, IParticleSystemHelper
+public class ExplosionEmitter : MonoBehaviour
 {
     private ParticleSystem _explosionParticleSystem;
     private ParticleSystemRenderer _explosionParticleRenderer;
@@ -25,6 +25,8 @@ public class ExplosionEmitter : MonoBehaviour, IParticleSystemHelper
     {
         //float preferredDimension = targetSize.x > targetSize.y ? targetSize.y : targetSize.x;
 
+        if (_explosionParticleSystem == null) return;
+
         ParticleSystem.MainModule main = _explosionParticleSystem.main;
         main.startSize = targetSize;
 
@@ -36,7 +38,7 @@ public class ExplosionEmitter : MonoBehaviour, IParticleSystemHelper
         _explosionParticleRenderer.material = deathAnimationMaterial;
     }
 
-    public IEnumerator DetachAndDestroyWhenParticlesDead()
+    private IEnumerator DetachAndDestroyWhenParticlesDeadCoroutine()
     {
         _explosionParticleSystem.Stop();
         transform.SetParent(null);
@@ -45,6 +47,16 @@ public class ExplosionEmitter : MonoBehaviour, IParticleSystemHelper
             yield return null;
         }
         Destroy(gameObject);
+    }
+
+    public void DetachAndDestroyWhenParticlesDead()
+    {
+        StartCoroutine(DetachAndDestroyWhenParticlesDeadCoroutine());
+    }
+
+    public bool IsEmitterAlive()
+    {
+        return _explosionParticleSystem.IsAlive();
     }
 
     //public void ResetExplosionAnimator()

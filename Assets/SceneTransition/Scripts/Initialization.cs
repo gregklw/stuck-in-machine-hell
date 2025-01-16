@@ -9,6 +9,8 @@ public class Initialization : MonoBehaviour
 #if UNITY_ANDROID
         Application.targetFrameRate = -1;
 #endif
+        Debug.Log(UnityEngine.AddressableAssets.Addressables.BuildPath);
+        Debug.Log(UnityEngine.AddressableAssets.Addressables.RuntimePath);
         LevelManager levelManager = FindObjectOfType<LevelManager>();
         levelManager.GoToMainMenu();
     }

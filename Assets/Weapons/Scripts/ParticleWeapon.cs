@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class ParticleWeapon : MonoBehaviour, IParticleSystemHelper
+public abstract class ParticleWeapon : MonoBehaviour
 {
     [SerializeField] private ProjectileSkinData _projectileData;
     [SerializeField] private float _damage;
@@ -88,14 +88,19 @@ public abstract class ParticleWeapon : MonoBehaviour, IParticleSystemHelper
         _explosionEmitter.ExplodeOnLocation(spawnPosition);
     }
 
-    public IEnumerator DetachAndDestroyWhenParticlesDead()
+    private IEnumerator DetachAndDestroyWhenParticlesDeadCoroutine()
     {
         transform.SetParent(null);
         _particleSystem.Stop();
-        while (_particleSystem.IsAlive())
+        while (_particleSystem.IsAlive() && _explosionEmitter.IsEmitterAlive())
         {
             yield return null;
         }
         Destroy(gameObject);
+    }
+
+    public void DetachAndDestroyWhenParticlesDead()
+    {
+        StartCoroutine(DetachAndDestroyWhenParticlesDeadCoroutine());
     }
 }

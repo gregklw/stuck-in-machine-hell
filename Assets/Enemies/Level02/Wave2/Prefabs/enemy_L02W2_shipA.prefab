@@ -16,6 +16,10 @@ PrefabInstance:
       propertyPath: _projectileData
       value: 
       objectReference: {fileID: 11400000, guid: 75db4fcc2b7b29d4e894e20c05bab455, type: 2}
+    - target: {fileID: 1322829392248536199, guid: afdc7e0547e7b794da4ab21db15a6fa4, type: 3}
+      propertyPath: InitialModule.startRotationX.scalar
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6275786692904806740, guid: afdc7e0547e7b794da4ab21db15a6fa4, type: 3}
       propertyPath: InitialModule.startSize.scalar
       value: 0.15

@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class Player : AttackingCharacter
+public class Player : AttackingCharacter, IPostAddressableLoadable
 {
     private Camera _mainCamera;
     private Camera MainCamera
@@ -153,6 +153,13 @@ public class Player : AttackingCharacter
             CharacterRenderer.color = Color.white;
             _flashDamageCoroutine = null;
         }
+    }
+
+    public IEnumerator Init()
+    {
+        yield return null;
+        transform.position = Vector3.zero;
+        transform.rotation = Quaternion.identity;
     }
     #endregion
 }

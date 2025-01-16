@@ -16,6 +16,10 @@ PrefabInstance:
       propertyPath: _projectileData
       value: 
       objectReference: {fileID: 11400000, guid: 694344858b546f14598ccd9bd019b636, type: 2}
+    - target: {fileID: 1322829392248536199, guid: afdc7e0547e7b794da4ab21db15a6fa4, type: 3}
+      propertyPath: InitialModule.startRotationX.scalar
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6275786692904806740, guid: afdc7e0547e7b794da4ab21db15a6fa4, type: 3}
       propertyPath: ShapeModule.arc.mode
       value: 0

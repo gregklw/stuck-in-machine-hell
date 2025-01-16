@@ -10,4 +10,4 @@ How to setup Remote Asset Addressables with CCD:
 -Copy link generated on CCD Unity DevOps website and use it as remote (should already be done automatically if using build to CCD option)
 
 ParticleSystem:
--Start speed set to 0 will not make particles appear
+-Start speed set to 0 will not make particles appear...need to make it at least 0.0001

@@ -250,6 +250,10 @@ PrefabInstance:
       propertyPath: InitialModule.startLifetime.scalar
       value: 2.7
       objectReference: {fileID: 0}
+    - target: {fileID: 5082497874055902862, guid: 13a0fe061526cfc49b9eae6408cee004, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8284839511616551576, guid: 13a0fe061526cfc49b9eae6408cee004, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
