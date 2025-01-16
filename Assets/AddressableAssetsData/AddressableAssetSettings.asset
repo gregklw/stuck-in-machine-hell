@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 468a46d0ae32c3544b7d98094e6448a9, type: 3}
   m_Name: AddressableAssetSettings
   m_EditorClassIdentifier: 
-  m_DefaultGroup: 98c8e91d08260e64c8cca5ce4b590eed
+  m_DefaultGroup: 334c3c5a88d76fd45a6ee517eed4e11b
   m_currentHash:
     serializedVersion: 2
     Hash: 00000000000000000000000000000000
@@ -86,7 +86,7 @@ MonoBehaviour:
       - m_Id: 0f3c716ef55a76744951070b81f9f315
         m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
       - m_Id: b8a1221437a652b42b678db5b8a45d82
-        m_Value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
+        m_Value: ServerData/[BuildTarget]
       - m_Id: dd617c5a1b502e04588cd44cfd3147b7
         m_Value: https://6cdc3080-ca15-4f01-994a-2fc1eab3f93a.client-api.unity3dusercontent.com/client_api/v1/environments/production/buckets/3b6369c4-ee14-411e-b86d-7665adeb2d5d/release_by_badge/latest/entry_by_path/content/?path=
       - m_Id: 62c42c5c4bb80aa4fbff119ee40fbc31
@@ -147,8 +147,8 @@ MonoBehaviour:
     m_RegisteredServiceTypeRefs: []
     m_PingTimeoutInMilliseconds: 5000
   m_CcdManagedData:
-    EnvironmentId: c245ee0c-35a8-486a-b071-1d81ebd3a90b
-    EnvironmentName: production
-    BucketId: 3b6369c4-ee14-411e-b86d-7665adeb2d5d
-    Badge: latest
+    EnvironmentId: 
+    EnvironmentName: 
+    BucketId: 
+    Badge: 
     State: 0
