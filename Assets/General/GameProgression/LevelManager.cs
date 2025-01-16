@@ -191,6 +191,7 @@ public class LevelManager : MonoBehaviour
         _cutsceneManager.AddButtonAction(
             () =>
             {
+                _cutsceneManager.ChangeHeaderText("");
                 StartCoroutine(EndOfLevelButtonCoroutine(levelCompleteEventWrapper));
                 //_cutsceneManager.ClearButtonActions();
             }
