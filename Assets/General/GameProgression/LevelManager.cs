@@ -90,7 +90,7 @@ public class LevelManager : MonoBehaviour
             }
         }
         else
-        {   
+        {
             DidMousePressUI = false;
         }
         //if (Input.GetKeyDown(KeyCode.K))
@@ -119,8 +119,8 @@ public class LevelManager : MonoBehaviour
         yield return CheckDownloadStatus(_mainMenuLabelReference.labelString);
 
         AsyncOperationHandle<SceneInstance> menuOperation = Addressables.LoadSceneAsync(_mainMenuScene, LoadSceneMode.Additive);
-        _loadingBar.RegisterHandleOperation(menuOperation);
-        yield return _loadingBar.ProcessOperations("Loading Menu");
+        _loadingBar.RegisterOperation(menuOperation);
+        yield return _loadingBar.DelayUntilOperationsComplete("Loading Menu");
 
         SceneManager.SetActiveScene(SceneManager.GetSceneByName(menuOperation.Result.Scene.name));
 
@@ -128,7 +128,7 @@ public class LevelManager : MonoBehaviour
         else
         {
             AsyncOperationHandle<SceneInstance> persistentGameplayUnload = Addressables.UnloadSceneAsync(_persistentGameplaySceneInstance, false);
-            _loadingBar.RegisterHandleOperation(persistentGameplayUnload);
+            _loadingBar.RegisterOperation(persistentGameplayUnload);
         }
 
         //yield return _loadingBar.ProcessOperations("Unloading Unneeded Scenes");
@@ -136,14 +136,15 @@ public class LevelManager : MonoBehaviour
         CurrentFocusSceneInstance = menuOperation.Result;
 
         LoadAllCurrentLevelAssets();
+        _loadingBar.RegisterOperation(Resources.UnloadUnusedAssets());
 
-        yield return _loadingBar.ProcessOperations("Loading Unneeded Scenes and Menu Assets");
+        yield return _loadingBar.DelayUntilOperationsComplete("Loading Unneeded Scenes and Menu Assets");
 
         _loadingBar.ToggleLoadingBarVisibility(false);
         if (!_loadedMainMenuBefore) _loadedMainMenuBefore = true;
     }
 
-    
+
     #endregion
 
     #region LEVEL_TRAVERSAL
@@ -166,16 +167,16 @@ public class LevelManager : MonoBehaviour
         //yield return DownloadGameData(_persistentGameplay);
 
         AsyncOperationHandle<SceneInstance> persistentGameplayHandle = Addressables.LoadSceneAsync(_persistentGameplay, LoadSceneMode.Additive);
-        _loadingBar.RegisterHandleOperation(persistentGameplayHandle);
-        yield return _loadingBar.ProcessOperations("Loading Persistent Gameplay Scene");
+        _loadingBar.RegisterOperation(persistentGameplayHandle);
+        yield return _loadingBar.DelayUntilOperationsComplete("Loading Persistent Gameplay Scene");
 
         _persistentGameplaySceneInstance = persistentGameplayHandle.Result;
         SceneManager.SetActiveScene(SceneManager.GetSceneByName(persistentGameplayHandle.Result.Scene.name));
 
         //unload menu scene
         AsyncOperationHandle<SceneInstance> unloadMenuHandle = Addressables.UnloadSceneAsync(CurrentFocusSceneInstance, false);
-        _loadingBar.RegisterHandleOperation(unloadMenuHandle);
-        yield return _loadingBar.ProcessOperations("Unloading Menu Scene");
+        _loadingBar.RegisterOperation(unloadMenuHandle);
+        yield return _loadingBar.DelayUntilOperationsComplete("Unloading Menu Scene");
 
         StartCoroutine(StartPlaythroughAtSelectedLevel(startingLevelSceneGroup));
     }
@@ -202,10 +203,10 @@ public class LevelManager : MonoBehaviour
     private IEnumerator EndOfLevelButtonCoroutine(LevelCompleteEventWrapper levelCompleteEventWrapper)
     {
         AsyncOperationHandle unloadBaseLevelHandle = Addressables.UnloadSceneAsync(levelCompleteEventWrapper.BaseSceneInstance, false);
-        _loadingBar.RegisterHandleOperation(unloadBaseLevelHandle);
+        _loadingBar.RegisterOperation(unloadBaseLevelHandle);
         Debug.Log($"Is handle done loading: {unloadBaseLevelHandle.IsDone}");
 
-        yield return _loadingBar.ProcessOperations("Unloading Base Level Scene");
+        yield return _loadingBar.DelayUntilOperationsComplete("Unloading Base Level Scene");
 
         if (levelCompleteEventWrapper.CurrentLevelGroup.NextLevel == null)
         {
@@ -253,11 +254,11 @@ public class LevelManager : MonoBehaviour
 
         //async load level base and make it the preferred scene when it completes loading
         AsyncOperationHandle<SceneInstance> baseSceneOperation = Addressables.LoadSceneAsync(baseScene, LoadSceneMode.Additive);
-        _loadingBar.RegisterHandleOperation(baseSceneOperation);
+        _loadingBar.RegisterOperation(baseSceneOperation);
 
         baseSceneOperation.Completed += (async) => SceneManager.SetActiveScene(SceneManager.GetSceneByName(baseSceneOperation.Result.Scene.name));
 
-        yield return _loadingBar.ProcessOperations("Loading Base Scene");
+        yield return _loadingBar.DelayUntilOperationsComplete("Loading Base Scene");
 
         //_handlesForLoadingOperations.Clear();
         SubLevelSequencer levelSequencer = FindObjectOfType<SubLevelSequencer>();
@@ -266,8 +267,10 @@ public class LevelManager : MonoBehaviour
 
         //load starting addressables
         LoadAllCurrentLevelAssets();
+        _loadingBar.RegisterOperation(Resources.UnloadUnusedAssets());
 
-        yield return _loadingBar.ProcessOperations("Loading Addressable Scene Assets");
+        yield return _loadingBar.DelayUntilOperationsComplete("Loading Addressable Scene Assets");
+
 
         _loadingBar.ToggleLoadingBarVisibility(false);
     }

@@ -42,7 +42,7 @@ public class AddressableSpawner : MonoBehaviour, IAddressableSceneStartLoadable
     {
         AsyncOperationHandle<GameObject> handle = Addressables.LoadAssetAsync<GameObject>(_objectToSpawn);
         //handles.Add(handle);
-        LoadingBar.Instance.RegisterHandleOperation(handle);
+        LoadingBar.Instance.RegisterOperation(handle);
         yield return handle;
         _loadedPrefab = handle.Result;
         Init();
