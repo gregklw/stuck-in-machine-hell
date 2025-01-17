@@ -3,7 +3,7 @@ using UnityEngine;
 public class CircularFireWeapon : Weapon
 {
     [SerializeField] private Projectile projectilePrefab;
-    [SerializeField][Range(0, 20)] private int _numberOfShrapnel;
+    [SerializeField][Range(0, 32)] private int _numberOfShrapnel;
     public override void Fire(Vector3 spawnPos, Vector3 facingDirection)
     {
         float angle = 0;
