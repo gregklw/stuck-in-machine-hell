@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Initialization : MonoBehaviour
 {
+    private void Awake()
+    {
+        Screen.SetResolution(720,1600, false);
+    }
     void Start()
     {
 #if UNITY_ANDROID
