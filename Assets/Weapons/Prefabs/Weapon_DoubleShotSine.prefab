@@ -45,6 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 12
-  _attackSpeedFactor: 0.8
+  _attackSpeedFactor: 1
   _offset: {x: 0.2, y: 0.15}
   _projectile: {fileID: 7563734159774025868, guid: 1e073307f50b5ac41b9fd0e26aec4c21, type: 3}

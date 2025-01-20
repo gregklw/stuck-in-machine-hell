@@ -122,4 +122,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _weaponPrefab: {fileID: 0}
-  AttackSpeedBoost: 10
+  AttackSpeedBoost: 25
