@@ -22,4 +22,20 @@ public class MainMenuButton : MonoBehaviour
         );
     }
 
+    public void UnloadUnusedAssets()
+    {
+        StartCoroutine(UnloadUnusedAssetsCoroutine());
+    }
+
+    private IEnumerator UnloadUnusedAssetsCoroutine()
+    {
+        AsyncOperation unloadOp = Resources.UnloadUnusedAssets();
+
+        while (!unloadOp.isDone)
+        {
+            Debug.Log((Mathf.Round(unloadOp.progress * 100)) / 100.0);
+            yield return null;
+        }
+    }
+
 }
