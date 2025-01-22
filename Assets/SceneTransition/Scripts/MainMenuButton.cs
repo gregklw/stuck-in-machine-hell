@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 using UnityEngine.UI;
 
 public class MainMenuButton : MonoBehaviour
@@ -22,4 +23,18 @@ public class MainMenuButton : MonoBehaviour
         );
     }
 
+    public void UnloadUnusedAssets()
+    {
+        StartCoroutine(UnloadUnusedAssetsCoroutine());
+    }
+
+    private IEnumerator UnloadUnusedAssetsCoroutine()
+    {
+        AsyncOperation unloadOperation = Resources.UnloadUnusedAssets();
+        while (!unloadOperation.isDone)
+        {
+            Debug.Log($"Progress: {(Mathf.Round(unloadOperation.progress * 100)) / 100.0}");
+            yield return null;
+        }
+    }
 }

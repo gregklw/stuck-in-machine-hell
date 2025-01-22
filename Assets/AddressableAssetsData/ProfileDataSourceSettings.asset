@@ -51,7 +51,7 @@ MonoBehaviour:
       m_Value: CCDBuildData/c245ee0c-35a8-486a-b071-1d81ebd3a90b/3b6369c4-ee14-411e-b86d-7665adeb2d5d/latest
     - m_Suffix: LoadPath
       m_Value: https://6cdc3080-ca15-4f01-994a-2fc1eab3f93a.client-api.unity3dusercontent.com/client_api/v1/environments/production/buckets/3b6369c4-ee14-411e-b86d-7665adeb2d5d/release_by_badge/latest/entry_by_path/content/?path=
-  - m_GroupTypePrefix: Automatic
+  - m_GroupTypePrefix: CCD.6cdc3080-ca15-4f01-994a-2fc1eab3f93a.c245ee0c-35a8-486a-b071-1d81ebd3a90b.1270c55d-50ba-4c7a-8878-c8209e630534.latest
     m_Variables:
     - m_Suffix: CcdBucketName
       m_Value: StandaloneWindows64
