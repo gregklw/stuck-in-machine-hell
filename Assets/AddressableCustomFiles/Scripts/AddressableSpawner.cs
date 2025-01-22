@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
 
-public class AddressableSpawner : MonoBehaviour, IAddressableSceneStartLoadable
+public class AddressableSpawner : MonoBehaviour, IAddressableSceneStartLoadable, IAddressableUnloadable
 {
     [SerializeField] private AssetReferenceGameObject _objectToSpawn;
     private GameObject _loadedPrefab;
@@ -38,13 +38,19 @@ public class AddressableSpawner : MonoBehaviour, IAddressableSceneStartLoadable
     }
 #endif
 
+    private AsyncOperationHandle<GameObject> _loadedHandle;
+
+    private void OnDisable()
+    {
+        Unload();
+    }
+
     public IEnumerator LoadAddressables()
     {
-        AsyncOperationHandle<GameObject> handle = Addressables.LoadAssetAsync<GameObject>(_objectToSpawn);
-        //handles.Add(handle);
-        LoadingBar.Instance.RegisterOperation(handle);
-        yield return handle;
-        _loadedPrefab = handle.Result;
+        _loadedHandle = Addressables.LoadAssetAsync<GameObject>(_objectToSpawn);
+        LoadingBar.Instance.RegisterOperation(_loadedHandle);
+        yield return _loadedHandle;
+        _loadedPrefab = _loadedHandle.Result;
         Init();
     }
 
@@ -53,5 +59,10 @@ public class AddressableSpawner : MonoBehaviour, IAddressableSceneStartLoadable
         //Debug.Log(_loadedPrefab + " Initialized" + " " + gameObject.name);
         GameObject instance = Instantiate(_loadedPrefab, transform);
         instance.transform.localPosition = Vector3.zero;
+    }
+
+    public void Unload()
+    {
+        Addressables.Release(_loadedHandle);
     }
 }

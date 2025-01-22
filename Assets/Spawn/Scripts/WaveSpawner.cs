@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
 
-public class WaveSpawner : MonoBehaviour, IAddressableLevelLoadable
+public class WaveSpawner : MonoBehaviour, IAddressableLevelLoadable, IAddressableUnloadable
 {
     [SerializeField] private CameraEdgeInstantiationDatum[] _cameraEdgeInstantiationData;
     [SerializeField][Range(0, 20)] private float _spawnTimeInterval;
@@ -14,6 +14,8 @@ public class WaveSpawner : MonoBehaviour, IAddressableLevelLoadable
     private int _totalAmountToSpawn;
     public int TotalAmountToSpawn => _totalAmountToSpawn;
 
+    private List<AsyncOperationHandle<GameObject>> _loadedHandles = new List<AsyncOperationHandle<GameObject>>();
+
     private void Awake()
     {
         _spawnPoint = FindObjectOfType<CameraEdgeSpawnPoint>();
@@ -22,6 +24,11 @@ public class WaveSpawner : MonoBehaviour, IAddressableLevelLoadable
         {
             _totalAmountToSpawn += _cameraEdgeInstantiationData[i].AmountToCreate;
         }
+    }
+
+    private void OnDisable()
+    {
+        Unload();
     }
 
     private void InitSpawner()
@@ -63,13 +70,13 @@ public class WaveSpawner : MonoBehaviour, IAddressableLevelLoadable
     public IEnumerator Setup()
     {
         Debug.Log("Setup Enabled");
-        List<AsyncOperationHandle> handleList = new List<AsyncOperationHandle>();
 
         foreach (var cameraEdgeInstantiationDatum in _cameraEdgeInstantiationData)
         {
             AsyncOperationHandle<GameObject> handle = Addressables.LoadAssetAsync<GameObject>(cameraEdgeInstantiationDatum.AssetReferencePrefab);
+            _loadedHandles.Add(handle);
+            LoadingBar.Instance.RegisterOperation(handle);
             yield return handle;
-            handleList.Add(handle);
             cameraEdgeInstantiationDatum.LoadedGameObject = handle.Result;
         }
         InitSpawner();
@@ -83,6 +90,15 @@ public class WaveSpawner : MonoBehaviour, IAddressableLevelLoadable
             SpawnGameObjects(_amountToSpawnPerRoutine);
             currentAmountRemaining -= _amountToSpawnPerRoutine;
             yield return Helpers.GetWaitForSeconds(_spawnTimeInterval);
+        }
+    }
+
+    public void Unload()
+    {
+        foreach (var loadedHandle in _loadedHandles)
+        {
+            Debug.Log($"Unloading: {loadedHandle.Result}");
+            Addressables.Release(loadedHandle);
         }
     }
 }

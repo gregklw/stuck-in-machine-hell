@@ -132,10 +132,10 @@ public class SubLevelSequencer : MonoBehaviour
 
         foreach (var levelLoadable in levelLoadables)
         {
-            yield return levelLoadable.Setup();
+            StartCoroutine(levelLoadable.Setup());
         }
 
-
+        yield return LoadingBar.Instance.DelayUntilOperationsComplete("Setting Up Addressables");
     }
 
     private IEnumerator ActivateLevelComponents()
