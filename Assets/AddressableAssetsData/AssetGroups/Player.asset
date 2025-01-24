@@ -22,48 +22,6 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 81af32093d93008478c7ee6272d89000
-    m_Address: Assets/Items/Prefabs/Powerup_Health.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Player
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: f1ee472ce0489214db64aa0cce9a7aea
-    m_Address: Assets/Items/Prefabs/Powerup_Base.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Player
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 0f5b075716150be4cb1940772344a5a8
-    m_Address: Assets/Items/Prefabs/Powerup_AttackSpeed.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Player
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: d56de986d6246f8409a0e1cef4cc87ca
-    m_Address: Assets/Items/Prefabs/Powerup_Weapon_DoubleShotSine.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Player
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 82ef5fe0e98e6d740bd5b2ca2a2a0a94
-    m_Address: Assets/Items/Prefabs/Powerup_Weapon_SinglePierce.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Player
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: b37f1506161df0c4f9e9668547aa195f
-    m_Address: Assets/Items/Prefabs/Powerup_Weapon_ShrapnelBomb.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Player
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 7a1159e439a03b941bf59e3b7edab99a
-    m_Address: Assets/Items/Prefabs/Powerup_Weapon_SingleShot.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Player
-    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 73c6bf2dc72c3ca48ac940e0f5611eda, type: 2}
   m_SchemaSet:
