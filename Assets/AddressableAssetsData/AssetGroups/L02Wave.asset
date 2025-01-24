@@ -1,0 +1,78 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: L02Wave
+  m_EditorClassIdentifier: 
+  m_GroupName: L02Wave
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 3e78d4b8dfe6c8d4c9b071c717c9bb15
+  m_SerializeEntries:
+  - m_GUID: 5876645558c39ac45b2a6e47178dcb4d
+    m_Address: Assets/Enemies/Level02/Wave1/SmallPlaneVariants/Prefabs/enemy_L02W1_smallplane_d.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - L02W1
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 907fbb5babebfa1429d05eee4a37a9e5
+    m_Address: Assets/Enemies/Level02/Wave1/SmallPlaneVariants/Prefabs/enemy_L02W1_smallplane_a.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - L02W1
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 394bf5d6432075840ac18fb94f535816
+    m_Address: Assets/Enemies/Level02/Wave1/SmallPlaneVariants/Prefabs/enemy_L02W1_smallplane_b.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - L02W1
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c93621cba97541b4882305fa9ccb28f3
+    m_Address: Assets/Enemies/Level02/Wave1/SmallPlaneVariants/Prefabs/enemy_L02W1_smallplane_c.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - L02W1
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 55ff09d11a984e2459b615d4cb95cd1e
+    m_Address: Assets/Enemies/Level02/Wave2/Prefabs/enemy_L02W2_shipA.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - L02W2
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ecbcea010af5a2f489736074e393ec1e
+    m_Address: Assets/Enemies/Level02/Wave2/Prefabs/enemy_L02W2_shipB.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - L02W2
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 91f8bf5f671715f4a8f4af409de4fb7b
+    m_Address: Assets/Enemies/Level02/Wave3/Prefabs/enemy_L02W3_ShipA.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - L02W3
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 24142cdf98d924848980953c44fcde09
+    m_Address: Assets/Enemies/Level02/Wave3/Prefabs/enemy_L02W3_ShipB.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - L02W3
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 56d18579a4b3f9d41812e43694bc3701
+    m_Address: Assets/Scenes/Level2_wave1.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 73c6bf2dc72c3ca48ac940e0f5611eda, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 4d07fd451bb429b4eb44ffeaf7cc679b, type: 2}
+    - {fileID: 11400000, guid: a2cb9cd8b227ff14d9af70f37eef9a44, type: 2}

@@ -10,27 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: L02
+  m_Name: Shared
   m_EditorClassIdentifier: 
-  m_GroupName: L02
+  m_GroupName: Shared
   m_Data:
     m_SerializedData: []
-  m_GUID: d55d4b0d53327154fa6fa20584e96c99
+  m_GUID: 5721fdea03e5e43479c0c77ca4f04539
   m_SerializeEntries:
-  - m_GUID: 8688028a35f167d4b99d61e83594342d
-    m_Address: Assets/LoadableAddressables/L02Base/Boulder.prefab
+  - m_GUID: 29dd98c28a6e7db4ca067058747cda37
+    m_Address: Assets/UI/Textures/image-from-rawpixel-id-7621506-png.png
     m_ReadOnly: 0
-    m_SerializedLabels:
-    - L02Base
+    m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: b2fb4e8d5faa10d48af421406e60dd6a
-    m_Address: Assets/LoadableAddressables/L02Base/Background_L02.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - L02Base
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: b82cb4aa38172634e8f15400daad8f01
-    m_Address: Assets/Scenes/Level2_base.unity
+  - m_GUID: 7e192cec2da32f14b9f29e36629cb945
+    m_Address: Assets/Thaleah_PixelFont/Materials/ThaleahFat_TTF SDF.asset
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -38,5 +31,5 @@ MonoBehaviour:
   m_Settings: {fileID: 11400000, guid: 73c6bf2dc72c3ca48ac940e0f5611eda, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: 585530620b8473446987b1ece6ebe739, type: 2}
-    - {fileID: 11400000, guid: fdb95474d01acda4b8a47b4e47d0d5d5, type: 2}
+    - {fileID: 11400000, guid: 2e1af9945e6d59d4f9fe40697362cc30, type: 2}
+    - {fileID: 11400000, guid: 71ff5c3eba8a3b448a996958f33a1e48, type: 2}

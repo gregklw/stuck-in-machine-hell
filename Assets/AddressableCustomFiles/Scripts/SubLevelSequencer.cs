@@ -72,6 +72,8 @@ public class SubLevelSequencer : MonoBehaviour
 
     public IEnumerator SetupLevelPart(LevelSceneGroup levelSceneGroup)
     {
+        
+
         //Start of sublevel
         if (_sceneCounter == 0)
         {
@@ -80,6 +82,8 @@ public class SubLevelSequencer : MonoBehaviour
         //Last sublevel
         else if (_sceneCounter >= _currentLevelSceneGroup.LevelScenes.Length)
         {
+            List<IAddressableUnloadable> unloadables = UnityUtils.FindInterfaces<IAddressableUnloadable>();
+            unloadables.ForEach(unloadable => unloadable.Unload());
 
             Debug.Log($"Current Sublevel: {_currentSubLevelInstance.Scene.name} | Current Base Level: {_baseLevelInstance.Scene.name}");
 
@@ -95,6 +99,9 @@ public class SubLevelSequencer : MonoBehaviour
         //Intermittent sublevel
         else
         {
+            List<IAddressableUnloadable> unloadables = UnityUtils.FindInterfaces<IAddressableUnloadable>();
+            unloadables.ForEach(unloadable => unloadable.Unload());
+
             yield return new WaitForSeconds(1);
             AsyncOperationHandle<SceneInstance> previousSceneUnloadOp = Addressables.UnloadSceneAsync(_currentSubLevelInstance, false);
 

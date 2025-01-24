@@ -7,11 +7,14 @@ public class AddressableSpawner : MonoBehaviour, IAddressableSceneStartLoadable,
 {
     [SerializeField] private AssetReferenceGameObject _objectToSpawn;
     private GameObject _loadedPrefab;
+    private GameObject _loadedInstance;
     public AssetReferenceGameObject ObjectToSpawn
     {
         get => _objectToSpawn;
         set => _objectToSpawn = value;
     }
+
+    private AsyncOperationHandle<GameObject> _loadedHandle;
 
 #if UNITY_EDITOR
     private GameObject _preview;
@@ -38,13 +41,6 @@ public class AddressableSpawner : MonoBehaviour, IAddressableSceneStartLoadable,
     }
 #endif
 
-    private AsyncOperationHandle<GameObject> _loadedHandle;
-
-    private void OnDisable()
-    {
-        Unload();
-    }
-
     public IEnumerator LoadAddressables()
     {
         _loadedHandle = Addressables.LoadAssetAsync<GameObject>(_objectToSpawn);
@@ -57,12 +53,21 @@ public class AddressableSpawner : MonoBehaviour, IAddressableSceneStartLoadable,
     public void Init()
     {
         //Debug.Log(_loadedPrefab + " Initialized" + " " + gameObject.name);
-        GameObject instance = Instantiate(_loadedPrefab, transform);
-        instance.transform.localPosition = Vector3.zero;
+        _loadedInstance = Instantiate(_loadedPrefab, transform);
+        _loadedInstance.transform.localPosition = Vector3.zero;
     }
 
     public void Unload()
     {
-        Addressables.Release(_loadedHandle);
+        if (_loadedHandle.IsValid())
+        {
+            Debug.Log($"Unloading: {_loadedHandle.Result}, {Addressables.ReleaseInstance(_loadedPrefab)}");
+        }
+        Debug.Log($"Unloading: {_loadedInstance}, {Addressables.ReleaseInstance(_loadedInstance)}");
+    }
+
+    public void Destroy()
+    {
+        Destroy(_loadedInstance);
     }
 }

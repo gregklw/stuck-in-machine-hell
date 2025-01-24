@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: L01Wave
+  m_EditorClassIdentifier: 
+  m_GroupName: L01Wave
+  m_Data:
+    m_SerializedData: []
+  m_GUID: d7f1c0d0abe61954989f72419faffaa3
+  m_SerializeEntries:
+  - m_GUID: 047c24d998316ec4ab3a91eb8e1c79c6
+    m_Address: Assets/Enemies/Level01/Wave1/Earwig/Female/Prefabs/enemy_L01W1_earwigfemale.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - L01W1
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 056307814a31f6e44a592edcf56383f0
+    m_Address: Assets/Enemies/Level01/Wave1/Earwig/Male/Prefabs/enemy_L01W1_earwigmale.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - L01W1
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 151c53454c8dbd4458b5432475f14ef0
+    m_Address: Assets/Scenes/Level1_wave1.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b2f090dddb0e0fb4fab2f92808fa7859
+    m_Address: Assets/Enemies/Level01/Wave2/HomingTurret/Prefabs/enemy_L01W2_homingturret.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - L01W2
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 02ac2b2be7ff88942bd51b52b8af3c24
+    m_Address: Assets/Enemies/Level01/Wave2/TriangleEyeBot/Prefabs/enemy_L01W2_triangleeyebot.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - L01W2
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2a4dc0a23f9137c44bf25ba27c229e51
+    m_Address: Assets/Enemies/Level01/Wave3/MeleeCircleBot/Prefabs/enemy_L01W3_meleecirclebot.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - L01W3
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 709435ea3a1c02540b205de14adf698f
+    m_Address: Assets/Enemies/Level01/Wave3/ShieldBot/Prefab/enemy_L01W3_shieldbot.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - L01W3
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 73c6bf2dc72c3ca48ac940e0f5611eda, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: a75ece0f06d218d4db76923c8c0cfbf3, type: 2}
+    - {fileID: 11400000, guid: a84eecbbb9a3c6f489a2344144771b69, type: 2}

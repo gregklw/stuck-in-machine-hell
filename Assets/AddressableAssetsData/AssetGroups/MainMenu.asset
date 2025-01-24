@@ -29,13 +29,6 @@ MonoBehaviour:
     m_SerializedLabels:
     - MainMenu
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: b8607ed156b76c34faac040984660dc5
-    m_Address: Assets/Background/Textures/motion graphics glow GIF by Matthew Butler
-      - Find & Share on GIPHY.png
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - MainMenu
-    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 73c6bf2dc72c3ca48ac940e0f5611eda, type: 2}
   m_SchemaSet:

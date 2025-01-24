@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
@@ -10,6 +11,8 @@ public class WaveSpawner : MonoBehaviour, IAddressableLevelLoadable, IAddressabl
     [SerializeField][Range(0, 20)] private float _spawnTimeInterval;
     [SerializeField][Range(0, 300)] private int _amountToSpawnPerRoutine;
     private Stack<GameObject> _objectPool;
+    private List<GameObject> _objectTracker;
+
     private CameraEdgeSpawnPoint _spawnPoint;
     private int _totalAmountToSpawn;
     public int TotalAmountToSpawn => _totalAmountToSpawn;
@@ -18,17 +21,13 @@ public class WaveSpawner : MonoBehaviour, IAddressableLevelLoadable, IAddressabl
 
     private void Awake()
     {
+        _objectTracker = new List<GameObject>();
         _spawnPoint = FindObjectOfType<CameraEdgeSpawnPoint>();
         _objectPool = new Stack<GameObject>();
         for (int i = 0; i < _cameraEdgeInstantiationData.Length; i++)
         {
             _totalAmountToSpawn += _cameraEdgeInstantiationData[i].AmountToCreate;
         }
-    }
-
-    private void OnDisable()
-    {
-        Unload();
     }
 
     private void InitSpawner()
@@ -63,6 +62,7 @@ public class WaveSpawner : MonoBehaviour, IAddressableLevelLoadable, IAddressabl
         if (_objectPool.Count > 0)
         {
             GameObject go = _objectPool.Pop();
+            _objectTracker.Add(go);
             go.SetActive(true);
         }
     }
@@ -97,8 +97,16 @@ public class WaveSpawner : MonoBehaviour, IAddressableLevelLoadable, IAddressabl
     {
         foreach (var loadedHandle in _loadedHandles)
         {
-            Debug.Log($"Unloading: {loadedHandle.Result}");
-            Addressables.Release(loadedHandle);
+            if (loadedHandle.IsValid())
+            {
+                Debug.Log($"Unloading: {loadedHandle.Result}");
+                Addressables.Release(loadedHandle);
+            }
         }
+    }
+
+    public void Destroy()
+    {
+        _objectTracker.ForEach(obj => { if (obj != null) Destroy(obj); });
     }
 }

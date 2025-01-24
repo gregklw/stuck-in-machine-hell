@@ -172,7 +172,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2425884637753499723, guid: eb8f545fc969c0045ba0f21f491d4b7d, type: 3}
       propertyPath: _spawnTimeInterval
-      value: 10
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2425884637753499723, guid: eb8f545fc969c0045ba0f21f491d4b7d, type: 3}
       propertyPath: _amountToSpawnPerRoutine
@@ -339,7 +339,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2425884637753499723, guid: eb8f545fc969c0045ba0f21f491d4b7d, type: 3}
       propertyPath: _spawnTimeInterval
-      value: 10
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2425884637753499723, guid: eb8f545fc969c0045ba0f21f491d4b7d, type: 3}
       propertyPath: _amountToSpawnPerRoutine
@@ -572,7 +572,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2425884637753499723, guid: eb8f545fc969c0045ba0f21f491d4b7d, type: 3}
       propertyPath: _spawnTimeInterval
-      value: 10
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2425884637753499723, guid: eb8f545fc969c0045ba0f21f491d4b7d, type: 3}
       propertyPath: _amountToSpawnPerRoutine

@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: L02Boss
+  m_EditorClassIdentifier: 
+  m_GroupName: L02Boss
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 48d1de162fd6ba741ae101e926b07c69
+  m_SerializeEntries:
+  - m_GUID: 83e653773ce05c24b8493fa400f9296e
+    m_Address: Assets/Enemies/Level02/BossFight/Prefabs/enemy_bossfight02_shipA.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - L02Boss
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f41ff05890310be46871daa83dccb662
+    m_Address: Assets/Enemies/Level02/BossFight/Prefabs/enemy_bossfight02_shipB.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - L02Boss
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2e59dd0b1b5d67440b8a67b40cd6b2d6
+    m_Address: Assets/Enemies/Level02/BossFight/Prefabs/enemy_bossfight02_tank.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - L02Boss
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 19290c39ee320b54689a193ae3211ac9
+    m_Address: Assets/Enemies/Level02/BossFight/Prefabs/enemy_bossfight02_boss.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - L02Boss
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e3fa1e99cbf073046ba62f01841b17be
+    m_Address: Assets/Scenes/Level2_boss.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 73c6bf2dc72c3ca48ac940e0f5611eda, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: cf21228c71f80a84ca81d60413f08606, type: 2}
+    - {fileID: 11400000, guid: b1ce73e530378514bba6325304dd2763, type: 2}
