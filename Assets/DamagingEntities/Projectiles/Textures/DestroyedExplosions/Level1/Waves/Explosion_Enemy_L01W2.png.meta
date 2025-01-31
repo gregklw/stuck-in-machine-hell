@@ -1,0 +1,844 @@
+fileFormatVersion: 2
+guid: e6b00a343f7292f4ca23fbb63891e66a
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: pngkey.com-explosions-png-936418_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 722.25
+        width: 254.125
+        height: 240.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de10ab77733b5054695620ecaa0ac589
+      internalID: -1460533542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkey.com-explosions-png-936418_1
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 722.25
+        width: 254.125
+        height: 240.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43fb797590004e949830a5ee6cca9b86
+      internalID: 1670198534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkey.com-explosions-png-936418_2
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 722.25
+        width: 254.125
+        height: 240.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b097eda1c1ffc2047b504b16e466be84
+      internalID: -397053298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkey.com-explosions-png-936418_3
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 722.25
+        width: 254.125
+        height: 240.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db3ba0ebfd3346e4a8ca79a8b98f027a
+      internalID: -687495633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkey.com-explosions-png-936418_4
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 722.25
+        width: 254.125
+        height: 240.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf7a24eb93550df419a6d8e3c9118907
+      internalID: 2033546364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkey.com-explosions-png-936418_5
+      rect:
+        serializedVersion: 2
+        x: 1270
+        y: 722.25
+        width: 254.125
+        height: 240.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58b17fe1c9e85af46b11b3c6e7e7bce7
+      internalID: 1940802877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkey.com-explosions-png-936418_6
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 722.25
+        width: 254.125
+        height: 240.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0c770e41b0ac3d4b9e336e30bb659bc
+      internalID: 1929695149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkey.com-explosions-png-936418_7
+      rect:
+        serializedVersion: 2
+        x: 1778
+        y: 722.25
+        width: 254.125
+        height: 240.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e9ed71fd1750be4da34604135dad18a
+      internalID: -1489433439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkey.com-explosions-png-936418_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 482.25
+        width: 254.125
+        height: 240.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3279095a95c3b94985364de40a2226e
+      internalID: -1802914478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkey.com-explosions-png-936418_9
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 482.25
+        width: 254.125
+        height: 240.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fb6b6ea1c301be4a914a2aac5e8b60c
+      internalID: -1769403443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkey.com-explosions-png-936418_10
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 482.25
+        width: 254.125
+        height: 240.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7d325f760def984392e25844087c1d3
+      internalID: -542705414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkey.com-explosions-png-936418_11
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 482.25
+        width: 254.125
+        height: 240.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23d5196e3a4c13a49b6eb766c1978b3f
+      internalID: 1377979936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkey.com-explosions-png-936418_12
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 482.25
+        width: 254.125
+        height: 240.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81eee8f4533e4794ba53e5bd48a368b3
+      internalID: -1495854050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkey.com-explosions-png-936418_13
+      rect:
+        serializedVersion: 2
+        x: 1270
+        y: 482.25
+        width: 254.125
+        height: 240.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 771d741d896e870499096352a719b672
+      internalID: -2019535764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkey.com-explosions-png-936418_14
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 482.25
+        width: 254.125
+        height: 240.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eb196d9e3caf094c8a93411c2147e92
+      internalID: 1039191040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkey.com-explosions-png-936418_15
+      rect:
+        serializedVersion: 2
+        x: 1778
+        y: 482.25
+        width: 254.125
+        height: 240.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5887288686ffc574f991a9007c6acdea
+      internalID: 2002955845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkey.com-explosions-png-936418_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 242.25
+        width: 254.125
+        height: 240.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e7e87040f9069447b104bbe8f1929c9
+      internalID: -321408800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkey.com-explosions-png-936418_17
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 242.25
+        width: 254.125
+        height: 240.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 317296560f3ee3848af478080f64270d
+      internalID: 198053159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkey.com-explosions-png-936418_18
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 242.25
+        width: 254.125
+        height: 240.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d92a1777ea356324588591d0f4087088
+      internalID: -1745592231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkey.com-explosions-png-936418_19
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 242.25
+        width: 254.125
+        height: 240.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40e08f9ecc199814eadea600055265fc
+      internalID: -210926866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkey.com-explosions-png-936418_20
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 242.25
+        width: 254.125
+        height: 240.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21f62685748a486458348ab0a53d8adf
+      internalID: 936460806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkey.com-explosions-png-936418_21
+      rect:
+        serializedVersion: 2
+        x: 1270
+        y: 242.25
+        width: 254.125
+        height: 240.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 410a8759fc1584d4786357d7829fffee
+      internalID: 456975488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkey.com-explosions-png-936418_22
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 242.25
+        width: 254.125
+        height: 240.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c4d8bf45bfe5ca45bec09e1364e8581
+      internalID: 442089170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkey.com-explosions-png-936418_23
+      rect:
+        serializedVersion: 2
+        x: 1778
+        y: 242.25
+        width: 254.125
+        height: 240.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70eddb37f81c0f649b59c8dc8c760dad
+      internalID: 1105505681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkey.com-explosions-png-936418_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2.25
+        width: 254.125
+        height: 240.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1275925be0b91734181238fa78e3b3fd
+      internalID: 837922697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkey.com-explosions-png-936418_25
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 2.25
+        width: 254.125
+        height: 240.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1da2065d3682bc84b858ce6003d8ca09
+      internalID: 179631801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkey.com-explosions-png-936418_26
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 2.25
+        width: 254.125
+        height: 240.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84b885f8cbe6c5346b74af577e2ceab5
+      internalID: 1431690989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkey.com-explosions-png-936418_27
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 2.25
+        width: 254.125
+        height: 240.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88d87080245f8a0469e5fa869bfa9853
+      internalID: -1485015011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkey.com-explosions-png-936418_28
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 2.25
+        width: 254.125
+        height: 240.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f4a66c6d45d7b64a983837352c1d942
+      internalID: -633104581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkey.com-explosions-png-936418_29
+      rect:
+        serializedVersion: 2
+        x: 1270
+        y: 2.25
+        width: 254.125
+        height: 240.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a12fda680d0899d49bd92c08cea08726
+      internalID: 1551328939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkey.com-explosions-png-936418_30
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 2.25
+        width: 254.125
+        height: 240.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98580032749c15241bc94acd5fc9232b
+      internalID: -907747190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkey.com-explosions-png-936418_31
+      rect:
+        serializedVersion: 2
+        x: 1778
+        y: 2.25
+        width: 254.125
+        height: 240.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 467aef8c987156748962b9706785e1fb
+      internalID: 331092635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      pngkey.com-explosions-png-936418_0: -1460533542
+      pngkey.com-explosions-png-936418_1: 1670198534
+      pngkey.com-explosions-png-936418_10: -542705414
+      pngkey.com-explosions-png-936418_11: 1377979936
+      pngkey.com-explosions-png-936418_12: -1495854050
+      pngkey.com-explosions-png-936418_13: -2019535764
+      pngkey.com-explosions-png-936418_14: 1039191040
+      pngkey.com-explosions-png-936418_15: 2002955845
+      pngkey.com-explosions-png-936418_16: -321408800
+      pngkey.com-explosions-png-936418_17: 198053159
+      pngkey.com-explosions-png-936418_18: -1745592231
+      pngkey.com-explosions-png-936418_19: -210926866
+      pngkey.com-explosions-png-936418_2: -397053298
+      pngkey.com-explosions-png-936418_20: 936460806
+      pngkey.com-explosions-png-936418_21: 456975488
+      pngkey.com-explosions-png-936418_22: 442089170
+      pngkey.com-explosions-png-936418_23: 1105505681
+      pngkey.com-explosions-png-936418_24: 837922697
+      pngkey.com-explosions-png-936418_25: 179631801
+      pngkey.com-explosions-png-936418_26: 1431690989
+      pngkey.com-explosions-png-936418_27: -1485015011
+      pngkey.com-explosions-png-936418_28: -633104581
+      pngkey.com-explosions-png-936418_29: 1551328939
+      pngkey.com-explosions-png-936418_3: -687495633
+      pngkey.com-explosions-png-936418_30: -907747190
+      pngkey.com-explosions-png-936418_31: 331092635
+      pngkey.com-explosions-png-936418_4: 2033546364
+      pngkey.com-explosions-png-936418_5: 1940802877
+      pngkey.com-explosions-png-936418_6: 1929695149
+      pngkey.com-explosions-png-936418_7: -1489433439
+      pngkey.com-explosions-png-936418_8: -1802914478
+      pngkey.com-explosions-png-936418_9: -1769403443
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

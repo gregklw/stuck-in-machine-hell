@@ -1,0 +1,124 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: L02
+  m_EditorClassIdentifier: 
+  m_GroupName: L02
+  m_Data:
+    m_SerializedData: []
+  m_GUID: d55d4b0d53327154fa6fa20584e96c99
+  m_SerializeEntries:
+  - m_GUID: 8688028a35f167d4b99d61e83594342d
+    m_Address: Assets/LoadableAddressables/L02Base/Boulder.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - L02Base
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b2fb4e8d5faa10d48af421406e60dd6a
+    m_Address: Assets/LoadableAddressables/L02Base/Background_L02.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - L02Base
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 83e653773ce05c24b8493fa400f9296e
+    m_Address: Assets/Enemies/Level02/BossFight/Prefabs/enemy_bossfight02_shipA.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - L02Boss
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f41ff05890310be46871daa83dccb662
+    m_Address: Assets/Enemies/Level02/BossFight/Prefabs/enemy_bossfight02_shipB.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - L02Boss
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2e59dd0b1b5d67440b8a67b40cd6b2d6
+    m_Address: Assets/Enemies/Level02/BossFight/Prefabs/enemy_bossfight02_tank.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - L02Boss
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 19290c39ee320b54689a193ae3211ac9
+    m_Address: Assets/Enemies/Level02/BossFight/Prefabs/enemy_bossfight02_boss.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - L02Boss
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5876645558c39ac45b2a6e47178dcb4d
+    m_Address: Assets/Enemies/Level02/Wave1/SmallPlaneVariants/Prefabs/enemy_L02W1_smallplane_d.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - L02W1
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 907fbb5babebfa1429d05eee4a37a9e5
+    m_Address: Assets/Enemies/Level02/Wave1/SmallPlaneVariants/Prefabs/enemy_L02W1_smallplane_a.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - L02W1
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 394bf5d6432075840ac18fb94f535816
+    m_Address: Assets/Enemies/Level02/Wave1/SmallPlaneVariants/Prefabs/enemy_L02W1_smallplane_b.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - L02W1
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c93621cba97541b4882305fa9ccb28f3
+    m_Address: Assets/Enemies/Level02/Wave1/SmallPlaneVariants/Prefabs/enemy_L02W1_smallplane_c.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - L02W1
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 55ff09d11a984e2459b615d4cb95cd1e
+    m_Address: Assets/Enemies/Level02/Wave2/Prefabs/enemy_L02W2_shipA.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - L02W2
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ecbcea010af5a2f489736074e393ec1e
+    m_Address: Assets/Enemies/Level02/Wave2/Prefabs/enemy_L02W2_shipB.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - L02W2
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 91f8bf5f671715f4a8f4af409de4fb7b
+    m_Address: Assets/Enemies/Level02/Wave3/Prefabs/enemy_L02W3_ShipA.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - L02W3
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 24142cdf98d924848980953c44fcde09
+    m_Address: Assets/Enemies/Level02/Wave3/Prefabs/enemy_L02W3_ShipB.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - L02W3
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b82cb4aa38172634e8f15400daad8f01
+    m_Address: Assets/Scenes/Level2_base.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 56d18579a4b3f9d41812e43694bc3701
+    m_Address: Assets/Scenes/Level2_wave1.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e3fa1e99cbf073046ba62f01841b17be
+    m_Address: Assets/Scenes/Level2_boss.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 73c6bf2dc72c3ca48ac940e0f5611eda, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 585530620b8473446987b1ece6ebe739, type: 2}
+    - {fileID: 11400000, guid: fdb95474d01acda4b8a47b4e47d0d5d5, type: 2}

@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f00cc6e2c4d1cd14aa52b194f90657ad, type: 3}
+  m_Name: DropInfoContainer_TriangleEyeBot
+  m_EditorClassIdentifier: 
+  DropInfoAllItems:
+  - DropPercentage: 20
+    DropPrefab: {fileID: 5014997281323560394, guid: 81af32093d93008478c7ee6272d89000, type: 3}
+    DropPrefabReference:
+      m_AssetGUID: 81af32093d93008478c7ee6272d89000
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+  - DropPercentage: 10
+    DropPrefab: {fileID: 5014997281323560394, guid: 0f5b075716150be4cb1940772344a5a8, type: 3}
+    DropPrefabReference:
+      m_AssetGUID: 0f5b075716150be4cb1940772344a5a8
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+  - DropPercentage: 5
+    DropPrefab: {fileID: 1548696160750521830, guid: d56de986d6246f8409a0e1cef4cc87ca, type: 3}
+    DropPrefabReference:
+      m_AssetGUID: d56de986d6246f8409a0e1cef4cc87ca
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+  - DropPercentage: 5
+    DropPrefab: {fileID: 1548696160750521830, guid: b37f1506161df0c4f9e9668547aa195f, type: 3}
+    DropPrefabReference:
+      m_AssetGUID: b37f1506161df0c4f9e9668547aa195f
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 1
+  DropProbabilityTotal: 100

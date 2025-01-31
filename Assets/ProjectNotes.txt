@@ -1,0 +1,13 @@
+Addressables:
+-Addressables.UnloadSceneAsync() seems to remove any references to AssetReferences thus rendering them null even if they're on ScriptableObjects
+-Loading a GameObject marked as an Addressable will also automatically bundle every component that goes along with said GameObject
+
+How to setup Remote Asset Addressables with CCD:
+-Modify profile to use Remote
+-Create new bundle and add schema as well as set to custom/remote
+-Create/link Addressables for assets
+-Build to CCD
+-Copy link generated on CCD Unity DevOps website and use it as remote (should already be done automatically if using build to CCD option)
+
+ParticleSystem:
+-Start speed set to 0 will not make particles appear...need to make it at least 0.0001

@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: MainMenu
+  m_EditorClassIdentifier: 
+  m_GroupName: MainMenu
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 6eafbdd6780f1bc43ba1b014752b0849
+  m_SerializeEntries:
+  - m_GUID: 229865f6042269f4eb2143e4d378fd69
+    m_Address: Assets/LoadableAddressables/MainMenu/Background_MainMenu.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - MainMenu
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 275e137cab6cb9449a0e3f5dc6e2be4d
+    m_Address: Assets/Scenes/MainMenu.unity
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - MainMenu
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b8607ed156b76c34faac040984660dc5
+    m_Address: Assets/Background/Textures/motion graphics glow GIF by Matthew Butler
+      - Find & Share on GIPHY.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - MainMenu
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 73c6bf2dc72c3ca48ac940e0f5611eda, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: ed58fa4ee9736754d8fa1344efe70020, type: 2}
+    - {fileID: 11400000, guid: 625b902b3f5d7594a98c112584a4b739, type: 2}

@@ -1,0 +1,1091 @@
+fileFormatVersion: 2
+guid: 6d1dff28c27105c46ab9b1afed87527a
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Earwig animation_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2604
+        width: 233
+        height: 372
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d693275ff2c849f4e8aff1ca2c5e6e07
+      internalID: -1137701086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig animation_1
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 2604
+        width: 233
+        height: 372
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f40f7a9495a8c6e4c867ecd828c36060
+      internalID: 947819908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig animation_2
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 2604
+        width: 233
+        height: 372
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1054f8c83a05f0f489b1c09ef269d222
+      internalID: 65550169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig animation_3
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 2604
+        width: 233
+        height: 372
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 778a08cbb2bbc064cabc161e680c2cfb
+      internalID: -191142502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig animation_4
+      rect:
+        serializedVersion: 2
+        x: 932
+        y: 2604
+        width: 233
+        height: 372
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b522f08b8ef11d4a8e800136b338ad0
+      internalID: -1787452454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig animation_5
+      rect:
+        serializedVersion: 2
+        x: 1165
+        y: 2604
+        width: 233
+        height: 372
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cb6c4deabc819e459a7137dcf46b846
+      internalID: 1108678430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig animation_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2232
+        width: 233
+        height: 372
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b885aef8caec6614ba2fae7268aa1531
+      internalID: -375177094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig animation_7
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 2232
+        width: 233
+        height: 372
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebbb954a90dcb444d8220425033249f0
+      internalID: 812925222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig animation_8
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 2232
+        width: 233
+        height: 372
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2df43e54e0390b543a6d1ffc0085b681
+      internalID: -335931893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig animation_9
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 2232
+        width: 233
+        height: 372
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7908694e1b0b8140a663278e4d9a478
+      internalID: -1474759402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig animation_10
+      rect:
+        serializedVersion: 2
+        x: 932
+        y: 2232
+        width: 233
+        height: 372
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 874db00614c729640ab5b5b0bc8da5e7
+      internalID: -263673302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig animation_11
+      rect:
+        serializedVersion: 2
+        x: 1165
+        y: 2232
+        width: 233
+        height: 372
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4d70897ba87b094db5cccf7cb9aa634
+      internalID: -159628542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig animation_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1860
+        width: 233
+        height: 372
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3809346a8aaa964d89ebbc43f1374fe
+      internalID: -1665203647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig animation_13
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 1860
+        width: 233
+        height: 372
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dc09131de00b844090bc06f34378985
+      internalID: -1539021637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig animation_14
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 1860
+        width: 233
+        height: 372
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ea4d611eb279ee42b987b57137e89d5
+      internalID: 493209325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig animation_15
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 1860
+        width: 233
+        height: 372
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2377571a87d63f44ba31246c99e736a
+      internalID: 1399042033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig animation_16
+      rect:
+        serializedVersion: 2
+        x: 932
+        y: 1860
+        width: 233
+        height: 372
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6532eafb52fbd174e9b84e5c161cc02c
+      internalID: -178915252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig animation_17
+      rect:
+        serializedVersion: 2
+        x: 1165
+        y: 1860
+        width: 233
+        height: 372
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0015113b4cbd0864e992ee2188b8e281
+      internalID: -680680470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig animation_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1488
+        width: 233
+        height: 372
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7ff053af4b8b3f4f938a620380ce16d
+      internalID: 16742670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig animation_19
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 1488
+        width: 233
+        height: 372
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9361c013e358e8047a221313ef9f9fb5
+      internalID: -1717808474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig animation_20
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 1488
+        width: 233
+        height: 372
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62af39c0486ebfa4194e8df44520ab19
+      internalID: -1156231037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig animation_21
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 1488
+        width: 233
+        height: 372
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 196a1e72908fef9458a61496fb60f706
+      internalID: 1454138994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig animation_22
+      rect:
+        serializedVersion: 2
+        x: 932
+        y: 1488
+        width: 233
+        height: 372
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb4b38ed26db3c946b07b6e2b58ce721
+      internalID: -586324101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig animation_23
+      rect:
+        serializedVersion: 2
+        x: 1165
+        y: 1488
+        width: 233
+        height: 372
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 931e99c1acd5b0e45aa3e065464d899f
+      internalID: 124573802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig animation_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1116
+        width: 233
+        height: 372
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b80fa51affca02e4ea491585ead6cf3e
+      internalID: 205306664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig animation_25
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 1116
+        width: 233
+        height: 372
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5552cd8b99062343b9a6a29603456d8
+      internalID: -789130275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig animation_26
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 1116
+        width: 233
+        height: 372
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d227ccf31d24d80419705e67b51f2b1c
+      internalID: 487426638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig animation_27
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 1116
+        width: 233
+        height: 372
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 101d1611f0348f64e849e9ea2ddc1eb2
+      internalID: -243175210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig animation_28
+      rect:
+        serializedVersion: 2
+        x: 932
+        y: 1116
+        width: 233
+        height: 372
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4485d2685494caa48bf5c363c8549ecc
+      internalID: -256916851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig animation_29
+      rect:
+        serializedVersion: 2
+        x: 1165
+        y: 1116
+        width: 233
+        height: 372
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0dfc6f64fcb820439a662ff9737c6e4
+      internalID: 1284246128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig animation_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 744
+        width: 233
+        height: 372
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e96beee9f55f9a44fabd822ed25b1e73
+      internalID: -1221698673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig animation_31
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 744
+        width: 233
+        height: 372
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dee9e00736759fd41ad427f0d523b893
+      internalID: 463408826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig animation_32
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 744
+        width: 233
+        height: 372
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c29fed1ce4f3ce646aaa3d467c2dade2
+      internalID: -1884739141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig animation_33
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 744
+        width: 233
+        height: 372
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7e66aecd3a212d42a6719d770fab531
+      internalID: -435211798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig animation_34
+      rect:
+        serializedVersion: 2
+        x: 932
+        y: 744
+        width: 233
+        height: 372
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e12b393eed9fbc4181e186573e812d5
+      internalID: 867880691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig animation_35
+      rect:
+        serializedVersion: 2
+        x: 1165
+        y: 744
+        width: 233
+        height: 372
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 737b9aea75c87d04fb58ecc33153af83
+      internalID: 158168100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig animation_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 372
+        width: 233
+        height: 372
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45bd3978a3318f340be8f25365f41017
+      internalID: -563020408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig animation_37
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 372
+        width: 233
+        height: 372
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06a7fd8ebedc3a94986003fdb99f95ae
+      internalID: -131447723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig animation_38
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 372
+        width: 233
+        height: 372
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99497a1ab03a60b438a162145bf4b09f
+      internalID: -950418748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig animation_39
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 372
+        width: 233
+        height: 372
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23c5b6117cbc468428a73b7305929436
+      internalID: -1498873281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig animation_40
+      rect:
+        serializedVersion: 2
+        x: 932
+        y: 372
+        width: 233
+        height: 372
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd558388a615e0540bf07bb17a255be0
+      internalID: -708363926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig animation_41
+      rect:
+        serializedVersion: 2
+        x: 1165
+        y: 372
+        width: 233
+        height: 372
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05a83fa39732b944eabcf50f91d3168e
+      internalID: 1561834406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Earwig animation_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 233
+        height: 372
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1daafbbad00bc6843bbc4e90c2addacb
+      internalID: 268724395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Earwig animation_0: -1137701086
+      Earwig animation_1: 947819908
+      Earwig animation_10: -263673302
+      Earwig animation_11: -159628542
+      Earwig animation_12: -1665203647
+      Earwig animation_13: -1539021637
+      Earwig animation_14: 493209325
+      Earwig animation_15: 1399042033
+      Earwig animation_16: -178915252
+      Earwig animation_17: -680680470
+      Earwig animation_18: 16742670
+      Earwig animation_19: -1717808474
+      Earwig animation_2: 65550169
+      Earwig animation_20: -1156231037
+      Earwig animation_21: 1454138994
+      Earwig animation_22: -586324101
+      Earwig animation_23: 124573802
+      Earwig animation_24: 205306664
+      Earwig animation_25: -789130275
+      Earwig animation_26: 487426638
+      Earwig animation_27: -243175210
+      Earwig animation_28: -256916851
+      Earwig animation_29: 1284246128
+      Earwig animation_3: -191142502
+      Earwig animation_30: -1221698673
+      Earwig animation_31: 463408826
+      Earwig animation_32: -1884739141
+      Earwig animation_33: -435211798
+      Earwig animation_34: 867880691
+      Earwig animation_35: 158168100
+      Earwig animation_36: -563020408
+      Earwig animation_37: -131447723
+      Earwig animation_38: -950418748
+      Earwig animation_39: -1498873281
+      Earwig animation_4: -1787452454
+      Earwig animation_40: -708363926
+      Earwig animation_41: 1561834406
+      Earwig animation_42: 268724395
+      Earwig animation_43: -594674240
+      Earwig animation_44: -821699606
+      Earwig animation_45: 1850879041
+      Earwig animation_46: 1333162108
+      Earwig animation_47: -1280567510
+      Earwig animation_5: 1108678430
+      Earwig animation_6: -375177094
+      Earwig animation_7: 812925222
+      Earwig animation_8: -335931893
+      Earwig animation_9: -1474759402
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
