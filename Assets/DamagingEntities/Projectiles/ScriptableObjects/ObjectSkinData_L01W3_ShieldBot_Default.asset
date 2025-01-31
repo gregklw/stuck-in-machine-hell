@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32dbb1894c444d64db91a0e410e318dc, type: 3}
+  m_Name: ObjectSkinData_L01W3_ShieldBot_Default
+  m_EditorClassIdentifier: 
+  ProjectileSprites:
+  - {fileID: 21300000, guid: 026ed9b3189af004d80064f3d50919f0, type: 3}
+  ExplosionAnimationController: {fileID: 22100000, guid: 635d10011fd97ee4e9092577995305ae, type: 2}
+  DeathExplosionMaterial: {fileID: 2100000, guid: fe4671d23491a0446af40536dfec4c19, type: 2}
+  SpriteSheetRows: 6
+  SpriteSheetColumns: 6
+  ProjectileSpeed: 2.5
+  ProjectileLifeTime: 1.5
+  CollisionTagsForHit:
+  - Player
+  ProjectileType: 0
