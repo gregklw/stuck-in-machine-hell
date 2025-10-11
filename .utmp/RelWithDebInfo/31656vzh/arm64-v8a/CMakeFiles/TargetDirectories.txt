@@ -1,0 +1,5 @@
+D:/UnityAlgoma/stuck-in-machine-hell/.utmp/RelWithDebInfo/31656vzh/arm64-v8a/CMakeFiles/edit_cache.dir
+D:/UnityAlgoma/stuck-in-machine-hell/.utmp/RelWithDebInfo/31656vzh/arm64-v8a/CMakeFiles/rebuild_cache.dir
+D:/UnityAlgoma/stuck-in-machine-hell/.utmp/RelWithDebInfo/31656vzh/arm64-v8a/FramePacing/CMakeFiles/swappywrapper.dir
+D:/UnityAlgoma/stuck-in-machine-hell/.utmp/RelWithDebInfo/31656vzh/arm64-v8a/FramePacing/CMakeFiles/edit_cache.dir
+D:/UnityAlgoma/stuck-in-machine-hell/.utmp/RelWithDebInfo/31656vzh/arm64-v8a/FramePacing/CMakeFiles/rebuild_cache.dir

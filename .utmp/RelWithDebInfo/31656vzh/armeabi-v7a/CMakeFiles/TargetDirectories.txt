@@ -1,0 +1,5 @@
+D:/UnityAlgoma/stuck-in-machine-hell/.utmp/RelWithDebInfo/31656vzh/armeabi-v7a/CMakeFiles/edit_cache.dir
+D:/UnityAlgoma/stuck-in-machine-hell/.utmp/RelWithDebInfo/31656vzh/armeabi-v7a/CMakeFiles/rebuild_cache.dir
+D:/UnityAlgoma/stuck-in-machine-hell/.utmp/RelWithDebInfo/31656vzh/armeabi-v7a/FramePacing/CMakeFiles/swappywrapper.dir
+D:/UnityAlgoma/stuck-in-machine-hell/.utmp/RelWithDebInfo/31656vzh/armeabi-v7a/FramePacing/CMakeFiles/edit_cache.dir
+D:/UnityAlgoma/stuck-in-machine-hell/.utmp/RelWithDebInfo/31656vzh/armeabi-v7a/FramePacing/CMakeFiles/rebuild_cache.dir

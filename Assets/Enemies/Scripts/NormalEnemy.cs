@@ -25,10 +25,10 @@ public class NormalEnemy : Enemy
         //ThisRigidbody.MovePosition(BaseMoveSpeed * 0.001f * Time.fixedDeltaTime * transform.up);
         //transform.position += transform.up * BaseMoveSpeed * Time.fixedDeltaTime;
         if (Mathf.Abs(transform.position.x - TargetPlayer.transform.position.x) >= _minimumDistance)
-            ThisRigidbody.velocity = BaseMoveSpeed * 40 * Time.fixedDeltaTime * (Vector2) transform.up;
+            ThisRigidbody.linearVelocity = BaseMoveSpeed * 40 * Time.fixedDeltaTime * (Vector2) transform.up;
         else
         {
-            ThisRigidbody.velocity = Vector2.zero;
+            ThisRigidbody.linearVelocity = Vector2.zero;
         }
     }
 }
