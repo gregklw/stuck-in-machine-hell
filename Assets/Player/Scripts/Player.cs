@@ -14,19 +14,21 @@ public class Player : AttackingCharacter, IPostAddressableLoadable
         get => _mainCamera ??= Camera.main;
     }
     private Vector2 _latestTravelPosition;
-    private const float MinimumMagnitudeToMove = 0.05f;
+    //private const float MinimumMagnitudeToMove = 0.05f;
 
     private PlayerParticleWeapon _currentWeapon;
 
     private BusEventBinding<EnemySpawnEventWrapper> _enemySpawnEventBinding;
 
-    [SerializeField][Range(0, 10)] private float _baseMoveSpeed;
+    //[SerializeField][Range(0, 10)] private float _baseMoveSpeed;
 
-    public float BaseMoveSpeed
-    {
-        get => _baseMoveSpeed;
-        set => _baseMoveSpeed = value;
-    }
+    public Action<Vector2> MovementAction;
+
+    //public float BaseMoveSpeed
+    //{
+    //    get => _baseMoveSpeed;
+    //    set => _baseMoveSpeed = value;
+    //}
 
     protected override void Awake()
     {
@@ -39,19 +41,21 @@ public class Player : AttackingCharacter, IPostAddressableLoadable
     private void OnEnable()
     {
         EventBus<EnemySpawnEventWrapper>.Register(_enemySpawnEventBinding);
+        MovementAction += MovePlayerTowardsInput;
     }
 
     private void OnDisable()
     {
         EventBus<EnemySpawnEventWrapper>.Deregister(_enemySpawnEventBinding);
+        MovementAction -= MovePlayerTowardsInput;
     }
 
     void FixedUpdate()
     {
-        if (Input.GetMouseButton(0) && !LevelManager.DidMousePressUI)
-        {
-            MovePlayerTowardsInput();
-        }
+        //if (Input.GetMouseButton(0) && !LevelManager.DidMousePressUI)
+        //{
+        //    MovePlayerTowardsInput();
+        //}
     }
 
     private void Update()
@@ -79,18 +83,16 @@ public class Player : AttackingCharacter, IPostAddressableLoadable
         }
     }
 
-    private void MovePlayerTowardsInput()
+    private void MovePlayerTowardsInput(Vector2 moveVelocity)
     {
         Vector2 playerForwardVector = transform.up;
-        Vector2 playerToMouseDistance = (Vector2)MainCamera.ScreenToWorldPoint(Input.mousePosition) - (Vector2)transform.position;
-        Vector2 playerToMouseDir = playerToMouseDistance.normalized;
+        //Vector2 playerToMouseDistance = (Vector2)MainCamera.ScreenToWorldPoint(Input.mousePosition) - (Vector2)transform.position;
+        //Vector2 playerToMouseDir = playerToMouseDistance.normalized;
 
-        if (playerToMouseDistance.sqrMagnitude > MinimumMagnitudeToMove)
-        {
-            //transform.position += (Vector3)playerToMouseDir * CurrentMoveSpeed;
-            ThisRigidbody.position += (playerToMouseDir * BaseMoveSpeed) * Time.fixedDeltaTime;
-        }
-        transform.Rotate(Vector3.forward, Vector2.SignedAngle(playerForwardVector, playerToMouseDir), Space.World);
+        //transform.position += (Vector3)playerToMouseDir * CurrentMoveSpeed;
+        ThisRigidbody.position += moveVelocity/1000 * Time.fixedDeltaTime;
+
+        transform.Rotate(Vector3.forward, Vector2.SignedAngle(playerForwardVector, moveVelocity), Space.World);
         //_rigidbody2D.SetRotation(Vector2.SignedAngle(playerForwardVector, playerToMouseDir));
         //_rigidbody2D.MoveRotation(Vector2.SignedAngle(playerForwardVector, playerToMouseDir));
     }

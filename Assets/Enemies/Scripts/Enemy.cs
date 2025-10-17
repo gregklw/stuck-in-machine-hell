@@ -14,7 +14,7 @@ public abstract class Enemy : AttackingCharacter
     {
         base.Awake();
         //HealthEventBinding = new LocalEventBinding<EnemyEvent>();
-        _targetPlayer = FindObjectOfType<Player>();
+        _targetPlayer = FindFirstObjectByType<Player>();
         _dropper = GetComponent<ItemDropper>();
     }
 

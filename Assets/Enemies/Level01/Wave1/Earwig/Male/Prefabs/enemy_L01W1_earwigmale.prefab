@@ -251,7 +251,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
 --- !u!95 &4912407376490468508
 Animator:
-  serializedVersion: 5
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -265,6 +265,7 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -285,7 +286,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1238710168913671161, guid: 44a10c2b65345c045920daea6d954443, type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
-      value: 1.5
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 2525833142765471545, guid: 44a10c2b65345c045920daea6d954443, type: 3}
       propertyPath: m_LocalPosition.x
@@ -340,7 +341,7 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5395217474819055541, guid: 44a10c2b65345c045920daea6d954443, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: f2f4b47da338a254493ed85ceb4ac319, type: 2}
     - target: {fileID: 5466621985363367623, guid: 44a10c2b65345c045920daea6d954443, type: 3}
