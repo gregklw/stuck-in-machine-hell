@@ -30,6 +30,8 @@ public class Player : AttackingCharacter, IPostAddressableLoadable
     //    set => _baseMoveSpeed = value;
     //}
 
+    private const float MovementMapValue = 100f;
+
     protected override void Awake()
     {
         base.Awake();
@@ -48,14 +50,6 @@ public class Player : AttackingCharacter, IPostAddressableLoadable
     {
         EventBus<EnemySpawnEventWrapper>.Deregister(_enemySpawnEventBinding);
         MovementAction -= MovePlayerTowardsInput;
-    }
-
-    void FixedUpdate()
-    {
-        //if (Input.GetMouseButton(0) && !LevelManager.DidMousePressUI)
-        //{
-        //    MovePlayerTowardsInput();
-        //}
     }
 
     private void Update()
@@ -86,15 +80,8 @@ public class Player : AttackingCharacter, IPostAddressableLoadable
     private void MovePlayerTowardsInput(Vector2 moveVelocity)
     {
         Vector2 playerForwardVector = transform.up;
-        //Vector2 playerToMouseDistance = (Vector2)MainCamera.ScreenToWorldPoint(Input.mousePosition) - (Vector2)transform.position;
-        //Vector2 playerToMouseDir = playerToMouseDistance.normalized;
-
-        //transform.position += (Vector3)playerToMouseDir * CurrentMoveSpeed;
-        ThisRigidbody.position += moveVelocity/1000 * Time.fixedDeltaTime;
-
+        ThisRigidbody.position += moveVelocity / MovementMapValue * Time.fixedDeltaTime;
         transform.Rotate(Vector3.forward, Vector2.SignedAngle(playerForwardVector, moveVelocity), Space.World);
-        //_rigidbody2D.SetRotation(Vector2.SignedAngle(playerForwardVector, playerToMouseDir));
-        //_rigidbody2D.MoveRotation(Vector2.SignedAngle(playerForwardVector, playerToMouseDir));
     }
 
     public override void ReceiveDamage(float damage)

@@ -11,11 +11,17 @@ public class MovementIndicator : MonoBehaviour, IPointerDownHandler, IPointerUpH
     [SerializeField] private Player _playerRef;
 
     private bool _isDragging;
+    private Vector2 _movementVelocity;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         //FindFirstObjectByType
+    }
+
+    private void FixedUpdate()
+    {
+        _playerRef.MovementAction?.Invoke(_movementVelocity);
     }
 
     // Update is called once per frame
@@ -39,7 +45,7 @@ public class MovementIndicator : MonoBehaviour, IPointerDownHandler, IPointerUpH
         _directionArrow.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
 
         Vector2 arrowDimensions = _directionArrow.rectTransform.sizeDelta;
-        Vector2 finalDirectionVector = inputDragDirection;
+        _movementVelocity = inputDragDirection;
         float bgRadius = _joystickBg.rectTransform.sizeDelta.x / 2;
         if (inputDragDirection.magnitude < bgRadius)
         {
@@ -49,12 +55,11 @@ public class MovementIndicator : MonoBehaviour, IPointerDownHandler, IPointerUpH
         }
         else
         {
-            finalDirectionVector = (Vector3)inputDragDirection.normalized * bgRadius;
-            _joystick.rectTransform.position = _joystickBg.rectTransform.position + (Vector3)finalDirectionVector;
+            _movementVelocity = (Vector3)inputDragDirection.normalized * bgRadius;
+            _joystick.rectTransform.position = _joystickBg.rectTransform.position + (Vector3)_movementVelocity;
         }
 
         //float movespeed = _directionArrow.rectTransform.sizeDelta.magnitude;
-        _playerRef.MovementAction?.Invoke(finalDirectionVector);
         //}
         //else if (Input.GetMouseButtonUp(0))
         //{
@@ -73,15 +78,18 @@ public class MovementIndicator : MonoBehaviour, IPointerDownHandler, IPointerUpH
     {
         _isDragging = false;
         _joystickBg.gameObject.SetActive(false);
+        _movementVelocity = Vector2.zero;
     }
 
     public void OnPointerDown(PointerEventData eventData)
     {
+        Debug.Log("Down");
         EnableIndicator();
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
+        Debug.Log("Up");
         DisablebleIndicator();
     }
 }

@@ -24,7 +24,7 @@ public class WeaponManager : MonoBehaviour
     {
         _weaponPickupEventBinding = new BusEventBinding<WeaponPickupEventWrapper>(AddNewPickedUpWeapon);
         _weaponStatModifierEventBinding = new BusEventBinding<WeaponStatModifierEventWrapper>(UpdateWeaponAttackSpeedValues);
-        _player ??= FindObjectOfType<Player>();
+        _player ??= FindFirstObjectByType<Player>();
         _weaponCollection = _weaponsCollectionRoot.GetComponentsInChildren<PlayerParticleWeapon>().ToList();
         _changeWeaponButton = GetComponent<Button>();
     }
